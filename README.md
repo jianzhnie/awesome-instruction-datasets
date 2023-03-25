@@ -1,5 +1,9 @@
+
+<div align="center">
+
 # Awesome Prompt datasets
 
+</div>
 
 <div align="center">
 
@@ -7,9 +11,9 @@
 </div>
 
 
-## [Summary of awesome Prompt datasets](https://jianzhnie.github.io/machine-learning-wiki/#/ai-general/chatgpt/awe_prompt?id=summary-of-awesome-prompt-datasets)
+## [Summary](https://jianzhnie.github.io/machine-learning-wiki/#/ai-general/chatgpt/awe_prompt?id=summary-of-awesome-prompt-datasets)
 
-| DATASETS/PROJECTS                               | ORGANIZATION/AUTHOR | INTRODUCTION                                                                                                           |
+| Datasets/Projects                            | Organization/Author | Introduction                                                                                                           |
 | :---------------------------------------------- | :------------------ | :--------------------------------------------------------------------------------------------------------------------- |
 | Natural Instruction / Super-Natural Instruction | Allen AI            | Contains instruction data of 61 NLP tasks (Natural Instruction) and 1600 NLP tasks (Super-Natural Instruction)         |
 | PromptSource / P3                               | BigScience          | More than 2,000 prompt templates (PromptSource) containing 270 NLP tasks and a P3 dataset with a scale between 100M-1B |
@@ -22,7 +26,21 @@
 | InstructDial                                    | prakharguptaz       | Attempts to fine-tune instructions on a specific task type (dialogue instructions)                                     |
 | Alpaca                                          | Stanford            | 53k data, very powerful performance (GPT-3.5 level).                                                                   |
 
-## List of awesome Prompt datasets
+## The template
+
+Append the new project at the end of file
+```shell
+
+[{Project-name}/{Dataset-name}]{https://github.com/link/to/project}
+
+- [paper/project link](link)
+- [dataset link](link)
+
+Some introductions ...
+```
+
+
+## The List
 
 ### Natural Instruction / Super-Natural Instruction
 
