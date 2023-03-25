@@ -1,3 +1,17 @@
+
+<div align="center">
+
+# Awesome Prompt datasets [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+
+</div>
+
+<div align="center">
+
+[English](README.md) | 中文
+</div>
+
+
+
 ## Summary of awesome Prompt datasets
 
 |                Datasets/Projects                | Organization/Author | Introduction                                                 |
