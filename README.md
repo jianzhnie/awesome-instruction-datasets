@@ -1,7 +1,7 @@
 
 <div align="center">
 
-# Awesome Prompt datasets
+# Awesome Prompt datasets [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
 </div>
 
