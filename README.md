@@ -11,7 +11,7 @@
 </div>
 
 
-## [Summary](https://jianzhnie.github.io/machine-learning-wiki/#/ai-general/chatgpt/awe_prompt?id=summary-of-awesome-prompt-datasets)
+## Summary
 
 | Datasets/Projects                            | Organization/Author | Introduction                                                                                                           |
 | :---------------------------------------------- | :------------------ | :--------------------------------------------------------------------------------------------------------------------- |
