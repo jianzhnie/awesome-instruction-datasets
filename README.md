@@ -1,17 +1,26 @@
-## Summary of awesome Prompt datasets
+# Awesome Prompt datasets
 
-|                Datasets/Projects                | Organization/Author | Introduction                                                 |
-| :---------------------------------------------: | :-----------------: | :----------------------------------------------------------- |
-| Natural Instruction / Super-Natural Instruction |      Allen AI       | 包含61个NLP任务（Natural Instruction）和1600个NLP任务（Super-Natural Instruction）的指令数据 |
-|                PromptSource / P3                |     BigScience      | 包含270个NLP任务的2000多个prompt模版（PromptSource）和规模在100M-1B之间的P3数据集 |
-|                      xMTF                       |     BigScience      | 包含13个NLP任务、46种语言的多语言prompt数据                  |
-|                     HH-RLHF                     |      Anthropic      | 旨在训练Helpful and Harmless（HH）的LLMs的RLHF数据集         |
-|              Unnatural Instruction              |     orhonovich      | 使用GPT3生成64k的instruction prompt数据，经改写后得到240k条instruction数据 |
-|                  Self-Instruct                  |      yizhongw       | 使用LLMs生成prompt进行instruct-tuning的方法，引入Task pool和Quality filtering等概念 |
-|                   UnifiedSKG                    |         HKU         | 在Text-to-Text框架中加入knowledge grounding，将结构化数据序列化并嵌入到prompt中 |
-|                 Flan Collection                 |       Google        | 将Flan 2021数据与一些开源的instruction数据（P3，super-natural instruction等）进行合并 |
-|                  InstructDial                   |    prakharguptaz    | 在特定的一种任务类型（对话指令）上进行指令微调的尝试         |
-|                     Alpaca                      |      Stanford       | 53k data, very powerful performance (GPT-3.5 level).         |
+
+<div align="center">
+
+[中文](README_zh.md) | English
+</div>
+
+
+## [Summary of awesome Prompt datasets](https://jianzhnie.github.io/machine-learning-wiki/#/ai-general/chatgpt/awe_prompt?id=summary-of-awesome-prompt-datasets)
+
+| DATASETS/PROJECTS                               | ORGANIZATION/AUTHOR | INTRODUCTION                                                                                                           |
+| :---------------------------------------------- | :------------------ | :--------------------------------------------------------------------------------------------------------------------- |
+| Natural Instruction / Super-Natural Instruction | Allen AI            | Contains instruction data of 61 NLP tasks (Natural Instruction) and 1600 NLP tasks (Super-Natural Instruction)         |
+| PromptSource / P3                               | BigScience          | More than 2,000 prompt templates (PromptSource) containing 270 NLP tasks and a P3 dataset with a scale between 100M-1B |
+| xMTF                                            | BigScience          | Contains 13 NLP tasks and multilingual prompt data in 46 languages                                                     |
+| HH-RLHF                                         | Anthropic           | RLHF dataset designed to train Helpful and Harmless (HH) LLMs                                                          |
+| Unnatural Instruction                           | orhonovich          | Use GPT3 to generate 64k instruction prompt data, and get 240k instruction data after rewriting                        |
+| Self-Instruct                                   | yizhongw            | Using LLMs to generate prompts for instruction-tuning, introducing concepts such as Task pool and Quality filtering    |
+| UnifiedSKG                                      | HKU                 | Add knowledge grounding to Text-to-Text framework, serialize and embed structured data into prompt                     |
+| Flan Collection                                 | Google              | Merge Flan 2021 data with some open source instruction data (P3, super-natural instruction, etc.)                      |
+| InstructDial                                    | prakharguptaz       | Attempts to fine-tune instructions on a specific task type (dialogue instructions)                                     |
+| Alpaca                                          | Stanford            | 53k data, very powerful performance (GPT-3.5 level).                                                                   |
 
 ## List of awesome Prompt datasets
 
@@ -20,71 +29,66 @@
 - [Paper/Project link](https://aclanthology.org/2022.acl-long.244.pdf)
 - [Dataset link](https://instructions.apps.allenai.org/)
 
-Allen AI 是第一批尝试Instruction做prompt并微调LLMs的机构。在Natural Instruction论文里可以基本了解instruction的标注思路.
+Allen AI is the first organization to try Instruction as a prompt and fine-tune LLMs. In the Natural Instruction paper, you can basically understand the labeling ideas of the instruction.
 
-在其提出的数据集中，包含了61和不同的NLP tasks。
+In its proposed dataset, 61 and different NLP tasks are included.
 
-Super-Natural Instruction 是Natural Instruction的超级加量版，其包含了超过1600个不同的NLP任务，光是不同**种类**的NLP任务（例如：分类，抽取，序列标注）就超过76个。
+Super-Natural Instruction is a super-intensive version of Natural Instruction, which contains more than 1,600 different NLP tasks, and there are more than 76 different **types of NLP tasks (such as: classification, extraction, sequence labeling).**
 
 ### PromptSource / P3
 
 - [Paper/Project Link](https://github.com/bigscience-workshop/promptsource)
-
 - [Dataset Link](https://huggingface.co/datasets/bigscience/P3)
 
-BigScience由Hugging Face和法国CNRS，IDRIS，GENCI等联合组织，是当下最大的开源LLMs组织之一。
+BigScience is jointly organized by Hugging Face and French CNRS, IDRIS, GENCI, etc. It is one of the largest open source LLMs organizations.
 
-BigScience在2021年末开发了PromptSource项目，开源了一系列工具toolkits，帮助研究者基于现有NLP任务构建prompt。截止目前，PromptSource项目包含了270个NLP任务的超过2000个prompt模版。
+BigScience developed the PromptSource project at the end of 2021, and open sourced a series of toolkits to help researchers build prompts based on existing NLP tasks. So far, the PromptSource project contains more than 2000 prompt templates for 270 NLP tasks.
 
-在此基础上，BigScience构建了P3数据集。在Hugging Face Hub上你可以找到P3数据，P3的数据规模在100M-1B之间。
+On this basis, BigScience constructed the P3 dataset. You can find P3 data on Hugging Face Hub, and the data size of P3 is between 100M-1B.
 
 ### xMTF - BigScience
 
 - [Project Link](https://arxiv.org/pdf/2211.01786.pdf)
-
 - [Dataset Link](https://github.com/bigscience-workshop/xmtf)
 
-BigScience在英语prompt的基础上，扩展其prompt到多种非英语语言。
+Based on the English prompt, BigScience extends its prompt to multiple non-English languages.
 
-该项目包含了13个NLP任务，并采用了46个不同的语言的版本。对应的prompt包含的语种个数不定。
+The project contains 13 NLP tasks and is available in 46 different languages. The corresponding prompt contains an indeterminate number of languages.
 
-在multilingual的基础上微调后，BLOOM和T0都变现出了理想的多语言能力。
+After fine-tuning on the basis of multilingual, both BLOOM and T0 have realized the ideal multilingual ability.
 
 ### HH-RLHF - Anthropic
 
 - [Paper/Project Link](https://arxiv.org/pdf/2204.05862.pdf)
-
 - [Dataset Link](https://huggingface.co/datasets/Anthropic/hh-rlhf)
 
-Anthropic公司旗下的Claud是ChatGPT的主要竞品之一。
+Claud under Anthropic is one of the main competitors of ChatGPT.
 
-Anthropic开源了其在自己产品线中使用的RLHF数据集。
+Anthropic has open-sourced the RLHF dataset it uses in its own product line.
 
-HH-RLHF项目的初衷在于训练Helpful and Harmless（HH）的LLMs。故该项目除了回复质量外，是否为有害信息也体现在了其human feedback中。
+The original intention of the HH-RLHF project is to train Helpful and Harmless (HH) LLMs. Therefore, in addition to the quality of the project's responses, whether it is harmful information is also reflected in its human feedback.
 
-论文中记录了如何使用RLHF数据Align模型的behaviour到人类的价值观上，同时记录了数据集的构建方式和标准。
+The paper records how to use the behavior of the RLHF data Align model to human values, and records the construction method and standards of the data set.
 
 ### Unnatural Instruction
 
 - [Paper/Project Link](https://arxiv.org/pdf/2212.09689.pdf)
-
 - [Dataset Link](https://github.com/orhonovich/unnatural-instructions)
 
-使用LLMs自主生成instruction数据是instruct-tuning领域较为活跃的一个方向。
+Using LLMs to independently generate instruction data is an active direction in the field of instruction-tuning.
 
-Unnatural Instruction使用GPT3 (text-davinci-002)生成了64k的instruction prompt数据。并使用同样的模型将64k的prompt进行改写，最终得到了240k条instruction数据。
+Unnatural Instruction uses GPT3 (text-davinci-002) to generate 64k instruction prompt data. And use the same model to rewrite the 64k prompt, and finally get 240k instruction data.
 
-论文中显示，在Instruct-Tuning中LLMs自主生成的prompt表现出了良好的效果，甚至超过了在P3等数据上进行微调的T0等模型。
+The paper shows that the prompts generated by LLMs in Instruct-Tuning show good results, even surpassing models such as T0 that are fine-tuned on P3 and other data.
 
 ### Self-Instruct
 
 - [Paper/Project Link](https://arxiv.org/pdf/2212.10560.pdf)
-
 - [Dataset Link](https://github.com/yizhongw/self-instruct)
 
-Self-Instruct同样是使用LLMs生成prompt进行instruct-tuning的思路。不过使用了更fine-grained的生成流程。
+Self-Instruct is also the idea of using LLMs to generate prompts for instruction-tuning. However, a more fine-grained generation process is used.
 
-Task pool和Quality filtering等概念被引入，部分缓解了self-intrauct类型数据的noise问题。
+Concepts such as Task pool and Quality filtering were introduced to partially alleviate the noise problem of self-intrauct type data.
 
 ### UnifiedSKG - HKU
 
@@ -92,42 +96,41 @@ Task pool和Quality filtering等概念被引入，部分缓解了self-intrauct�
 
 [DataSet Link](https://unifiedskg.com/)
 
-UnifiedSKG在Text-to-Text的框架中加入了knowledge grounding，也就是在prompt-output的框架中，加入了结构化数据做辅助。
+UnifiedSKG has added knowledge grounding in the Text-to-Text framework, that is, in the prompt-output framework, it has added structured data for assistance.
 
-举个例子，某些NLP任务非常依赖结构化的知识库/数据库。UnifiedSKG的思路是将需要的数据库序列化，并嵌入到prompt中。如下图所示。
+As an example, some NLP tasks rely heavily on structured knowledge bases/databases. The idea of UnifiedSKG is to serialize the required database and embed it into the prompt. As shown below.
 
-UnifiedSKG代表了LLMs领域中尝试使用结构化知识增强性能的一个方向。
+UnifiedSKG represents a direction in the field of LLMs that attempts to use structured knowledge to enhance performance.
 
 ### Flan Collection - Google
 
 - [Paper/Project Link](https://arxiv.org/pdf/2301.13688.pdf)
 - [Dataset Link](https://github.com/google-research/FLAN/tree/main/flan/v2)
 
-Google在这个项目中将自己的Flan 2021数据与一些开源的instruction数据（P3，super-natural instruction 等）进行了合并。
+In this project, Google merged its own Flan 2021 data with some open source instruction data (P3, super-natural instruction, etc.).
 
-在Flan Collection的论文中，google也总结了Flan系列模型训练/推理中的一些关键点，可能会有不错的参考价值。
+In Flan Collection's paper, Google also summarizes some key points in Flan series model training/reasoning, which may have good reference value.
 
 ### InstructDial
 
 - [Paper/Project Link](https://arxiv.org/pdf/2205.12673.pdf)
-
 - [Dataset Link](https://github.com/prakharguptaz/Instructdial/tree/main/datasets)
 
-InstructDial是在特定的一种任务类型上进行指令微调的尝试。实验结果表明，在对话指令数据上微调后，模型在对话任务上的表现强于在超大规模任务集上的结果。
+InstructDial is an attempt to fine-tune instructions on a specific task type. Experimental results show that after fine-tuning on dialogue instruction data, the model performs better on dialogue tasks than on very large-scale task sets.
 
 ### Alpaca -Stanford
 
 - [Paper/Project Link](https://github.com/tatsu-lab/stanford_alpaca)
-
 - [Dataset Link](https://github.com/tatsu-lab/stanford_alpaca)
 
-Stanford release的Alpaca是在Meta Ai LLaMA模型基础上进行instruct-tuning的微调模型。
+The Alpaca of the Stanford release is a fine-tuning model for instruct-tuning based on the Meta Ai LLaMA model.
 
-Alpaca使用GPT-3.5自动生成了52k的指令数据，并用其微调LLaMA模型。实验结果表明，其能够达到/甚至超过GPT-3.5在一些任务上的效果。
+Alpaca automatically generated 52k instruction data using GPT-3.5 and used it to fine-tune the LLaMA model. Experimental results show that it can reach or even exceed the performance of GPT-3.5 on some tasks.
 
 ## Contributing
 
 Our purpose is to make this repo even better. If you are interested in contributing, please refer to HERE for instructions in contribution.
 
 ## License
+
 `Awesome-Prompt-Dataset` is released under the Apache 2.0 license.
