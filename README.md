@@ -13,7 +13,9 @@
 |                  InstructDial                   |    prakharguptaz    | 在特定的一种任务类型（对话指令）上进行指令微调的尝试         |
 |                     Alpaca                      |      Stanford       | 53k data, very powerful performance (GPT-3.5 level).         |
 
-## Natural Instruction / Super-Natural Instruction
+## List of awesome Prompt datasets
+
+### Natural Instruction / Super-Natural Instruction
 
 - [Paper/Project link](https://aclanthology.org/2022.acl-long.244.pdf)
 - [Dataset link](https://instructions.apps.allenai.org/)
@@ -24,7 +26,7 @@ Allen AI 是第一批尝试Instruction做prompt并微调LLMs的机构。在Natur
 
 Super-Natural Instruction 是Natural Instruction的超级加量版，其包含了超过1600个不同的NLP任务，光是不同**种类**的NLP任务（例如：分类，抽取，序列标注）就超过76个。
 
-## PromptSource / P3
+### PromptSource / P3
 
 - [Paper/Project Link](https://github.com/bigscience-workshop/promptsource)
 
@@ -36,7 +38,7 @@ BigScience在2021年末开发了PromptSource项目，开源了一系列工具too
 
 在此基础上，BigScience构建了P3数据集。在Hugging Face Hub上你可以找到P3数据，P3的数据规模在100M-1B之间。
 
-## xMTF - BigScience
+### xMTF - BigScience
 
 - [Project Link](https://arxiv.org/pdf/2211.01786.pdf)
 
@@ -48,7 +50,7 @@ BigScience在英语prompt的基础上，扩展其prompt到多种非英语语言�
 
 在multilingual的基础上微调后，BLOOM和T0都变现出了理想的多语言能力。
 
-## HH-RLHF - Anthropic
+### HH-RLHF - Anthropic
 
 - [Paper/Project Link](https://arxiv.org/pdf/2204.05862.pdf)
 
@@ -62,7 +64,7 @@ HH-RLHF项目的初衷在于训练Helpful and Harmless（HH）的LLMs。故该�
 
 论文中记录了如何使用RLHF数据Align模型的behaviour到人类的价值观上，同时记录了数据集的构建方式和标准。
 
-## Unnatural Instruction
+### Unnatural Instruction
 
 - [Paper/Project Link](https://arxiv.org/pdf/2212.09689.pdf)
 
@@ -74,7 +76,7 @@ Unnatural Instruction使用GPT3 (text-davinci-002)生成了64k的instruction pro
 
 论文中显示，在Instruct-Tuning中LLMs自主生成的prompt表现出了良好的效果，甚至超过了在P3等数据上进行微调的T0等模型。
 
-## Self-Instruct
+### Self-Instruct
 
 - [Paper/Project Link](https://arxiv.org/pdf/2212.10560.pdf)
 
@@ -84,7 +86,7 @@ Self-Instruct同样是使用LLMs生成prompt进行instruct-tuning的思路。不
 
 Task pool和Quality filtering等概念被引入，部分缓解了self-intrauct类型数据的noise问题。
 
-## UnifiedSKG - HKU
+### UnifiedSKG - HKU
 
 [Paper/Project Link](https://arxiv.org/pdf/2201.05966.pdf)
 
@@ -96,7 +98,7 @@ UnifiedSKG在Text-to-Text的框架中加入了knowledge grounding，也就是在
 
 UnifiedSKG代表了LLMs领域中尝试使用结构化知识增强性能的一个方向。
 
-## Flan Collection - Google
+### Flan Collection - Google
 
 - [Paper/Project Link](https://arxiv.org/pdf/2301.13688.pdf)
 - [Dataset Link](https://github.com/google-research/FLAN/tree/main/flan/v2)
@@ -105,7 +107,7 @@ Google在这个项目中将自己的Flan 2021数据与一些开源的instruction
 
 在Flan Collection的论文中，google也总结了Flan系列模型训练/推理中的一些关键点，可能会有不错的参考价值。
 
-## InstructDial
+### InstructDial
 
 - [Paper/Project Link](https://arxiv.org/pdf/2205.12673.pdf)
 
@@ -113,7 +115,7 @@ Google在这个项目中将自己的Flan 2021数据与一些开源的instruction
 
 InstructDial是在特定的一种任务类型上进行指令微调的尝试。实验结果表明，在对话指令数据上微调后，模型在对话任务上的表现强于在超大规模任务集上的结果。
 
-## Alpaca -Stanford
+### Alpaca -Stanford
 
 - [Paper/Project Link](https://github.com/tatsu-lab/stanford_alpaca)
 
@@ -123,8 +125,8 @@ Stanford release的Alpaca是在Meta Ai LLaMA模型基础上进行instruct-tuning
 
 Alpaca使用GPT-3.5自动生成了52k的指令数据，并用其微调LLaMA模型。实验结果表明，其能够达到/甚至超过GPT-3.5在一些任务上的效果。
 
-
 ## Contributing
+
 Our purpose is to make this repo even better. If you are interested in contributing, please refer to HERE for instructions in contribution.
 
 ## License
