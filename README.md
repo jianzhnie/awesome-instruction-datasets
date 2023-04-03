@@ -1,8 +1,8 @@
 
 <div align="center">
 
-# Awesome Prompt datasets [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
-
+# Awesome Prompt datasets 
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 </div>
 
 <div align="center">
@@ -10,10 +10,34 @@
 [中文](README_zh.md) | English
 </div>
 
+## Contents
+- [Awesome Prompt datasets](#awesome-prompt-datasets)
+  - [Contents](#contents)
+  - [Introduction](#introduction)
+  - [Summary](#summary)
+  - [The template](#the-template)
+  - [The Prompt Data List](#the-prompt-data-list)
+    - [Natural Instruction / Super-Natural Instruction](#natural-instruction--super-natural-instruction)
+    - [PromptSource / P3](#promptsource--p3)
+    - [xMTF - BigScience](#xmtf---bigscience)
+    - [HH-RLHF - Anthropic](#hh-rlhf---anthropic)
+    - [Unnatural Instruction](#unnatural-instruction)
+    - [Self-Instruct](#self-instruct)
+    - [UnifiedSKG - HKU](#unifiedskg---hku)
+    - [Flan Collection - Google](#flan-collection---google)
+    - [InstructDial](#instructdial)
+    - [Alpaca -Stanford](#alpaca--stanford)
+    - [Instruction in the Wild](#instruction-in-the-wild)
+  - [Contributing](#contributing)
+  - [License](#license)
+
+
+## Introduction
+"Welcome to 'awesome-prompt-datasets', a comprehensive collection of high-quality prompts for natural language processing tasks. With 'awesome-prompt-dataset', you can accelerate your research and development in NLP and unlock new opportunities for innovation. Let's explore the possibilities together!"
 
 ## Summary
 
-| Datasets/Projects                            | Organization/Author | Introduction                                                                                                           |
+| Datasets/Projects                               | Organization/Author | Introduction                                                                                                           |
 | :---------------------------------------------- | :------------------ | :--------------------------------------------------------------------------------------------------------------------- |
 | Natural Instruction / Super-Natural Instruction | Allen AI            | Contains instruction data of 61 NLP tasks (Natural Instruction) and 1600 NLP tasks (Super-Natural Instruction)         |
 | PromptSource / P3                               | BigScience          | More than 2,000 prompt templates (PromptSource) containing 270 NLP tasks and a P3 dataset with a scale between 100M-1B |
@@ -40,7 +64,7 @@ Some introductions ...
 ```
 
 
-## The List
+## The Prompt Data List
 
 ### Natural Instruction / Super-Natural Instruction
 
@@ -110,9 +134,9 @@ Concepts such as Task pool and Quality filtering were introduced to partially al
 
 ### UnifiedSKG - HKU
 
-[Paper/Project Link](https://arxiv.org/pdf/2201.05966.pdf)
+- [Paper/Project Link](https://arxiv.org/pdf/2201.05966.pdf)
 
-[DataSet Link](https://unifiedskg.com/)
+- [DataSet Link](https://unifiedskg.com/)
 
 UnifiedSKG has added knowledge grounding in the Text-to-Text framework, that is, in the prompt-output framework, it has added structured data for assistance.
 
@@ -144,6 +168,19 @@ InstructDial is an attempt to fine-tune instructions on a specific task type. Ex
 The Alpaca of the Stanford release is a fine-tuning model for instruct-tuning based on the Meta Ai LLaMA model.
 
 Alpaca automatically generated 52k instruction data using GPT-3.5 and used it to fine-tune the LLaMA model. Experimental results show that it can reach or even exceed the performance of GPT-3.5 on some tasks.
+
+
+### Instruction in the Wild
+- [Paper/Project Link](https://github.com/hpcaitech/ColossalAI/tree/main/applications/Chat)
+- [Dataset Link](https://github.com/XueFuzhao/InstructionWild)
+  
+Instruction Tuning is a key component of ChatGPT. OpenAI used their user-based Instruction dataset, but unfortunately, this dataset is not open-sourced. Self-Instruct released a small instruction dataset including 175 instructions written by human labors. Standford Alpaca Team generated 52K instructions by text-davinci-003 model based on the the 175 seed instructions above.
+
+This project targets on a larger and more diverse instruction dataset. To this end, we collected 429 instructions from ChatGPT usage screenshots and released both English and Chinese versions. We found these instructions are very diverse even if the scale is still small. We follow Alpaca to generate 52K instructions and their responses. All data can be found in data dir.
+
+Note: This is an ongoing project. We are still collecting and improving our data. We release this dataset as early as possible to speedup our LLM research. We will also release a whitepaper soon.
+
+
 
 ## Contributing
 
