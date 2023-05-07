@@ -73,29 +73,30 @@ With 'awesome-prompt-dataset', you can accelerate your research and development 
 
 # Summary
 
-|                      Datasets/Projects                       |           Organization/Author           | Language | Introduction                                                 | Num Rows |
-| :----------------------------------------------------------: | :-------------------------------------: | :------: | ------------------------------------------------------------ | :------: |
-| [ Allen AI/Super-Natural Instruction](https://instructions.apps.allenai.org/) |                Allen AI                 | English  | Contains instruction data of 61 NLP tasks (Natural Instruction) and 1600 NLP tasks (Super-Natural Instruction) |    NA    |
-| [PromptSource / P3](https://huggingface.co/datasets/bigscience/P3) |               BigScience                | English  | More than 2,000 prompt templates (PromptSource) containing 270 NLP tasks and a P3 dataset with a scale between 100M-1B |    NA    |
-| [BigScience/xMTF](https://github.com/bigscience-workshop/xmtf) |               BigScience                | English  | Contains 13 NLP tasks and multilingual prompt data in 46 languages |    NA    |
-| [Anthropic/HH-RLHF](https://huggingface.co/datasets/Anthropic/hh-rlhf) |                Anthropic                | English  | RLHF dataset designed to train Helpful and Harmless (HH) LLMs |          |
-| [Unnatural Instruction](https://github.com/orhonovich/unnatural-instructions) |               orhonovich                |          | Use GPT3 to generate 64k instruction prompt data, and get 240k instruction data after rewriting |  240 K   |
-|  [Self-Instruct](https://github.com/yizhongw/self-instruct)  |                yizhongw                 | English  | Using LLMs to generate prompts for instruction-tuning, introducing concepts such as Task pool and Quality filtering |          |
-|         [UnifiedSKG - HKU](https://unifiedskg.com/)          |                   HKU                   | English  | Add knowledge grounding to Text-to-Text framework, serialize and embed structured data into prompt |          |
-| [Google/Flan Collection](https://github.com/google-research/FLAN/tree/main/flan/v2) |                 Google                  | English  | Merge Flan 2021 data with some open source instruction data (P3, super-natural instruction, etc.) |          |
-|                         InstructDial                         |              prakharguptaz              | English  | Attempts to fine-tune instructions on a specific task type (dialogue instructions) |          |
-|                            Alpaca                            |                Stanford                 |          | 53k data, very powerful performance (GPT-3.5 level).         |          |
-| [webgpt_comparisons](https://huggingface.co/datasets/openai/webgpt_comparisons) |                 Openai                  | English  | In the [WebGPT paper](https://arxiv.org/abs/2112.09332), the authors trained a reward model from human feedback. They used the reward model to train a long form question answering model to align with human preferences. This is the dataset of all comparisons that were marked as suitable for reward modeling by the end of the WebGPT project. There are 19,578 comparisons in total. |  19,578  |
-|    [SHP](https://huggingface.co/datasets/stanfordnlp/SHP)    |               stanfordnlp               | English  | SHP is a dataset of 385K collective human preferences over responses to questions/instructions in 18 different subject areas, from cooking to legal advice. The preferences are meant to reflect the helpfulness of one response over another, and are intended to be used for training RLHF reward models and NLG evaluation models (e.g., [SteamSHP](https://huggingface.co/stanfordnlp/SteamSHP-flan-t5-xl)). |  349 K   |
-| [rlhf-reward-datasets](https://huggingface.co/datasets/yitingxie/rlhf-reward-datasets) |                yitingxie                | English  |                                                              |  76.3 k  |
-| [Dahoas/full-hh-rlhf](https://huggingface.co/datasets/Dahoas/full-hh-rlhf) |                 Dahoas                  | English  | Anthropic's HH dataset reformatted into prompt, chosen, rejected samples. |  112 k   |
-| [Dahoas/synthetic-instruct-gptj-pairwise](https://huggingface.co/datasets/Dahoas/synthetic-instruct-gptj-pairwise) | Dahoas/synthetic-instruct-gptj-pairwise | English  |                                                              |          |
-| [Dahoas/rm-static](https://huggingface.co/datasets/Dahoas/rm-static) |            Dahoas/rm-static             | English  | Split of [hh-static](https://huggingface.co/datasets/Dahoas/static-hh) used for training reward models after supervised fine-tuning. |  76.3K   |
-| [Hello-SimpleAI/HC3-Chinese](https://huggingface.co/datasets/Hello-SimpleAI/HC3-Chinese) |             Hello-SimpleAI              | Chinese  | We propose the first human-ChatGPT comparison corpus, named HC3 dataset. This dataset is introduced in our paper:  Paper: [How Close is ChatGPT to Human Experts? Comparison Corpus, Evaluation, and Detection](https://arxiv.org/abs/2301.07597) |          |
-| [Hello-SimpleAI/HC3](https://huggingface.co/datasets/Hello-SimpleAI/HC3) |             Hello-SimpleAI              | English  |                                                              |  24.3K   |
-| [Cohere/miracl-zh-queries-22-12](https://huggingface.co/datasets/Cohere/miracl-zh-queries-22-12) |                 Cohere                  | Chinese  |                                                              |          |
-| [wangrui6/Zhihu-KOL](https://huggingface.co/datasets/wangrui6/Zhihu-KOL) |                wangrui6                 | Chinese  | Zhihu data for training Open Assitant                        |          |
-
+|                      Datasets/Projects                       |              Organization/Author               | Language | Introduction                                                 | Num Rows |
+| :----------------------------------------------------------: | :--------------------------------------------: | :------: | ------------------------------------------------------------ | :------: |
+| [ Allen AI/Super-Natural Instruction](https://instructions.apps.allenai.org/) |                    Allen AI                    | English  | Contains instruction data of 61 NLP tasks (Natural Instruction) and 1600 NLP tasks (Super-Natural Instruction) |    NA    |
+| [PromptSource / P3](https://huggingface.co/datasets/bigscience/P3) |                   BigScience                   | English  | More than 2,000 prompt templates (PromptSource) containing 270 NLP tasks and a P3 dataset with a scale between 100M-1B |    NA    |
+| [BigScience/xMTF](https://github.com/bigscience-workshop/xmtf) |                   BigScience                   | English  | Contains 13 NLP tasks and multilingual prompt data in 46 languages |    NA    |
+| [Anthropic/HH-RLHF](https://huggingface.co/datasets/Anthropic/hh-rlhf) |                   Anthropic                    | English  | RLHF dataset designed to train Helpful and Harmless (HH) LLMs |          |
+| [Unnatural Instruction](https://github.com/orhonovich/unnatural-instructions) |                   orhonovich                   |          | Use GPT3 to generate 64k instruction prompt data, and get 240k instruction data after rewriting |  240 K   |
+|  [Self-Instruct](https://github.com/yizhongw/self-instruct)  |                    yizhongw                    | English  | Using LLMs to generate prompts for instruction-tuning, introducing concepts such as Task pool and Quality filtering |          |
+|         [UnifiedSKG - HKU](https://unifiedskg.com/)          |                      HKU                       | English  | Add knowledge grounding to Text-to-Text framework, serialize and embed structured data into prompt |          |
+| [Google/Flan Collection](https://github.com/google-research/FLAN/tree/main/flan/v2) |                     Google                     | English  | Merge Flan 2021 data with some open source instruction data (P3, super-natural instruction, etc.) |          |
+|                         InstructDial                         |                 prakharguptaz                  | English  | Attempts to fine-tune instructions on a specific task type (dialogue instructions) |          |
+|                            Alpaca                            |                    Stanford                    |          | 53k data, very powerful performance (GPT-3.5 level).         |          |
+| [webgpt_comparisons](https://huggingface.co/datasets/openai/webgpt_comparisons) |                     Openai                     | English  | In the [WebGPT paper](https://arxiv.org/abs/2112.09332), the authors trained a reward model from human feedback. They used the reward model to train a long form question answering model to align with human preferences. This is the dataset of all comparisons that were marked as suitable for reward modeling by the end of the WebGPT project. There are 19,578 comparisons in total. |  19,578  |
+|    [SHP](https://huggingface.co/datasets/stanfordnlp/SHP)    |                  stanfordnlp                   | English  | SHP is a dataset of 385K collective human preferences over responses to questions/instructions in 18 different subject areas, from cooking to legal advice. The preferences are meant to reflect the helpfulness of one response over another, and are intended to be used for training RLHF reward models and NLG evaluation models (e.g., [SteamSHP](https://huggingface.co/stanfordnlp/SteamSHP-flan-t5-xl)). |  349 K   |
+| [rlhf-reward-datasets](https://huggingface.co/datasets/yitingxie/rlhf-reward-datasets) |                   yitingxie                    | English  |                                                              |  76.3 k  |
+| [Dahoas/full-hh-rlhf](https://huggingface.co/datasets/Dahoas/full-hh-rlhf) |                     Dahoas                     | English  | Anthropic's HH dataset reformatted into prompt, chosen, rejected samples. |  112 k   |
+| [Dahoas/synthetic-instruct-gptj-pairwise](https://huggingface.co/datasets/Dahoas/synthetic-instruct-gptj-pairwise) |    Dahoas/synthetic-instruct-gptj-pairwise     | English  |                                                              |          |
+| [Dahoas/rm-static](https://huggingface.co/datasets/Dahoas/rm-static) |                Dahoas/rm-static                | English  | Split of [hh-static](https://huggingface.co/datasets/Dahoas/static-hh) used for training reward models after supervised fine-tuning. |  76.3K   |
+| [Hello-SimpleAI/HC3-Chinese](https://huggingface.co/datasets/Hello-SimpleAI/HC3-Chinese) |                 Hello-SimpleAI                 | Chinese  | We propose the first human-ChatGPT comparison corpus, named HC3 dataset. This dataset is introduced in our paper:  Paper: [How Close is ChatGPT to Human Experts? Comparison Corpus, Evaluation, and Detection](https://arxiv.org/abs/2301.07597) |          |
+| [Hello-SimpleAI/HC3](https://huggingface.co/datasets/Hello-SimpleAI/HC3) |                 Hello-SimpleAI                 | English  |                                                              |  24.3K   |
+| [Cohere/miracl-zh-queries-22-12](https://huggingface.co/datasets/Cohere/miracl-zh-queries-22-12) |                     Cohere                     | Chinese  |                                                              |          |
+| [wangrui6/Zhihu-KOL](https://huggingface.co/datasets/wangrui6/Zhihu-KOL) |                    wangrui6                    | Chinese  | Zhihu data for training Open Assitant                        |          |
+| [YeungNLP/firefly-train-1.1M](https://huggingface.co/datasets/YeungNLP/firefly-train-1.1M) |                    YeungNLP                    | Chinese  | firefly-train-1.1M：包含了23个常见的中文数据集，对于每个任务，由人工书写若干种指令模板，保证数据的高质量与丰富度，数据量为115万 。此数据应用于应用于项目：[Firefly（流萤）: 中文对话式大语言模型](https://github.com/yangjianxin1/Firefly) |   115M   |
+|       [BelleGroup](https://huggingface.co/BelleGroup)        | 项目地址：https://github.com/LianjiaTech/BELLE |          | BELLE Group Dataset : 链家基于ChatGPT用self-instruct生成的中文指令数据集，其中还包括中文数学题数据和多轮对话数据。 |          |
 
 # The template
 
@@ -315,6 +316,53 @@ The train/validation/test splits were created by splitting the post IDs of a sub
 - Data generation model: N/A
 - paper: [OpenAssistant Conversations - Democratizing Large Language Model Alignment](https://drive.google.com/file/d/10iR5hKwFqAKhL3umx8muOWSRm7hs5FqX/view)
 - Cost: N/A
+
+## BELLE/data/1.5M
+
+- 下载地址: [https://github.com/LianjiaTech/BELLE/tree/main/data/1.5M](https://github.com/LianjiaTech/BELLE/tree/main/data/1.5M)
+- 数据量: 1.5M
+- 生成方式: self-instruct，使用了中文种子任务，以及openai的text-davinci-003接口
+- 涉及任务: 包含175个种子任务，[https://github.com/LianjiaTech/BELLE/blob/main/data/1.5M/zh_seed_tasks.json](https://github.com/LianjiaTech/BELLE/blob/main/data/1.5M/zh_seed_tasks.json)
+- 数据示例: [https://huggingface.co/datasets](https://huggingface.co/datasets/BelleGroup/train_0.5M_CN)
+
+## alpaca_chinese_dataset
+
+- 下载地址: [https://github.com/hikariming/alpaca_chinese_dataset](https://github.com/hikariming/alpaca_chinese_dataset)
+- 数据量: 52k
+- 生成方式: 借助chatgpt对原始的[stanford_alpaca](https://github.com/tatsu-lab/stanford_alpaca)做机器翻译，并加入人工校验来保证质量
+- 涉及任务: 与原始的[stanford_alpaca](https://github.com/tatsu-lab/stanford_alpaca)一致，可以在原项目的[seed_task.json](https://github.com/tatsu-lab/stanford_alpaca/blob/main/seed_tasks.jsonl)中查到全部任务
+
+## Med-ChatGLM/data
+
+- 下载地址: [https://github.com/SCIR-HI/Med-ChatGLM](https://github.com/SCIR-HI/Med-ChatGLM)
+- 数据量: 7k
+- 生成方式: 利用GPT3.5接口围绕医学知识库构建问答数据，并设置了多种Prompt形式来充分利用知识
+- 涉及任务: 医学领域相关的问答，包含并发症，高危因素，组织学检查，临床症状，药物治疗，辅助治疗
+
+## pCLUE
+
+- 下载地址: [https://github.com/CLUEbenchmark/pCLUE](https://github.com/CLUEbenchmark/pCLUE)
+- 数据量: 1.2M
+- 生成方式: 通过原有的NLP任务数据集，结合特定的[prompt](https://www.zhihu.com/search?q=prompt&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra={"sourceType"%3A"article"%2C"sourceId"%3A"624084039"})模板生成
+- 涉及任务: 包含9个NLP数据集，涉及的NLP任务有[文本分类](https://www.zhihu.com/search?q=文本分类&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra={"sourceType"%3A"article"%2C"sourceId"%3A"624084039"})/自然语言推理/语义匹配/[指代消解](https://www.zhihu.com/search?q=指代消解&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra={"sourceType"%3A"article"%2C"sourceId"%3A"624084039"})/关键词识别/阅读理解
+
+### COIG
+
+- 下载地址: [https://huggingface.co/datasets/BAAI/COIG](https://huggingface.co/datasets/BAAI/COIG)
+
+- 数据量: 
+
+- - Translated Instructions (67,798)
+  - Exam Instructions (63,532)
+  - Human Value Alignment Instructions (34,471)
+  - Counterfactural Correction Multi-round Chat (13,653)
+  - Leetcode Instructions (11,737)
+
+- 生成方式: 融合了多个领域的数据，具体可以参考论文[Chinese Open Instruction Generalist: A Preliminary Release](https://arxiv.org/abs/2304.07987)
+
+https://github.com/FreedomIntelligence/InstructionZoo
+
+https://github.com/lightaime/camel
 
 # Reinforcement Learning from Human Feedback (RLHF) Datasets
 
