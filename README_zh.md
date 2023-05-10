@@ -28,7 +28,7 @@
 - [(MOSS)|0.6M](https://github.com/OpenLMLab/MOSS/tree/main/SFT_data)
 ## Datasets
 
-## [(JosephusCheung/GuanacoDataset)|534K](https://huggingface.co/datasets/JosephusCheung/GuanacoDataset)
+ ## [(JosephusCheung/GuanacoDataset)|534K](https://huggingface.co/datasets/JosephusCheung/GuanacoDataset)
 
  - The dataset for the Guanaco model is designed to enhance the multilingual capabilities and address various linguistic tasks. It builds upon the 175 tasks from the Alpaca model by providing rewrites of seed tasks in different languages and adding new tasks specifically designed for English grammar analysis, natural language understanding, cross-lingual self-awareness, and explicit content recognition. The dataset comprises a total of 534,530 entries. 
 
