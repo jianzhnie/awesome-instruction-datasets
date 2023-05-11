@@ -6,9 +6,11 @@
 </div>
 
 <div align="center">
+
 [English](README.md) | 中文
 </div>
 
+## 简介
 
 这是一个用于中文指令调整的 AWESOME 数据集合集。
 
