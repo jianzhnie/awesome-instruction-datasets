@@ -1,7 +1,8 @@
 
 <div align="center">
-# Awesome Prompt datasets  for Chinese[![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
+# Awesome Prompt datasets 
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 </div>
 
 <div align="center">
