@@ -146,7 +146,7 @@ Referring to [this](https://github.com/yaodongC/awesome-instruction-dataset) ([@
 |                                                              |                                                              |                               |          |       |       |      |                                                              |                                                              |                                                              |
 |                                                              |                                                              |                               |          |       |       |      |                                                              |                                                              |                                                              |
 
-# RLHF Dataset
+# RLHF Datasets
 
 ## Statistics
 
@@ -174,7 +174,7 @@ Some introductions ...
 
 ```
 
-# The Prompt Data List
+# The Prompt Datasets List
 
 ## [Alpaca -Stanford](https://github.com/tatsu-lab/stanford_alpaca)
 
@@ -374,7 +374,7 @@ https://github.com/FreedomIntelligence/InstructionZoo
 
 https://github.com/lightaime/camel
 
-# The (RLHF) Datasets List
+# The RLHF Datasets List
 
 ## [Anthropic/hh-rlhf](https://huggingface.co/datasets/Anthropic/hh-rlhf)
 
