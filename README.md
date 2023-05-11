@@ -14,15 +14,16 @@
 - [Awesome Prompt datasets](#awesome-prompt-datasets)
 - [Contents](#contents)
 - [Introduction](#introduction)
-- [Summary](#summary)
+- [Prompt Datasets](#prompt-datasets)
+  - [Statistics](#statistics)
+- [RLHF Dataset](#rlhf-dataset)
+  - [Statistics](#statistics-1)
 - [The template](#the-template)
 - [The Prompt Data List](#the-prompt-data-list)
   - [Alpaca -Stanford](#alpaca--stanford)
   - [Instruction in the Wild](#instruction-in-the-wild)
   - [JosephusCheung/GuanacoDataset](#josephuscheungguanacodataset)
   - [Stanford Human Preferences Dataset (SHP)](#stanford-human-preferences-dataset-shp)
-    - [Dataset Desig](#dataset-desig)
-      - [Domain Selection](#domain-selection)
   - [Hello-SimpleAI/HC3](#hello-simpleaihc3)
   - [Hello-SimpleAI/HC3-Chinese](#hello-simpleaihc3-chinese)
   - [allenai/prosocial-dialog](#allenaiprosocial-dialog)
@@ -38,7 +39,12 @@
   - [Instruction-Tuning-with-GPT-4/GPT-4-LLM](#instruction-tuning-with-gpt-4gpt-4-llm)
   - [databrickslabs/dolly](#databrickslabsdolly)
   - [OpenAssistant/oasst1](#openassistantoasst1)
-- [Reinforcement Learning from Human Feedback (RLHF) Datasets](#reinforcement-learning-from-human-feedback-rlhf-datasets)
+  - [BELLE/data/1.5M](#belledata15m)
+  - [alpaca\_chinese\_dataset](#alpaca_chinese_dataset)
+  - [Med-ChatGLM/data](#med-chatglmdata)
+  - [pCLUE](#pclue)
+  - [COIG](#coig)
+- [The (RLHF) Datasets List](#the-rlhf-datasets-list)
   - [Anthropic/hh-rlhf](#anthropichh-rlhf)
   - [HuggingFaceH4/stack-exchange-preferences](#huggingfaceh4stack-exchange-preferences)
   - [stanfordnlp/SHP](#stanfordnlpshp)
@@ -58,10 +64,8 @@
   - [OpenAI Summarization.](#openai-summarization)
 - [Datasets without license information](#datasets-without-license-information)
   - [alespalla/chatbot\_instruction\_prompts](#alespallachatbot_instruction_prompts)
-- [Open-source Codebase For Instruction-following LLMs](#open-source-codebase-for-instruction-following-llms)
-  - [nichtdax/awesome-totally-open-chatgpt](#nichtdaxawesome-totally-open-chatgpt)
-  - [Contributing](#contributing)
-  - [License](#license)
+- [Contributing](#contributing)
+- [License](#license)
 
 
 # Introduction
@@ -71,7 +75,7 @@ Instruction Tuning / Reinforcement Learning from Human Feedback (RLHF) Dataset i
 
 With 'awesome-prompt-dataset', you can accelerate your research and development in NLP and unlock new opportunities for innovation. Let's explore the possibilities together!"
 
-# Summary
+# Prompt Datasets
 
 Referring to [this](https://github.com/yaodongC/awesome-instruction-dataset) ([@yaodongC](https://github.com/yaodongC)), we labeled each collected dataset according to the following rules:
 
@@ -95,71 +99,65 @@ Referring to [this](https://github.com/yaodongC/awesome-instruction-dataset) ([@
 
 ## Statistics
 
-| Project                                                      | Datasets                                                     | Nums     | Lang  | Task  | Gen  | Type                                                         | Src                                                          | Url                                                          |
-| :----------------------------------------------------------- | ------------------------------------------------------------ | :------- | :---- | :---- | :--- | :----------------------------------------------------------- | :----------------------------------------------------------- | :----------------------------------------------------------- |
-| [Chain of Thought](https://github.com/google-research/FLAN)  |                                                              | 74771    | EN/CN | MT    | HG   | instruct with cot reasoning                                  | annotating CoT on existing data                              | [download](https://huggingface.co/datasets/QingyiSi/Alpaca-CoT/tree/main/Chain-of-Thought) |
-| [GPT4all](https://github.com/nomic-ai/gpt4all)               | [nomic-ai/gpt4all-j-prompt-generations](https://huggingface.co/datasets/nomic-ai/gpt4all-j-prompt-generations) | 806199   | EN    | MT    | COL  | code, storys and dialogs                                     | distillation from GPT-3.5-turbo                              | [download](https://huggingface.co/datasets/QingyiSi/Alpaca-CoT/tree/main/GPT4all) |
-| [GPTeacher](https://github.com/teknium1/GPTeacher)           | [GPT-4 General-Instruct ](https://github.com/teknium1/GPTeacher/tree/main/Instruct)\|[Roleplay-Instruct](https://github.com/teknium1/GPTeacher/tree/main/Roleplay) \|[Code-Instruct ](https://github.com/teknium1/GPTeacher/tree/main/Codegen)\| [Toolformer](https://github.com/teknium1/GPTeacher/tree/main/Toolformer) | 29013    | EN    | MT    | SI   | general, roleplay, toolformer                                | GPT-4 & toolformer                                           | [download](https://huggingface.co/datasets/QingyiSi/Alpaca-CoT/tree/main/GPTeacher) |
-| [Guanaco](https://huggingface.co/datasets/JosephusCheung/GuanacoDataset) | [JosephusCheung/GuanacoDataset](https://huggingface.co/datasets/JosephusCheung/GuanacoDataset) | 534610   | ML    | MT    | SI   | various linguistic tasks                                     | text-davinci-003                                             | [download](https://huggingface.co/datasets/QingyiSi/Alpaca-CoT/tree/main/Guanaco) |
-| [HC3](https://huggingface.co/datasets/Hello-SimpleAI/HC3)    | [Hello-SimpleAI/HC3](https://huggingface.co/datasets/Hello-SimpleAI/HC3) | 37175    | EN/CN | TS    | MIX  | dialogue evaluation                                          | human or ChatGPT                                             | [download](https://huggingface.co/datasets/QingyiSi/Alpaca-CoT/tree/main/HC3) |
-| [HC3-Chinese](https://huggingface.co/datasets/Hello-SimpleAI/HC3-Chinese) | [Hello-SimpleAI/HC3-Chinese](https://huggingface.co/datasets/Hello-SimpleAI/HC3-Chinese) |          | CN    | TS    | MIX  | dialogue evaluation                                          | human or ChatGPT                                             |                                                              |
-| [alpaca](https://github.com/tatsu-lab/stanford_alpaca)       | [tatsu-lab/alpaca](https://huggingface.co/datasets/tatsu-lab/alpaca) | 52002    | EN    | MT    | SI   | general instruct                                             | text-davinci-003                                             | [download](https://huggingface.co/datasets/QingyiSi/Alpaca-CoT/tree/main/alpaca) |
-| [Natural Instructions](https://github.com/allenai/natural-instructions) | [Natural-Instructions - v1 61 task_](https://instructions.apps.allenai.org/#:~:text=Download%20Natural%2DInstructions%20%2D%20v1.1)\|[Natural-Instructions - v1 1.5k task](https://instructions.apps.allenai.org/#:~:text=Natural%2DInstructions%20%2D%20v2-,.,-x) | 5040134  | ML    | MT    | COL  | diverse nlp tasks                                            | human annotated datasets collection                          | [download](https://huggingface.co/datasets/QingyiSi/Alpaca-CoT/tree/main/Natural-Instructions) |
-| [belle_cn](https://huggingface.co/BelleGroup)                | [BelleGroup/train_1M_CN](https://huggingface.co/datasets/bellegroup/train_1M_CN) \|[BelleGroup/train_0.5M_CN](https://huggingface.co/datasets/bellegroup/train_0.5M_CN) | 1079517  | CN    | TS/MT | SI   | general, mathematical reasoning, dialogue                    | text-davinci-003                                             | [download](https://huggingface.co/datasets/QingyiSi/Alpaca-CoT/tree/main/belle_cn) |
-| [instinwild](https://github.com/XueFuzhao/InstructionWild)   | [instinwild_ch](https://github.com/XueFuzhao/InstructionWild/tree/main/data) \| [instinwild_en](https://github.com/XueFuzhao/InstructionWild/tree/main/data) | 52191    | EN/CN | MT    | SI   | generation, open-qa, mind-storm                              | text-davinci-003                                             | [download](https://huggingface.co/datasets/QingyiSi/Alpaca-CoT/tree/main/instinwild) |
-| [prosocial dialog](https://huggingface.co/datasets/allenai/prosocial-dialog) | [allenai/prosocial-dialog](https://huggingface.co/datasets/allenai/prosocial-dialog) | 165681   | EN    | TS    | MIX  | dialogue                                                     | GPT-3 rewrites questions + humans feedback manually          | [download](https://huggingface.co/datasets/QingyiSi/Alpaca-CoT/tree/main/prosocial-dialog) |
-| [finance_en](https://huggingface.co/datasets/gbharti/finance-alpaca) | [gbharti/finance-alpaca](https://huggingface.co/datasets/allenai/prosocial-dialog) | 68912    | EN    | TS    | COL  | financial related qa                                         | GPT3.5                                                       | [download](https://huggingface.co/datasets/QingyiSi/Alpaca-CoT/tree/main/) |
-| [xP3](https://huggingface.co/datasets/bigscience/xP3)        | [gbharti/finance-alpaca](https://huggingface.co/datasets/bigscience/xP3) | 78883588 | ML    | MT    | COL  | a collection of prompts & datasets across 46 of languages & 16 NLP tasks | human annotated datasets collection                          | [download](https://huggingface.co/datasets/QingyiSi/Alpaca-CoT/tree/main/xP3) |
-| [firefly](https://github.com/yangjianxin1/Firefly)           | [YeungNLP/firefly-train-1.1M](https://huggingface.co/datasets/YeungNLP/firefly-train-1.1M) | 1649398  | CN    | MT    | COL  | 23 nlp tasks                                                 | human annotated datasets collection                          | [download](https://huggingface.co/datasets/QingyiSi/Alpaca-CoT/tree/main/firefly) |
-| [instruct](https://huggingface.co/datasets/swype/instruct)   | [swype/instruct](https://huggingface.co/datasets/swype/instruct) | 888969   | EN    | MT    | COL  | augmented of GPT4All, Alpaca, open-source Meta datasets      | augmentation performed using the advanced NLP tools provided by AllenAI | [download](https://huggingface.co/datasets/QingyiSi/Alpaca-CoT/tree/main/instruct) |
-| [Code Alpaca](https://github.com/sahil280114/codealpaca)     | [sahil280114/codealpaca](https://github.com/sahil280114/codealpaca/blob/master/data/code_alpaca_20k.json) | 20022    | EN    | TS    | SI   | code generation, editing, optimization                       | text-davinci-003                                             | [download](https://huggingface.co/datasets/QingyiSi/Alpaca-CoT/tree/main/CodeAlpaca) |
-| [Alpaca_GPT4](https://github.com/Instruction-Tuning-with-GPT-4/GPT-4-LLM) | [alpaca_gpt4_data](https://github.com/Instruction-Tuning-with-GPT-4/GPT-4-LLM/blob/main/data/alpaca_gpt4_data.json)\|[alpaca_gpt4_data_zh](https://github.com/Instruction-Tuning-with-GPT-4/GPT-4-LLM/blob/main/data/alpaca_gpt4_data_zh.json) \|[comparison_data_v2](https://github.com/Instruction-Tuning-with-GPT-4/GPT-4-LLM/blob/main/data/comparison_data_v2.json) | 52002    | EN/CN | MT    | SI   | general instruct                                             | generated by GPT-4 using Alpaca                              | [download](https://huggingface.co/datasets/QingyiSi/Alpaca-CoT/tree/main/alpacaGPT4) |
-| [webGPT](https://huggingface.co/datasets/openai/webgpt_comparisons) | [openai/webgpt_comparisons](https://huggingface.co/datasets/openai/webgpt_comparisons) | 18994    | EN    | TS    | MIX  | information retrieval (IR) QA                                | fine-tuned GPT-3, each instruction has two outputs, select better one | [download](https://huggingface.co/datasets/QingyiSi/Alpaca-CoT/tree/main/webGPT) |
-| [dolly 2.0](https://github.com/databrickslabs/dolly)         | [databricks/databricks-dolly-15k](https://huggingface.co/datasets/databricks/databricks-dolly-15k) | 15015    | EN    | TS    | HG   | closed QA , summarization and etc, Wikipedia as references   | human annotated                                              | [download](https://huggingface.co/datasets/QingyiSi/Alpaca-CoT/tree/main/dolly) |
-| [baize](https://github.com/project-baize/baize-chatbot)      | [alpaca_chat_data.json](https://github.com/project-baize/baize-chatbot/tree/main/data) \|[medical_chat_data.json](https://github.com/project-baize/baize-chatbot/blob/main/data/medical_chat_data.json) \| [quora_chat_data.json](https://github.com/project-baize/baize-chatbot/blob/main/data/quora_chat_data.json) \|[stackoverflow_chat_data.json](https://github.com/project-baize/baize-chatbot/blob/main/data/stackoverflow_chat_data.json) | 653699   | EN    | MT    | COL  | a collection from Alpaca, Quora, StackOverFlow and MedQuAD questions | human annotated datasets collection                          | [download](https://huggingface.co/datasets/QingyiSi/Alpaca-CoT/tree/main/baize) |
-| [hh-rlhf](https://github.com/anthropics/hh-rlhf)             | [Anthropic/hh-rlhf](https://huggingface.co/datasets/anthropic/hh-rlhf) | 284517   | EN    | TS    | MIX  | dialogue                                                     | dialog between human and RLHF models                         | [download](https://huggingface.co/datasets/QingyiSi/Alpaca-CoT/tree/main/hh-rlhf) |
-| [OIG(part)](https://laion.ai/blog/oig-dataset/)              | [laion/OIG](https://huggingface.co/datasets/laion/oig)       | 49237    | EN    | MT    | COL  | created from various tasks, such as question and answering   | using data augmentation, human annotated datasets collection | [download](https://huggingface.co/datasets/QingyiSi/Alpaca-CoT/tree/main/OIG) |
-| [GAOKAO](https://github.com/OpenLMLab/GAOKAO-Bench)          | [Fill-in-the-blank_Questions](https://github.com/OpenLMLab/GAOKAO-Bench/tree/main/data/Fill-in-the-blank_Questions) \| [Multiple-choice_Questions](https://github.com/OpenLMLab/GAOKAO-Bench/tree/main/data/Multiple-choice_Questions) \| [Open-ended_Questions](https://github.com/OpenLMLab/GAOKAO-Bench/tree/main/data/Open-ended_Questions) | 2785     | CN    | MT    | COL  | Multiple-choice, Fill-in-the-blank and Open-ended questions from examination | human annotated                                              | [download](https://huggingface.co/datasets/QingyiSi/Alpaca-CoT/tree/main/GAOKAO) |
-| [camel](https://github.com/lightaime/camel)                  | [camel-ai/code](https://huggingface.co/datasets/camel-ai/ai_society)\|[camel-ai/biology](https://huggingface.co/datasets/camel-ai/biology) \|[camel-ai/physics](https://huggingface.co/datasets/camel-ai/physics) \|[camel-ai/chemistry](https://huggingface.co/datasets/camel-ai/chemistry) \|[camel-ai/math](https://huggingface.co/datasets/camel-ai/math) | 760620   | EN    | MT    | SI   | Role-Playing conversations in AI Society, Code, Math, Physics, Chemistry, Biolog | gpt-3.5-turbo                                                | [download](https://huggingface.co/datasets/QingyiSi/Alpaca-CoT/tree/main/camel) |
-| [FLAN-Muffin](https://huggingface.co/datasets/Muennighoff/flan) | [Muennighoff/flan](https://huggingface.co/datasets/Muennighoff/flan) | 1764800  | EN    | MT    | COL  | 60 nlp tasks                                                 | human annotated datasets collection                          | [download](https://huggingface.co/datasets/QingyiSi/Alpaca-CoT/tree/main/FLAN-Muffin) |
-| [COIG](https://huggingface.co/datasets/BAAI/COIG)            | [COIG](https://huggingface.co/datasets/BAAI/COIG)            | 298428   | CN    | MT    | COL  | collect fron Exam, Translated, Human Value Alignment Instructions and Counterfactural Correction Multi-round Chat | using automatic tool and manual verification                 | [download](https://huggingface.co/datasets/QingyiSi/Alpaca-CoT/tree/main/COIG) |
-| [GPT4Tools](https://github.com/StevenGrove/GPT4Tools)        | [gpt4tools_71k.json](https://drive.google.com/file/d/1JKIT-Or1of7TJuWvmrJpPoOx0cLdcWry/view?usp=share_link) | 71446    | EN    | MT    | SI   | a collection of tool-related instructions                    | gpt-3.5-turbo                                                | [download](https://huggingface.co/datasets/QingyiSi/Alpaca-CoT/tree/main/gpt4tools) |
-| [ShareChat](https://huggingface.co/datasets/RyokoAI/ShareGPT52K) | [RyokoAI/ShareGPT52K](https://huggingface.co/datasets/RyokoAI/ShareGPT52K) | 1663241  | EN    | MT    | MIX  | general instruct                                             | crowdsourcing to collect conversations between people and ChatGPT (ShareGPT) | [download](https://huggingface.co/datasets/QingyiSi/Alpaca-CoT/tree/main/ShareGPT) |
-| [Auto CoT](https://github.com/amazon-science/auto-cot)       | [kojima-takeshi188/zero_shot_cot/dataset](https://github.com/kojima-takeshi188/zero_shot_cot/tree/main/dataset) \|[kojima-takeshi188/zero_shot_cot/log](https://github.com/kojima-takeshi188/zero_shot_cot/tree/main/log) |          | EN    |       |      |                                                              |                                                              | [download](https://huggingface.co/datasets/QingyiSi/Alpaca-CoT/tree/main/Auto-CoT) |
-| [MOSS](https://github.com/OpenLMLab/MOSS)                    | [fnlp/moss-002-sft-data](https://huggingface.co/datasets/fnlp/moss-002-sft-data) | 1583595  | EN/CN | SI    |      |                                                              |                                                              | [download](https://huggingface.co/datasets/QingyiSi/Alpaca-CoT/tree/main/MOSS) |
-| [ultrachat](https://github.com/thunlp/UltraChat)             | [stingning/ultrachat](https://huggingface.co/datasets/stingning/ultrachat) | 28247446 | EN    |       |      |                                                              |                                                              | [download](https://huggingface.co/datasets/QingyiSi/Alpaca-CoT/tree/main/ultrachat) |
-| [StackLLaMA](https://huggingface.co/datasets/lvwerra/stack-exchange-paired) | [https://huggingface.co/datasets/lvwerra/stack-exchange-paired](lvwerra/stack-exchange-paired) | todo     | EN    |       |      |                                                              |                                                              |                                                              |
+| Project                                                      |                           Datasets                           | Org                           | Nums     | Lang  | Task  | Gen  | Type                                                         | Src                                                          | Url                                                          |
+| :----------------------------------------------------------- | :----------------------------------------------------------: | ----------------------------- | :------- | :---- | :---- | :--- | :----------------------------------------------------------- | :----------------------------------------------------------- | :----------------------------------------------------------- |
+| [Chain of Thought](https://github.com/google-research/FLAN)  |                                                              |                               | 74771    | EN/CN | MT    | HG   | instruct with cot reasoning                                  | annotating CoT on existing data                              | [download](https://huggingface.co/datasets/QingyiSi/Alpaca-CoT/tree/main/Chain-of-Thought) |
+| [GPT4all](https://github.com/nomic-ai/gpt4all)               | [nomic-ai/gpt4all-j-prompt-generations](https://huggingface.co/datasets/nomic-ai/gpt4all-j-prompt-generations) | nomic-ai                      | 806199   | EN    | MT    | COL  | code, storys and dialogs                                     | distillation from GPT-3.5-turbo                              | [download](https://huggingface.co/datasets/QingyiSi/Alpaca-CoT/tree/main/GPT4all) |
+| [GPTeacher](https://github.com/teknium1/GPTeacher)           | [GPT-4 General-Instruct ](https://github.com/teknium1/GPTeacher/tree/main/Instruct)\|[Roleplay-Instruct](https://github.com/teknium1/GPTeacher/tree/main/Roleplay) \|[Code-Instruct ](https://github.com/teknium1/GPTeacher/tree/main/Codegen)\| [Toolformer](https://github.com/teknium1/GPTeacher/tree/main/Toolformer) |                               | 29013    | EN    | MT    | SI   | general, roleplay, toolformer                                | GPT-4 & toolformer                                           | [download](https://huggingface.co/datasets/QingyiSi/Alpaca-CoT/tree/main/GPTeacher) |
+| [Guanaco](https://huggingface.co/datasets/JosephusCheung/GuanacoDataset) | [JosephusCheung/GuanacoDataset](https://huggingface.co/datasets/JosephusCheung/GuanacoDataset) |                               | 534610   | ML    | MT    | SI   | various linguistic tasks                                     | text-davinci-003                                             | [download](https://huggingface.co/datasets/QingyiSi/Alpaca-CoT/tree/main/Guanaco) |
+| [HC3](https://huggingface.co/datasets/Hello-SimpleAI/HC3)    | [Hello-SimpleAI/HC3](https://huggingface.co/datasets/Hello-SimpleAI/HC3) |                               | 37175    | EN/CN | TS    | MIX  | dialogue evaluation                                          | human or ChatGPT                                             | [download](https://huggingface.co/datasets/QingyiSi/Alpaca-CoT/tree/main/HC3) |
+| [HC3-Chinese](https://huggingface.co/datasets/Hello-SimpleAI/HC3-Chinese) | [Hello-SimpleAI/HC3-Chinese](https://huggingface.co/datasets/Hello-SimpleAI/HC3-Chinese) |                               |          | CN    | TS    | MIX  | dialogue evaluation                                          | human or ChatGPT                                             |                                                              |
+| [alpaca](https://github.com/tatsu-lab/stanford_alpaca)       | [tatsu-lab/alpaca](https://huggingface.co/datasets/tatsu-lab/alpaca) | tatsu-lab                     | 52002    | EN    | MT    | SI   | general instruct                                             | text-davinci-003                                             | [download](https://huggingface.co/datasets/QingyiSi/Alpaca-CoT/tree/main/alpaca) |
+| [Natural Instructions](https://github.com/allenai/natural-instructions) | [Allen AI - v1-61 task_](https://instructions.apps.allenai.org/#:~:text=Download%20Natural%2DInstructions%20%2D%20v1.1)\|[ v2 1.5k task](https://instructions.apps.allenai.org/#:~:text=Natural%2DInstructions%20%2D%20v2-,.,-x) | Allen AI                      | 5040134  | ML    | MT    | COL  | diverse nlp tasks                                            | human annotated datasets collection                          | [download](https://huggingface.co/datasets/QingyiSi/Alpaca-CoT/tree/main/Natural-Instructions) |
+| [belle_cn](https://huggingface.co/BelleGroup)                | [BelleGroup/train_1M_CN](https://huggingface.co/datasets/bellegroup/train_1M_CN) \|[BelleGroup/train_0.5M_CN](https://huggingface.co/datasets/bellegroup/train_0.5M_CN) | BelleGroup                    | 1079517  | CN    | TS/MT | SI   | general, mathematical reasoning, dialogue                    | text-davinci-003                                             | [download](https://huggingface.co/datasets/QingyiSi/Alpaca-CoT/tree/main/belle_cn) |
+| [instinwild](https://github.com/XueFuzhao/InstructionWild)   | [instinwild_ch](https://github.com/XueFuzhao/InstructionWild/tree/main/data) \| [instinwild_en](https://github.com/XueFuzhao/InstructionWild/tree/main/data) |                               | 52191    | EN/CN | MT    | SI   | generation, open-qa, mind-storm                              | text-davinci-003                                             | [download](https://huggingface.co/datasets/QingyiSi/Alpaca-CoT/tree/main/instinwild) |
+| [prosocial dialog](https://huggingface.co/datasets/allenai/prosocial-dialog) | [allenai/prosocial-dialog](https://huggingface.co/datasets/allenai/prosocial-dialog) | allenai                       | 165681   | EN    | TS    | MIX  | dialogue                                                     | GPT-3 rewrites questions + humans feedback manually          | [download](https://huggingface.co/datasets/QingyiSi/Alpaca-CoT/tree/main/prosocial-dialog) |
+| [finance_en](https://huggingface.co/datasets/gbharti/finance-alpaca) | [gbharti/finance-alpaca](https://huggingface.co/datasets/allenai/prosocial-dialog) |                               | 68912    | EN    | TS    | COL  | financial related qa                                         | GPT3.5                                                       | [download](https://huggingface.co/datasets/QingyiSi/Alpaca-CoT/tree/main/) |
+| [xP3](https://huggingface.co/datasets/bigscience/xP3)        | [bigscience/xP3](https://huggingface.co/datasets/bigscience/xP3) | bigscience                    | 78883588 | ML    | MT    | COL  | a collection of prompts & datasets across 46 of languages & 16 NLP tasks | human annotated datasets collection                          | [download](https://huggingface.co/datasets/QingyiSi/Alpaca-CoT/tree/main/xP3) |
+| [firefly](https://github.com/yangjianxin1/Firefly)           | [YeungNLP/firefly-train-1.1M](https://huggingface.co/datasets/YeungNLP/firefly-train-1.1M) |                               | 1649398  | CN    | MT    | COL  | 23 nlp tasks                                                 | human annotated datasets collection                          | [download](https://huggingface.co/datasets/QingyiSi/Alpaca-CoT/tree/main/firefly) |
+| [instruct](https://huggingface.co/datasets/swype/instruct)   | [swype/instruct](https://huggingface.co/datasets/swype/instruct) |                               | 888969   | EN    | MT    | COL  | augmented of GPT4All, Alpaca, open-source Meta datasets      | augmentation performed using the advanced NLP tools provided by AllenAI | [download](https://huggingface.co/datasets/QingyiSi/Alpaca-CoT/tree/main/instruct) |
+| [Code Alpaca](https://github.com/sahil280114/codealpaca)     | [sahil280114/codealpaca](https://github.com/sahil280114/codealpaca/blob/master/data/code_alpaca_20k.json) |                               | 20022    | EN    | TS    | SI   | code generation, editing, optimization                       | text-davinci-003                                             | [download](https://huggingface.co/datasets/QingyiSi/Alpaca-CoT/tree/main/CodeAlpaca) |
+| [Alpaca_GPT4](https://github.com/Instruction-Tuning-with-GPT-4/GPT-4-LLM) | [alpaca_gpt4_data](https://github.com/Instruction-Tuning-with-GPT-4/GPT-4-LLM/blob/main/data/alpaca_gpt4_data.json)\|[alpaca_gpt4_data_zh](https://github.com/Instruction-Tuning-with-GPT-4/GPT-4-LLM/blob/main/data/alpaca_gpt4_data_zh.json) \|[comparison_data_v2](https://github.com/Instruction-Tuning-with-GPT-4/GPT-4-LLM/blob/main/data/comparison_data_v2.json) | Instruction-Tuning-with-GPT-4 | 52002    | EN/CN | MT    | SI   | general instruct                                             | generated by GPT-4 using Alpaca                              | [download](https://huggingface.co/datasets/QingyiSi/Alpaca-CoT/tree/main/alpacaGPT4) |
+| [webGPT](https://huggingface.co/datasets/openai/webgpt_comparisons) | [openai/webgpt_comparisons](https://huggingface.co/datasets/openai/webgpt_comparisons) | openai                        | 18994    | EN    | TS    | MIX  | information retrieval (IR) QA                                | fine-tuned GPT-3, each instruction has two outputs, select better one | [download](https://huggingface.co/datasets/QingyiSi/Alpaca-CoT/tree/main/webGPT) |
+| [dolly 2.0](https://github.com/databrickslabs/dolly)         | [databricks/databricks-dolly-15k](https://huggingface.co/datasets/databricks/databricks-dolly-15k) | databricks                    | 15015    | EN    | TS    | HG   | closed QA , summarization and etc, Wikipedia as references   | human annotated                                              | [download](https://huggingface.co/datasets/QingyiSi/Alpaca-CoT/tree/main/dolly) |
+| [baize](https://github.com/project-baize/baize-chatbot)      | [alpaca_chat_data.json](https://github.com/project-baize/baize-chatbot/tree/main/data) \|[medical_chat_data.json](https://github.com/project-baize/baize-chatbot/blob/main/data/medical_chat_data.json) \| [quora_chat_data.json](https://github.com/project-baize/baize-chatbot/blob/main/data/quora_chat_data.json) \|[stackoverflow_chat_data.json](https://github.com/project-baize/baize-chatbot/blob/main/data/stackoverflow_chat_data.json) | project-baize                 | 653699   | EN    | MT    | COL  | a collection from Alpaca, Quora, StackOverFlow and MedQuAD questions | human annotated datasets collection                          | [download](https://huggingface.co/datasets/QingyiSi/Alpaca-CoT/tree/main/baize) |
+| [hh-rlhf](https://github.com/anthropics/hh-rlhf)             | [Anthropic/hh-rlhf](https://huggingface.co/datasets/anthropic/hh-rlhf) | Anthropic                     | 284517   | EN    | TS    | MIX  | dialogue                                                     | dialog between human and RLHF models                         | [download](https://huggingface.co/datasets/QingyiSi/Alpaca-CoT/tree/main/hh-rlhf) |
+| [OIG(part)](https://laion.ai/blog/oig-dataset/)              |    [laion/OIG](https://huggingface.co/datasets/laion/oig)    | laion                         | 49237    | EN    | MT    | COL  | created from various tasks, such as question and answering   | using data augmentation, human annotated datasets collection | [download](https://huggingface.co/datasets/QingyiSi/Alpaca-CoT/tree/main/OIG) |
+| [GAOKAO](https://github.com/OpenLMLab/GAOKAO-Bench)          | [Fill-in-the-blank_Questions](https://github.com/OpenLMLab/GAOKAO-Bench/tree/main/data/Fill-in-the-blank_Questions) \| [Multiple-choice_Questions](https://github.com/OpenLMLab/GAOKAO-Bench/tree/main/data/Multiple-choice_Questions) \| [Open-ended_Questions](https://github.com/OpenLMLab/GAOKAO-Bench/tree/main/data/Open-ended_Questions) | OpenLMLab                     | 2785     | CN    | MT    | COL  | Multiple-choice, Fill-in-the-blank and Open-ended questions from examination | human annotated                                              | [download](https://huggingface.co/datasets/QingyiSi/Alpaca-CoT/tree/main/GAOKAO) |
+| [camel](https://github.com/lightaime/camel)                  | [camel-ai/code](https://huggingface.co/datasets/camel-ai/ai_society)\|[camel-ai/biology](https://huggingface.co/datasets/camel-ai/biology) \|[camel-ai/physics](https://huggingface.co/datasets/camel-ai/physics) \|[camel-ai/chemistry](https://huggingface.co/datasets/camel-ai/chemistry) \|[camel-ai/math](https://huggingface.co/datasets/camel-ai/math) | camel-ai                      | 760620   | EN    | MT    | SI   | Role-Playing conversations in AI Society, Code, Math, Physics, Chemistry, Biolog | gpt-3.5-turbo                                                | [download](https://huggingface.co/datasets/QingyiSi/Alpaca-CoT/tree/main/camel) |
+| [FLAN-Muffin](https://huggingface.co/datasets/Muennighoff/flan) | [Muennighoff/flan](https://huggingface.co/datasets/Muennighoff/flan) |                               | 1764800  | EN    | MT    | COL  | 60 nlp tasks                                                 | human annotated datasets collection                          | [download](https://huggingface.co/datasets/QingyiSi/Alpaca-CoT/tree/main/FLAN-Muffin) |
+| [COIG](https://huggingface.co/datasets/BAAI/COIG)            |      [COIG](https://huggingface.co/datasets/BAAI/COIG)       | BAAI                          | 298428   | CN    | MT    | COL  | collect fron Exam, Translated, Human Value Alignment Instructions and Counterfactural Correction Multi-round Chat | using automatic tool and manual verification                 | [download](https://huggingface.co/datasets/QingyiSi/Alpaca-CoT/tree/main/COIG) |
+| [GPT4Tools](https://github.com/StevenGrove/GPT4Tools)        | [gpt4tools_71k.json](https://drive.google.com/file/d/1JKIT-Or1of7TJuWvmrJpPoOx0cLdcWry/view?usp=share_link) | StevenGrove                   | 71446    | EN    | MT    | SI   | a collection of tool-related instructions                    | gpt-3.5-turbo                                                | [download](https://huggingface.co/datasets/QingyiSi/Alpaca-CoT/tree/main/gpt4tools) |
+| [ShareChat](https://huggingface.co/datasets/RyokoAI/ShareGPT52K) | [RyokoAI/ShareGPT52K](https://huggingface.co/datasets/RyokoAI/ShareGPT52K) | RyokoAI                       | 1663241  | EN    | MT    | MIX  | general instruct                                             | crowdsourcing to collect conversations between people and ChatGPT (ShareGPT) | [download](https://huggingface.co/datasets/QingyiSi/Alpaca-CoT/tree/main/ShareGPT) |
+| [Auto CoT](https://github.com/amazon-science/auto-cot)       | [kojima-takeshi188/zero_shot_cot/dataset](https://github.com/kojima-takeshi188/zero_shot_cot/tree/main/dataset) \|[kojima-takeshi188/zero_shot_cot/log](https://github.com/kojima-takeshi188/zero_shot_cot/tree/main/log) | amazon-science                |          | EN    |       |      |                                                              |                                                              | [download](https://huggingface.co/datasets/QingyiSi/Alpaca-CoT/tree/main/Auto-CoT) |
+| [MOSS](https://github.com/OpenLMLab/MOSS)                    | [fnlp/moss-002-sft-data](https://huggingface.co/datasets/fnlp/moss-002-sft-data) | fnlp                          | 1583595  | EN/CN | SI    |      |                                                              |                                                              | [download](https://huggingface.co/datasets/QingyiSi/Alpaca-CoT/tree/main/MOSS) |
+| [ultrachat](https://github.com/thunlp/UltraChat)             | [stingning/ultrachat](https://huggingface.co/datasets/stingning/ultrachat) |                               | 28247446 | EN    |       |      |                                                              |                                                              | [download](https://huggingface.co/datasets/QingyiSi/Alpaca-CoT/tree/main/ultrachat) |
+| [StackLLaMA](https://huggingface.co/datasets/lvwerra/stack-exchange-paired) | [lvwerra/stack-exchange-paired](lvwerra/stack-exchange-paired) |                               | todo     | EN    |       |      |                                                              |                                                              |                                                              |
+| [Self-Instruct](https://github.com/yizhongw/self-instruct)   | [yizhongw/self-instruct](https://github.com/yizhongw/self-instruct/blob/main/data/gpt3_generations/batch_221203/all_instances_82K.jsonl) |                               | 82 K     | EN    |       |      |                                                              |                                                              |                                                              |
+|                                                              |                                                              |                               |          |       |       |      |                                                              |                                                              |                                                              |
+|                                                              |                                                              |                               |          |       |       |      |                                                              |                                                              |                                                              |
+|                                                              |                                                              |                               |          |       |       |      |                                                              |                                                              |                                                              |
+|                                                              |                                                              |                               |          |       |       |      |                                                              |                                                              |                                                              |
+|                                                              |                                                              |                               |          |       |       |      |                                                              |                                                              |                                                              |
+|                                                              |                                                              |                               |          |       |       |      |                                                              |                                                              |                                                              |
+|                                                              |                                                              |                               |          |       |       |      |                                                              |                                                              |                                                              |
+|                                                              |                                                              |                               |          |       |       |      |                                                              |                                                              |                                                              |
+|                                                              |                                                              |                               |          |       |       |      |                                                              |                                                              |                                                              |
+|                                                              |                                                              |                               |          |       |       |      |                                                              |                                                              |                                                              |
+|                                                              |                                                              |                               |          |       |       |      |                                                              |                                                              |                                                              |
 
+# RLHF Dataset
 
+## Statistics
 
-## Summary
-
-
-
-|                      Datasets/Projects                       |              Organization/Author               | Language | Introduction                                                 | Num Rows |
-| :----------------------------------------------------------: | :--------------------------------------------: | :------: | ------------------------------------------------------------ | :------: |
-| [ Allen AI/Super-Natural Instruction](https://instructions.apps.allenai.org/) |                    Allen AI                    | English  | Contains instruction data of 61 NLP tasks (Natural Instruction) and 1600 NLP tasks (Super-Natural Instruction) |    NA    |
-| [PromptSource / P3](https://huggingface.co/datasets/bigscience/P3) |                   BigScience                   | English  | More than 2,000 prompt templates (PromptSource) containing 270 NLP tasks and a P3 dataset with a scale between 100M-1B |    NA    |
-| [BigScience/xMTF](https://github.com/bigscience-workshop/xmtf) |                   BigScience                   | English  | Contains 13 NLP tasks and multilingual prompt data in 46 languages |    NA    |
-| [Anthropic/HH-RLHF](https://huggingface.co/datasets/Anthropic/hh-rlhf) |                   Anthropic                    | English  | RLHF dataset designed to train Helpful and Harmless (HH) LLMs |          |
-| [Unnatural Instruction](https://github.com/orhonovich/unnatural-instructions) |                   orhonovich                   |          | Use GPT3 to generate 64k instruction prompt data, and get 240k instruction data after rewriting |  240 K   |
-|  [Self-Instruct](https://github.com/yizhongw/self-instruct)  |                    yizhongw                    | English  | Using LLMs to generate prompts for instruction-tuning, introducing concepts such as Task pool and Quality filtering |          |
-|         [UnifiedSKG - HKU](https://unifiedskg.com/)          |                      HKU                       | English  | Add knowledge grounding to Text-to-Text framework, serialize and embed structured data into prompt |          |
-| [Google/Flan Collection](https://github.com/google-research/FLAN/tree/main/flan/v2) |                     Google                     | English  | Merge Flan 2021 data with some open source instruction data (P3, super-natural instruction, etc.) |          |
-|                         InstructDial                         |                 prakharguptaz                  | English  | Attempts to fine-tune instructions on a specific task type (dialogue instructions) |          |
-|                            Alpaca                            |                    Stanford                    |          | 53k data, very powerful performance (GPT-3.5 level).         |          |
-| [webgpt_comparisons](https://huggingface.co/datasets/openai/webgpt_comparisons) |                     Openai                     | English  | In the [WebGPT paper](https://arxiv.org/abs/2112.09332), the authors trained a reward model from human feedback. They used the reward model to train a long form question answering model to align with human preferences. This is the dataset of all comparisons that were marked as suitable for reward modeling by the end of the WebGPT project. There are 19,578 comparisons in total. |  19,578  |
-|    [SHP](https://huggingface.co/datasets/stanfordnlp/SHP)    |                  stanfordnlp                   | English  | SHP is a dataset of 385K collective human preferences over responses to questions/instructions in 18 different subject areas, from cooking to legal advice. The preferences are meant to reflect the helpfulness of one response over another, and are intended to be used for training RLHF reward models and NLG evaluation models (e.g., [SteamSHP](https://huggingface.co/stanfordnlp/SteamSHP-flan-t5-xl)). |  349 K   |
-| [rlhf-reward-datasets](https://huggingface.co/datasets/yitingxie/rlhf-reward-datasets) |                   yitingxie                    | English  |                                                              |  76.3 k  |
-| [Dahoas/full-hh-rlhf](https://huggingface.co/datasets/Dahoas/full-hh-rlhf) |                     Dahoas                     | English  | Anthropic's HH dataset reformatted into prompt, chosen, rejected samples. |  112 k   |
-| [Dahoas/synthetic-instruct-gptj-pairwise](https://huggingface.co/datasets/Dahoas/synthetic-instruct-gptj-pairwise) |    Dahoas/synthetic-instruct-gptj-pairwise     | English  |                                                              |          |
-| [Dahoas/rm-static](https://huggingface.co/datasets/Dahoas/rm-static) |                Dahoas/rm-static                | English  | Split of [hh-static](https://huggingface.co/datasets/Dahoas/static-hh) used for training reward models after supervised fine-tuning. |  76.3K   |
-| [Hello-SimpleAI/HC3-Chinese](https://huggingface.co/datasets/Hello-SimpleAI/HC3-Chinese) |                 Hello-SimpleAI                 | Chinese  | We propose the first human-ChatGPT comparison corpus, named HC3 dataset. This dataset is introduced in our paper:  Paper: [How Close is ChatGPT to Human Experts? Comparison Corpus, Evaluation, and Detection](https://arxiv.org/abs/2301.07597) |          |
-| [Hello-SimpleAI/HC3](https://huggingface.co/datasets/Hello-SimpleAI/HC3) |                 Hello-SimpleAI                 | English  |                                                              |  24.3K   |
-| [Cohere/miracl-zh-queries-22-12](https://huggingface.co/datasets/Cohere/miracl-zh-queries-22-12) |                     Cohere                     | Chinese  |                                                              |          |
-| [wangrui6/Zhihu-KOL](https://huggingface.co/datasets/wangrui6/Zhihu-KOL) |                    wangrui6                    | Chinese  | Zhihu data for training Open Assitant                        |          |
-| [YeungNLP/firefly-train-1.1M](https://huggingface.co/datasets/YeungNLP/firefly-train-1.1M) |                    YeungNLP                    | Chinese  | firefly-train-1.1M：包含了23个常见的中文数据集，对于每个任务，由人工书写若干种指令模板，保证数据的高质量与丰富度，数据量为115万 。此数据应用于应用于项目：[Firefly（流萤）: 中文对话式大语言模型](https://github.com/yangjianxin1/Firefly) |   115M   |
-|       [BelleGroup](https://huggingface.co/BelleGroup)        | 项目地址：https://github.com/LianjiaTech/BELLE |          | BELLE Group Dataset : 链家基于ChatGPT用self-instruct生成的中文指令数据集，其中还包括中文数学题数据和多轮对话数据。 |          |
+|                           Project                            | Links |                   Org                   | Nums   |  Lang   | Summary                                                      |      |
+| :----------------------------------------------------------: | ----- | :-------------------------------------: | ------ | :-----: | ------------------------------------------------------------ | :--: |
+| [webgpt_comparisons](https://huggingface.co/datasets/openai/webgpt_comparisons) |       |                 Openai                  | 19,578 | English | In the [WebGPT paper](https://arxiv.org/abs/2112.09332), the authors trained a reward model from human feedback. They used the reward model to train a long form question answering model to align with human preferences. This is the dataset of all comparisons that were marked as suitable for reward modeling by the end of the WebGPT project. There are 19,578 comparisons in total. |      |
+|    [SHP](https://huggingface.co/datasets/stanfordnlp/SHP)    |       |               stanfordnlp               | 349 K  | English | SHP is a dataset of 385K collective human preferences over responses to questions/instructions in 18 different subject areas, from cooking to legal advice. The preferences are meant to reflect the helpfulness of one response over another, and are intended to be used for training RLHF reward models and NLG evaluation models (e.g., [SteamSHP](https://huggingface.co/stanfordnlp/SteamSHP-flan-t5-xl)). |      |
+| [rlhf-reward-datasets](https://huggingface.co/datasets/yitingxie/rlhf-reward-datasets) |       |                yitingxie                | 76.3 k | English |                                                              |      |
+| [Dahoas/full-hh-rlhf](https://huggingface.co/datasets/Dahoas/full-hh-rlhf) |       |                 Dahoas                  | 112 k  | English | Anthropic's HH dataset reformatted into prompt, chosen, rejected samples. |      |
+| [Dahoas/synthetic-instruct-gptj-pairwise](https://huggingface.co/datasets/Dahoas/synthetic-instruct-gptj-pairwise) |       | Dahoas/synthetic-instruct-gptj-pairwise |        | English |                                                              |      |
+| [Dahoas/rm-static](https://huggingface.co/datasets/Dahoas/rm-static) |       |            Dahoas/rm-static             | 76.3k  | English | Split of [hh-static](https://huggingface.co/datasets/Dahoas/static-hh) used for training reward models after supervised fine-tuning. |      |
 
 # The template
 
@@ -219,55 +217,6 @@ SHP is a dataset of 385K collective human preferences over responses to question
 Each example is a Reddit post with a question/instruction and a pair of top-level comments for that post, where one comment is more preferred by Reddit users (collectively). SHP exploits the fact that if comment A was written after comment B but has a higher score nonetheless, then A is ostensibly more preferred to B. If A had been written before B, then we could not conclude this, since its higher score could have been the result of more visibility. We chose data where the preference label is intended to reflect which response is more helpful rather than which is less harmful, the latter being the focus of much past work.
 
 How is SHP different from [Anthropic's HH-RLHF dataset](https://huggingface.co/datasets/Anthropic/hh-rlhf)? Most notably, all the data in SHP is naturally occurring and human-written, whereas the responses in HH-RLHF are machine-written, giving us two very different distributions that can complement each other.
-
-| Dataset | Size | Input                                       | Label                       | Domains       | Data Format                                   | Length                |
-| ------- | ---- | ------------------------------------------- | --------------------------- | ------------- | --------------------------------------------- | --------------------- |
-| SHP     | 385K | Naturally occurring human-written responses | Collective Human Preference | 18 (labelled) | Question/Instruction + Response (Single-turn) | up to 10.1K T5 tokens |
-| HH-RLHF | 91K  | Dialogue with LLM                           | Individual Human Preference | not labelled  | Live Chat (Multi-turn)                        | up to 1.5K T5 tokens  |
-
-How is SHP different from other datasets that have scraped Reddit, like [ELI5](https://huggingface.co/datasets/eli5#source-data)? SHP uses the timestamp information to infer preferences, while ELI5 only provides comments and scores -- the latter are not enough to infer preferences since comments made earlier tend to get higher scores from more visibility. It also contains data from more domains:
-
-| Dataset | Size | Comments + Scores | Preferences | Number of Domains |
-| ------- | ---- | ----------------- | ----------- | ----------------- |
-| SHP     | 385K | Yes               | Yes         | 18                |
-| ELI5    | 270K | Yes               | No          | 3                 |
-
-### Dataset Desig
-
-#### Domain Selection
-
-The data is sourced from Reddit, which is a public forum organized into topic-specific fora called subreddits. For example, the `askculinary` subreddit is where users ask cooking-related questions and are answered by other users.
-
-SHP contains a train, validation, and test split for comments scraped from 18 different subreddits. We chose subreddits based on:
-
-1. whether they were well-known (subscriber count >= 100K)
-2. whether posts were expected to pose a question or instruction
-3. whether responses were valued based on how helpful they were
-4. whether comments had to be rooted in some objectivity, instead of being entirely about personal experiences (e.g., `askscience` vs. `AskAmericans`)
-
-The train/validation/test splits were created by splitting the post IDs of a subreddit in 90%/5%/5% proportions respectively, so that no post would appear in multiple splits. Since different posts have different numbers of comments, the number of preferences in each split is not exactly 90%/5%/5%:
-
-| subreddit         | train  | validation | test  | total  |
-| ----------------- | ------ | ---------- | ----- | ------ |
-| askacademia       | 31450  | 2095       | 1708  | 35253  |
-| askanthropology   | 3910   | 203        | 268   | 4381   |
-| askbaking         | 44007  | 2096       | 1544  | 47647  |
-| askcarguys        | 3227   | 159        | 117   | 3503   |
-| askculinary       | 45710  | 2094       | 2563  | 50367  |
-| askdocs           | 6449   | 315        | 455   | 7219   |
-| askengineers      | 57096  | 3154       | 2638  | 62888  |
-| askhistorians     | 3264   | 113        | 164   | 3541   |
-| askhr             | 8295   | 641        | 395   | 9331   |
-| askphilosophy     | 10307  | 608        | 677   | 11592  |
-| askphysics        | 7364   | 409        | 587   | 8360   |
-| askscience        | 13316  | 899        | 977   | 15192  |
-| asksciencefiction | 29382  | 1576       | 1987  | 32945  |
-| asksocialscience  | 2706   | 147        | 188   | 3041   |
-| askvet            | 3300   | 170        | 224   | 3694   |
-| changemyview      | 38173  | 1637       | 1836  | 41646  |
-| explainlikeimfive | 19592  | 1014       | 1070  | 21676  |
-| legaladvice       | 21170  | 1106       | 1011  | 23287  |
-| ALL               | 348718 | 18436      | 18409 | 385563 |
 
 
 ## [Hello-SimpleAI/HC3](https://huggingface.co/datasets/Hello-SimpleAI/HC3)
@@ -329,8 +278,6 @@ The train/validation/test splits were created by splitting the post IDs of a sub
 - Data generation model: `GPT-4`
 - paper: N/A
 - Cost: N/A
-
-
 
 ## [thunlp/UltraChat](https://github.com/thunlp/UltraChat)
 
@@ -409,7 +356,7 @@ The train/validation/test splits were created by splitting the post IDs of a sub
 - 生成方式: 通过原有的NLP任务数据集，结合特定的[prompt](https://www.zhihu.com/search?q=prompt&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra={"sourceType"%3A"article"%2C"sourceId"%3A"624084039"})模板生成
 - 涉及任务: 包含9个NLP数据集，涉及的NLP任务有[文本分类](https://www.zhihu.com/search?q=文本分类&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra={"sourceType"%3A"article"%2C"sourceId"%3A"624084039"})/自然语言推理/语义匹配/[指代消解](https://www.zhihu.com/search?q=指代消解&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra={"sourceType"%3A"article"%2C"sourceId"%3A"624084039"})/关键词识别/阅读理解
 
-### COIG
+## COIG
 
 - 下载地址: [https://huggingface.co/datasets/BAAI/COIG](https://huggingface.co/datasets/BAAI/COIG)
 
@@ -427,7 +374,7 @@ https://github.com/FreedomIntelligence/InstructionZoo
 
 https://github.com/lightaime/camel
 
-# Reinforcement Learning from Human Feedback (RLHF) Datasets
+# The (RLHF) Datasets List
 
 ## [Anthropic/hh-rlhf](https://huggingface.co/datasets/Anthropic/hh-rlhf)
 
@@ -435,9 +382,6 @@ https://github.com/lightaime/camel
 - Data generation model: `Anthropic RL-CAI 52B`
 - paper: [Training a Helpful and Harmless Assistant with Reinforcement Learning from Human Feedback](https://arxiv.org/abs/2204.05862)
 - Cost: N/A
-- Related: 
-    -[(Hello-SimpleAI/HC3)|24K|EN|MT|MIX](https://huggingface.co/datasets/Hello-SimpleAI/HC3)
-    -[(Hello-SimpleAI/HC3-Chinese)|13K|CN|MT|MIX](https://huggingface.co/datasets/Hello-SimpleAI/HC3-Chinese)
 
 ## [HuggingFaceH4/stack-exchange-preferences](https://huggingface.co/datasets/HuggingFaceH4/stack-exchange-preferences)
 
@@ -588,10 +532,6 @@ Each example in the dataset contains a pair of model answers for a question, and
 
 The OpenAI summarization dataset contains ~93K examples, each example consists of feedback from humans regarding the summarizations generated by a model. Human evaluators chose the superior summary from two options.
 
-
-
-
-
 # Datasets without license information 
 
  ## [alespalla/chatbot_instruction_prompts](https://huggingface.co/datasets/alespalla/chatbot_instruction_prompts)
@@ -601,15 +541,10 @@ The OpenAI summarization dataset contains ~93K examples, each example consists o
  - paper: N/A
  - Cost: N/A
 
-# Open-source Codebase For Instruction-following LLMs
-
-## [nichtdax/awesome-totally-open-chatgpt](https://github.com/nichtdax/awesome-totally-open-chatgpt)
-- Summary: Alternatives are projects featuring different instruct finetuned language models for chat. 
-
-## Contributing
+# Contributing
 
 Our purpose is to make this repo even better. If you are interested in contributing, please refer to HERE for instructions in contribution.
 
-## License
+# License
 
 `Awesome-Prompt-Dataset` is released under the Apache 2.0 license.
