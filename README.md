@@ -213,7 +213,7 @@ Alpaca automatically generated 52k instruction data using GPT-3.5 and used it to
 
 ## [Instruction in the Wild](https://github.com/XueFuzhao/InstructionWild)
 
-- [Paper/Project Link](https://github.com/hpcaitech/ColossalAI/tree/main/applications/Chat)
+- [Paper/Project Link](https://github.com/hpcaitech/ColossalAI/tree/main/applications/ColossalChat)
 - [Dataset Link](https://github.com/XueFuzhao/InstructionWild)
 - Data generation model: text-davinci-003
   
