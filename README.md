@@ -1,7 +1,7 @@
 
 <div align="center">
 
-# Awesome Instruction Datasets 
+# Awesome Instruction Datasets
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 </div>
 
@@ -11,93 +11,77 @@
 </div>
 
 # Contents
-- [Awesome Prompt datasets](#awesome-prompt-datasets)
-- [Contents](#contents)
+
 - [Introduction](#introduction)
-- [Prompt Datasets](#prompt-datasets)
-  - [Statistics](#statistics)
-- [RLHF Datasets](#rlhf-datasets)
-  - [Statistics](#statistics-1)
-- [The template](#the-template)
-- [The Prompt Datasets List](#the-prompt-datasets-list)
-  - [Alpaca -Stanford](#alpaca--stanford)
-  - [Instruction in the Wild](#instruction-in-the-wild)
-  - [JosephusCheung/GuanacoDataset](#josephuscheungguanacodataset)
-  - [Stanford Human Preferences Dataset (SHP)](#stanford-human-preferences-dataset-shp)
-  - [Hello-SimpleAI/HC3](#hello-simpleaihc3)
-  - [Hello-SimpleAI/HC3-Chinese](#hello-simpleaihc3-chinese)
-  - [allenai/prosocial-dialog](#allenaiprosocial-dialog)
-  - [allenai/natural-instructions](#allenainatural-instructions)
-  - [PhoebusSi/Alpaca-CoT](#phoebussialpaca-cot)
-  - [nomic-ai/gpt4all](#nomic-aigpt4all)
-  - [bigscience/xP3](#bigsciencexp3)
-  - [teknium1/GPTeacher](#teknium1gpteacher)
-  - [thunlp/UltraChat](#thunlpultrachat)
-  - [cascip/ChatAlpaca](#cascipchatalpaca)
-  - [YeungNLP/firefly-train-1.1M)](#yeungnlpfirefly-train-11m)
-  - [orhonovich/unnatural-instructions](#orhonovichunnatural-instructions)
-  - [Instruction-Tuning-with-GPT-4/GPT-4-LLM](#instruction-tuning-with-gpt-4gpt-4-llm)
-  - [databrickslabs/dolly](#databrickslabsdolly)
-  - [OpenAssistant/oasst1](#openassistantoasst1)
-  - [BELLE/data/1.5M](#belledata15m)
-  - [alpaca\_chinese\_dataset](#alpaca_chinese_dataset)
-  - [Med-ChatGLM/data](#med-chatglmdata)
-  - [pCLUE](#pclue)
-  - [COIG](#coig)
-- [The RLHF Datasets List](#the-rlhf-datasets-list)
-  - [Anthropic/hh-rlhf](#anthropichh-rlhf)
-  - [HuggingFaceH4/stack-exchange-preferences](#huggingfaceh4stack-exchange-preferences)
-  - [stanfordnlp/SHP](#stanfordnlpshp)
-  - [Instruction-Tuning-with-GPT-4/GPT-4-LLM](#instruction-tuning-with-gpt-4gpt-4-llm-1)
-  - [Natural Instruction / Super-Natural Instruction](#natural-instruction--super-natural-instruction)
-  - [BigScience/P3](#bigsciencep3)
-  - [xMTF - BigScience](#xmtf---bigscience)
-  - [HH-RLHF - Anthropic](#hh-rlhf---anthropic)
-  - [Unnatural Instruction](#unnatural-instruction)
-  - [Self-Instruct](#self-instruct)
-  - [UnifiedSKG - HKU](#unifiedskg---hku)
-  - [Google/Flan Collection](#googleflan-collection)
-  - [InstructDial](#instructdial)
-  - [ChatGPT Distillation Data](#chatgpt-distillation-data)
-  - [Open Instruction Generalist (OIG).](#open-instruction-generalist-oig)
-  - [OpenAI WebGPT.](#openai-webgpt)
-  - [OpenAI Summarization.](#openai-summarization)
+- [What's New (2023–2025)](#whats-new-20232025)
+- [Quick Index by Category](#quick-index-by-category)
+- [SFT Datasets](#sft-datasets)
+  - [SFT Statistics](#sft-statistics)
+  - [SFT Dataset Details](#sft-dataset-details)
+- [RLHF / Preference Datasets](#rlhf--preference-datasets)
+  - [RLHF Statistics](#rlhf-statistics)
+  - [RLHF Dataset Details](#rlhf-dataset-details)
+- [DPO Datasets](#dpo-datasets)
+  - [DPO Statistics](#dpo-statistics)
+  - [DPO Dataset Details](#dpo-dataset-details)
 - [Datasets without license information](#datasets-without-license-information)
-  - [alespalla/chatbot\_instruction\_prompts](#alespallachatbot_instruction_prompts)
 - [Contributing](#contributing)
 - [License](#license)
+- [Reference](#reference)
 
 
 # Introduction
-"Welcome to 'awesome-prompt-datasets', a comprehensive collection of high-quality open-source instruction tuning datasets to train chat-based LLMs (ChatGPT,LLaMA,Alpaca)。
+
+"Welcome to 'awesome-prompt-datasets', a comprehensive collection of high-quality open-source instruction tuning datasets to train chat-based LLMs (ChatGPT, LLaMA, Alpaca).
 
 Instruction Tuning / Reinforcement Learning from Human Feedback (RLHF) Dataset is a key component of instruction-following LLMs such as ChatGPT. This repo is dedicated to providing a comprehensive list of datasets used for instruction tuning in various LLMs, making it easier for researchers and developers to access and utilize these resources.
 
 With 'awesome-prompt-dataset', you can accelerate your research and development in NLP and unlock new opportunities for innovation. Let's explore the possibilities together!"
 
-# Prompt Datasets
+# What's New (2023–2025)
+
+The instruction-tuning landscape has evolved rapidly. Below are representative high-quality datasets that have emerged since this list was first created, covering general SFT, RLHF/preference, code/math reasoning, and Chinese resources. For Chinese datasets, also see README_zh.md for ModelScope links.
+
+Notable additions:
+- **SFT**: LIMA, UltraChat, OpenOrca/SlimOrca, OpenHermes 2.5, WizardLM/Evol-Instruct, MetaMathQA, Airoboros, Platypus, No Robots, Magpie, Infinity Instruct, Deita, WildChat, Capybara, Tulu 3 SFT Mix, Smol-Smoltalk, PersonaHub, OpenMathInstruct-1, DART-Math, LIMO, Code-Feedback, FineWeb-Edu, OpenCodeInstruct.
+- **RLHF / Preference**: Anthropic HH-RLHF, Stanford SHP, UltraFeedback, HelpSteer/HelpSteer2/HelpSteer2-Preference, NVIDIA HelpSteer3-Preference.
+- **DPO**: Orca-DPO-Pairs, UltraFeedback-Binarized, DPO-Mix-7K, Llama3-UltraFeedback-ArmoRM, ChatML-DPO-Pairs, Magpie-Air-DPO, Magpie-Pro-DPO, Tulu 3 Preference.
+- **Code / Math**: MetaMathQA, OpenMathInstruct-1, DART-Math, LIMO, Code-Feedback, OpenCodeInstruct.
+- **Chinese / ModelScope**: COIG-CQIA, MSAgent, DeepCtrl-SFT, Infinity Instruct, Alpaca-GPT4 Chinese, HC3-Chinese, Magpie-Qwen2-Pro-200K-Chinese, Chinese-DeepSeek-R1-Distill-110k-SFT, Seq-Monkey.
+
+The list is now organized into **SFT datasets**, **RLHF datasets**, and **DPO datasets** sections.
+
+# Quick Index by Category
+
+| Category | Where to find | Highlights |
+| :------- | :------------ | :----------- |
+| **General SFT** | [SFT Statistics](#sft-statistics) • [General SFT Details](#general-sft) | Alpaca, LIMA, UltraChat, OpenOrca, OpenHermes 2.5, WizardLM, Magpie, No Robots, Deita, WildChat, Capybara, Tulu 3, Smol-Smoltalk, PersonaHub |
+| **Code & Math** | [SFT Statistics](#sft-statistics) • [Code & Math Details](#code--math) | Code Alpaca, MetaMathQA, OpenMathInstruct-1, DART-Math, LIMO, Code-Feedback, OpenCodeInstruct |
+| **Multilingual & Chinese** | [SFT Statistics](#sft-statistics) • [Multilingual & Chinese Details](#multilingual--chinese) | Chinese-LLaMA-Alpaca, BELLE, COIG, COIG-CQIA, MSAgent, DeepCtrl-SFT, Infinity Instruct, Chinese-DeepSeek-R1-Distill, Seq-Monkey |
+| **RLHF / Preference** | [RLHF Statistics](#rlhf-statistics) • [RLHF Details](#rlhf-dataset-details) | HH-RLHF, SHP, UltraFeedback, HelpSteer family |
+| **DPO** | [DPO Statistics](#dpo-statistics) • [DPO Details](#dpo-dataset-details) | Orca-DPO-Pairs, UltraFeedback-Binarized, DPO-Mix-7K, Llama3-UltraFeedback-ArmoRM, Magpie DPO |
+| **Chinese ModelScope** | README_zh.md | COIG-CQIA, MSAgent, DeepCtrl-SFT, Infinity Instruct, Chinese-DeepSeek-R1-Distill, Seq-Monkey |
+
+# SFT Datasets
 
 Referring to [this](https://github.com/yaodongC/awesome-instruction-dataset) ([@yaodongC](https://github.com/yaodongC)), we labeled each collected dataset according to the following rules:
 
-**(Lang)Lingual-Tags**:
-
+**(Lang) Lingual-Tags**:
 - EN: Instruction datasets in English
 - CN: Instruction datasets in Chinese
 - ML: [Multi-lingual] Instruction datasets in multiple languages
 
-**(Task)Task-Tags**:
-
+**(Task) Task-Tags**:
 - MT: [Multi-task] Datasets containing multiple tasks
 - TS: [Task-specific] Datasets tailored for specific tasks
 
-**(Gen)Generation-method**:
-
+**(Gen) Generation-method**:
 - HG: [Human Generated Dataset] Datasets created by humans
 - SI: [Self-Instruct] Datasets generated using self-instruct methods
 - MIX: [Mixed Dataset] Dataset contains both human and machine generated data
 - COL: [Collection of Dataset] Dataset made from a collection of other datasets
 
-## Statistics
+## SFT Statistics
 
 | Project                                                      |                           Datasets                           | Org                        | Nums      | Lang  | Task  | Gen  | Type                                                         | Src                                                          | Url                                                          |
 | :----------------------------------------------------------- | :----------------------------------------------------------: | -------------------------- | :-------- | :---- | :---- | :--- | :----------------------------------------------------------- | :----------------------------------------------------------- | :----------------------------------------------------------- |
@@ -147,58 +131,39 @@ Referring to [this](https://github.com/yaodongC/awesome-instruction-dataset) ([@
 | 医疗问答 [michael-wzhu/PromptCBLUE](https://github.com/michael-wzhu/PromptCBLUE) | [michaelwzhu/ChatMed_Consult_Dataset](https://huggingface.co/datasets/michaelwzhu/ChatMed_Consult_Dataset) | michael-wzhu               | 110113    | CN    | SI    |      |                                                              | 互联网上的医疗问诊问题(110,113)，反映了真实世界的不同用户/患者的医疗问诊需求。目前response都是由OpenAI `GPT-3.5`引擎回答的。 |                                                              |
 | [mbzuai-nlp/LaMini-LM](https://github.com/mbzuai-nlp/LaMini-LM) | [MBZUAI/LaMini-instruction](https://huggingface.co/datasets/MBZUAI/LaMini-instruction) | MBZUAI/LaMini-instruction  | **2.58M** | EN    | MT    | SI   |                                                              | 通过离线蒸馏从大型语言模型中提取知识                         |                                                              |
 | [pCLUE](https://github.com/CLUEbenchmark/pCLUE)              |       [pCLUE](https://github.com/CLUEbenchmark/pCLUE)        |                            | 120 万    |       |       |      |                                                              |                                                              |                                                              |
-| [WizardLM](https://github.com/nlpxucan/WizardLM)             | [victor123/evol_instruct_70k](https://huggingface.co/datasets/victor123/evol_instruct_70k) | WizardLM                   | 70k       | EN    | MT    |      |                                                              |                                                              |                                                              |
-|                                                              |                                                              |                            |           |       |       |      |                                                              |                                                              |                                                              |
+| [WizardLM](https://github.com/nlpxucan/WizardLM)             | [victor123/evol_instruct_70k](https://huggingface.co/datasets/victor123/evol_instruct_70k) \|[evol_instruct_V2_196k](https://huggingface.co/datasets/WizardLMTeam/WizardLM_evol_instruct_V2_196k) | WizardLM                   | 70k-196k  | EN    | MT    | SI   | general instruct evolved for complexity                      | GPT-4 / ChatGPT evolution                                  | [download](https://huggingface.co/datasets/WizardLMTeam/WizardLM_evol_instruct_V2_196k) |
+| [LIMA](https://arxiv.org/abs/2305.11206)                     | [GAIR/lima](https://huggingface.co/datasets/GAIR/lima)       | Meta AI                    | 1k        | EN    | MT    | HG   | high-quality human-written instructions                     | Stack Exchange, wikiHow, Reddit, human authors             | [download](https://huggingface.co/datasets/GAIR/lima)        |
+| [UltraChat](https://github.com/thunlp/UltraChat)             | [stingning/ultrachat](https://huggingface.co/datasets/stingning/ultrachat) \|[HuggingFaceH4/ultrachat_200k](https://huggingface.co/datasets/HuggingFaceH4/ultrachat_200k) | THUNLP / HuggingFaceH4     | 1.5M / 200k | EN    | MT    | SI   | multi-turn dialogue                                          | GPT-3.5-turbo generated, filtered                          | [download](https://huggingface.co/datasets/HuggingFaceH4/ultrachat_200k) |
+| [OpenOrca](https://github.com/Open-Orca/OpenOrca)            | [Open-Orca/OpenOrca](https://huggingface.co/datasets/Open-Orca/OpenOrca) \|[Open-Orca/SlimOrca](https://huggingface.co/datasets/Open-Orca/SlimOrca) | Open-Orca                  | 4.2M / 550k | EN    | MT    | SI   | reasoning traces over FLAN-style prompts                    | GPT-4 / GPT-3.5 augmented FLAN Collection                  | [download](https://huggingface.co/datasets/Open-Orca/SlimOrca) |
+| [OpenHermes 2.5](https://huggingface.co/datasets/teknium/OpenHermes-2.5) | [teknium/OpenHermes-2.5](https://huggingface.co/datasets/teknium/OpenHermes-2.5) | Nous Research / Teknium    | ~1M       | EN    | MT    | COL  | curated mixture: SlimOrca, Evol-Instruct, Platypus, ShareGPT, etc. | collection of open-source datasets                         | [download](https://huggingface.co/datasets/teknium/OpenHermes-2.5) |
+| [Airoboros](https://huggingface.co/datasets/jondurbin/airoboros-3.2) | [jondurbin/airoboros-3.2](https://huggingface.co/datasets/jondurbin/airoboros-3.2) | jondurbin                  | 58.7k     | EN    | MT    | SI   | customizable self-instruct, uncensored                       | GPT-4 self-instruct                                        | [download](https://huggingface.co/datasets/jondurbin/airoboros-3.2) |
+| [Platypus](https://github.com/raunak-agarwal/instruction-datasets) | [garage-bAInd/Open-Platypus](https://huggingface.co/datasets/garage-bAInd/Open-Platypus) | garage-bAInd               | 25k       | EN    | TS    | COL  | STEM focused (math/science)                                  | merging selected datasets                                  | [download](https://huggingface.co/datasets/garage-bAInd/Open-Platypus) |
+| [MetaMathQA](https://github.com/meta-math/MetaMath)          | [meta-math/MetaMathQA](https://huggingface.co/datasets/meta-math/MetaMathQA) | MetaMath                   | 395k      | EN    | TS    | SI   | mathematical reasoning                                       | bootstrapped from GSM8K & MATH via GPT-3.5                 | [download](https://huggingface.co/datasets/meta-math/MetaMathQA) |
+| [No Robots](https://huggingface.co/datasets/HuggingFaceH4/no_robots) | [HuggingFaceH4/no_robots](https://huggingface.co/datasets/HuggingFaceH4/no_robots) | HuggingFaceH4              | 10k       | EN    | MT    | HG   | human-curated across 10 categories                           | skilled human annotators                                   | [download](https://huggingface.co/datasets/HuggingFaceH4/no_robots) |
+| [Magpie](https://github.com/magpie-align/magpie)             | [Magpie-Align/Magpie-Pro-1M-v0.1](https://huggingface.co/datasets/Magpie-Align/Magpie-Pro-1M-v0.1) \|[Magpie-Qwen2-Pro-200K-Chinese](https://huggingface.co/datasets/Magpie-Align/Magpie-Qwen2-Pro-200K-Chinese) | Magpie-Align               | 1M / 200k | EN/CN | MT    | SI   | alignment data synthesized from aligned LLMs                 | Llama-3 / Qwen2-Instruct auto-generated                    | [download](https://huggingface.co/datasets/Magpie-Align)    |
+| [Infinity Instruct](https://github.com/FlagOpen/Infinity-Instruct) | [AI-ModelScope/Infinity-Instruct](https://modelscope.cn/datasets/AI-ModelScope/Infinity-Instruct) | BAAI / FlagOpen            | 7M+       | EN/CN | MT    | COL  | large-scale general instruction collection                   | collection + synthesis                                     | [download](https://modelscope.cn/datasets/AI-ModelScope/Infinity-Instruct) |
+| [COIG-CQIA](https://github.com/CSJianYang/COIG-CQIA)         | [m-a-p/COIG-CQIA](https://huggingface.co/datasets/m-a-p/COIG-CQIA) \|[modelscope/COIG-CQIA](https://modelscope.cn/datasets/m-a-p/COIG-CQIA) | 01.AI / M-A-P              | 48k       | CN    | MT    | COL  | high-quality Chinese Q&A and articles                        | Chinese internet data, cleaned + manually reviewed         | [download](https://huggingface.co/datasets/m-a-p/COIG-CQIA) |
+| [MSAgent / MSAgent-Bench](https://github.com/modelscope/modelscope-agent) | [iic/MSAgent-Bench](https://huggingface.co/datasets/iic/MSAgent-Bench) \|[modelscope/MSAgent-Bench](https://modelscope.cn/datasets/iic/MSAgent-Bench) | Alibaba / ModelScope       | 600k+     | CN/EN | MT    | COL  | tool-use and agent capabilities                              | API calling, multi-turn tool interactions                  | [download](https://huggingface.co/datasets/iic/MSAgent-Bench) |
+| [DeepCtrl-SFT](https://modelscope.cn/datasets/deepctrl/deepctrl-sft-data) | [deepctrl/deepctrl-sft-data](https://modelscope.cn/datasets/deepctrl/deepctrl-sft-data) | DeepCtrl                   | 12M       | CN/EN | MT    | MIX  | safe general-domain SFT data                                 | curated + safety-filtered Chinese/English data             | [download](https://modelscope.cn/datasets/deepctrl/deepctrl-sft-data) |
+| [OpenCodeInstruct](https://github.com/OpenCoder-llm/OpenCoder-llm) | [OpenCoder-llm/OpenCoder-llm](https://huggingface.co/datasets/OpenCoder-llm/OpenCoder-llm) | OpenCoder / NVIDIA         | 5M        | EN    | TS    | SI   | large-scale code instruction tuning                         | synthetic code data with execution verification            | [download](https://huggingface.co/datasets/OpenCoder-llm/OpenCoder-llm) |
+| [Deita](https://github.com/hkust-nlp/deita)                  | [hkust-nlp/deita-10k-v0](https://huggingface.co/datasets/hkust-nlp/deita-10k-v0) | HKUST-NLP                  | 10k       | EN    | MT    | COL  | data-efficient high-quality alignment SFT                   | complexity + quality + diversity selection on open data    | [download](https://huggingface.co/datasets/hkust-nlp/deita-10k-v0) |
+| [WildChat](https://wildchat.allen.ai/)                       | [allenai/WildChat-1M](https://huggingface.co/datasets/allenai/WildChat-1M) \|[lmsys/lmsys-chat-1m](https://huggingface.co/datasets/lmsys/lmsys-chat-1m) | Allen AI / LMSYS           | 1M-4.8M   | ML    | MT    | HG   | real-world human-ChatGPT / multi-model conversations        | real user interactions on Chatbot Arena & ChatGPT          | [download](https://huggingface.co/datasets/allenai/WildChat-1M) |
+| [Capybara](https://huggingface.co/datasets/LDJnr/Capybara)   | [LDJnr/Capybara](https://huggingface.co/datasets/LDJnr/Capybara) | LDJnr / Nous Research      | 15k       | EN    | MT    | SI   | multi-turn reasoning conversations                           | Amplify-Instruct from seed datasets                        | [download](https://huggingface.co/datasets/LDJnr/Capybara)   |
+| [Tulu 3 SFT Mix](https://github.com/allenai/open-instruct)   | [allenai/tulu-3-sft-mixture](https://huggingface.co/datasets/allenai/tulu-3-sft-mixture) | Ai2                        | ~939k     | EN    | MT    | COL  | open post-training SFT mixture                               | curated open-source instruction datasets                   | [download](https://huggingface.co/datasets/allenai/tulu-3-sft-mixture) |
+| [Smol-Smoltalk](https://huggingface.co/datasets/HuggingFaceTB/smoltalk) | [HuggingFaceTB/smoltalk](https://huggingface.co/datasets/HuggingFaceTB/smoltalk) \|[HuggingFaceTB/smoltalk2](https://huggingface.co/datasets/HuggingFaceTB/smoltalk2) | Hugging Face TB            | 460k-3.4M | EN/ML | MT    | COL  | instruction data for SmolLM family                           | collection + synthetic data                                | [download](https://huggingface.co/datasets/HuggingFaceTB/smoltalk2) |
+| [PersonaHub](https://github.com/tencent-ailab/persona-hub)   | [proj-persona/PersonaHub](https://huggingface.co/datasets/proj-persona/PersonaHub) | Tencent AI Lab             | 200k personas / 100k+ instruct | EN/CN | MT    | SI   | persona-driven synthetic instruction data                    | 1B persona scaling for diverse synthesis                   | [download](https://huggingface.co/datasets/proj-persona/PersonaHub) |
+| [OpenMathInstruct-1](https://huggingface.co/datasets/nvidia/OpenMathInstruct-1) | [nvidia/OpenMathInstruct-1](https://huggingface.co/datasets/nvidia/OpenMathInstruct-1) | NVIDIA                     | 1.8M      | EN    | TS    | SI   | mathematical problem-solving                                 | GSM8K & MATH synthetic solutions                           | [download](https://huggingface.co/datasets/nvidia/OpenMathInstruct-1) |
+| [DART-Math](https://github.com/hkust-nlp/dart-math)          | [hkust-nlp/DART-Math](https://huggingface.co/datasets/hkust-nlp/DART-Math) | HKUST-NLP                  | 600k+     | EN    | TS    | SI   | difficulty-aware math instruction tuning                    | rejection tuning from MATH/GSM8K with difficulty control     | [download](https://huggingface.co/datasets/hkust-nlp/DART-Math) |
+| [LIMO](https://github.com/GAIR-NLP/LIMO)                     | [GAIR/LIMO](https://huggingface.co/datasets/GAIR/LIMO)       | GAIR-NLP                   | 817       | EN    | TS    | COL  | high-quality reasoning elicitation                          | curated MATH/AIME/NuminaMath with expert CoT               | [download](https://huggingface.co/datasets/GAIR/LIMO)        |
+| [Code-Feedback](https://huggingface.co/datasets/m-a-p/Code-Feedback) | [m-a-p/Code-Feedback](https://huggingface.co/datasets/m-a-p/Code-Feedback) \|[m-a-p/CodeFeedback-Filtered-Instruction](https://huggingface.co/datasets/m-a-p/CodeFeedback-Filtered-Instruction) | M-A-P                      | 200k+     | EN    | TS    | COL  | code instruction with execution feedback                     | collection of code datasets with test feedback             | [download](https://huggingface.co/datasets/m-a-p/Code-Feedback) |
+| [FineWeb-Edu](https://huggingface.co/datasets/HuggingFaceFW/fineweb-edu) | [HuggingFaceFW/fineweb-edu](https://huggingface.co/datasets/HuggingFaceFW/fineweb-edu) | HuggingFaceFW              | 1.3T+ tokens | ML | MT    | COL  | high-quality educational web corpus for pretrain/SFT         | FineWeb filtered for educational content                   | [download](https://huggingface.co/datasets/HuggingFaceFW/fineweb-edu) |
+| [Chinese-DeepSeek-R1-Distill-110k-SFT](https://huggingface.co/datasets/Congliu/Chinese-DeepSeek-R1-Distill-data-110k) | [Congliu/Chinese-DeepSeek-R1-Distill-data-110k](https://huggingface.co/datasets/Congliu/Chinese-DeepSeek-R1-Distill-data-110k) \|[liucong/Chinese-DeepSeek-R1-Distill-data-110k](https://modelscope.cn/datasets/liucong/Chinese-DeepSeek-R1-Distill-data-110k) | Cong Liu                   | 110k      | CN    | MT    | SI   | Chinese reasoning SFT distilled from DeepSeek-R1-671B       | math/exam/STEM/general Chinese reasoning                   | [download](https://huggingface.co/datasets/Congliu/Chinese-DeepSeek-R1-Distill-data-110k) |
+| [Seq-Monkey](https://www.modelscope.cn/datasets/ddzhu123/seq-monkey) | [ddzhu123/seq-monkey](https://www.modelscope.cn/datasets/ddzhu123/seq-monkey) | Mobvoi / 出门问问          | 10B tokens | CN   | MT    | COL  | Chinese pre-training corpus (general/web/QA/code)           | Chinese web, encyclopedia, Q&A, blogs, books, code       | [download](https://www.modelscope.cn/datasets/ddzhu123/seq-monkey) |
 
-# RLHF Datasets
 
-## Statistics
+## SFT Dataset Details
 
-|                           Project                            | Links                                                        |              Org              | Nums   |  Lang   | Summary                                                      |
-| :----------------------------------------------------------: | ------------------------------------------------------------ | :---------------------------: | ------ | :-----: | ------------------------------------------------------------ |
-| [webgpt_comparisons](https://huggingface.co/datasets/openai/webgpt_comparisons) |                                                              |            Openai             | 19,578 | English | In the [WebGPT paper](https://arxiv.org/abs/2112.09332), the authors trained a reward model from human feedback. They used the reward model to train a long form question answering model to align with human preferences. This is the dataset of all comparisons that were marked as suitable for reward modeling by the end of the WebGPT project. There are 19,578 comparisons in total. |
-|    [SHP](https://huggingface.co/datasets/stanfordnlp/SHP)    |                                                              |          stanfordnlp          | 349 K  | English | SHP is a dataset of 385K collective human preferences over responses to questions/instructions in 18 different subject areas, from cooking to legal advice. The preferences are meant to reflect the helpfulness of one response over another, and are intended to be used for training RLHF reward models and NLG evaluation models (e.g., [SteamSHP](https://huggingface.co/stanfordnlp/SteamSHP-flan-t5-xl)). |
-| [rlhf-reward-datasets](https://huggingface.co/datasets/yitingxie/rlhf-reward-datasets) |                                                              |           yitingxie           | 76.3 k | English |                                                              |
-| [Dahoas/full-hh-rlhf](https://huggingface.co/datasets/Dahoas/full-hh-rlhf) |                                                              |            Dahoas             | 112 k  | English | Anthropic's HH dataset reformatted into prompt, chosen, rejected samples. |
-| [Dahoas/synthetic-instruct-gptj-pairwise](https://huggingface.co/datasets/Dahoas/synthetic-instruct-gptj-pairwise) |                                                              |            Dahoas             |        | English |                                                              |
-| [Dahoas/rm-static](https://huggingface.co/datasets/Dahoas/rm-static) |                                                              |            Dahoas             | 76.3k  | English | Split of [hh-static](https://huggingface.co/datasets/Dahoas/static-hh) used for training reward models after supervised fine-tuning. |
-| [Anthropic/hh-rlhf](https://huggingface.co/datasets/Anthropic/hh-rlhf) |                                                              |           Anthropic           | 22k    | English | This RLHF dataset is an iterated 'online' dataset that includes data from 52B language models. It contains 22k helpfulness comparisons and no red-teaming data. |
-| [Instruction-Tuning-with-GPT-4/GPT-4-LLM](https://github.com/Instruction-Tuning-with-GPT-4/GPT-4-LLM) |                                                              | Instruction-Tuning-with-GPT-4 | 52k    | English | Ranked responses (Note: Data is evaluated by `GPT-4` model NOT human) of Alpaca prompts from three models (GPT-4, GPT-3.5 and OPT-IML) by asking GPT-4 to rate the quality. Author believes "GPT-4 is capable of identifying and fixing its own mistakes, and accurately judging the quality of responses" |
-| [thu-coai/Safety-Prompts](https://github.com/thu-coai/Safety-Prompts) | [thu-coai/Safety-Prompts](https://huggingface.co/datasets/thu-coai/Safety-Prompts) |           thu-coai            | 100k   | Chinese | 中文安全prompts，用于评测和提升大模型的安全性，将模型的输出与人类的价值观对齐。 |
-| [Chatgpt-Comparison-Detection project](https://github.com/Hello-SimpleAI/chatgpt-comparison-detection) | [Hello-SimpleAI/HC3](https://huggingface.co/datasets/Hello-SimpleAI/HC3) |                               | 24.3K  | English | Human ChatGPT Comparison Corpus, 60k human answers and 27K ChatGPT answers for around 24K questions. |
-
-# Open ChatLLMs
-
-| Release    | Model_name                                                   | Base          | Model_Size | Datasets                                                     | Number of Instances | Language    |
-| ---------- | ------------------------------------------------------------ | ------------- | ---------- | ------------------------------------------------------------ | ------------------- | ----------- |
-| 2022-12    | GPT-3 Self Inst.                                             | GPT-3         | 175B       | Self-Instruct                                                | 82 k                | En          |
-| 2023-03-03 | [alpaca](https://github.com/tatsu-lab/stanford_alpaca)       | LLaMA         | 7B         | [alpaca_data](https://github.com/tatsu-lab/stanford_alpaca/blob/main/alpaca_data.json) | 52 k                | En          |
-| 2023-03-19 | [alpaca-lora](https://github.com/tloen/alpaca-lora/commits/main) | LLaMA         | 7B 13B 30B | [alpaca_data](https://github.com/tatsu-lab/stanford_alpaca/blob/main/alpaca_data.json)、[alpaca_data_cleaned](https://github.com/tloen/alpaca-lora/blob/main/alpaca_data_cleaned.json) | 52 k                | En          |
-| 2023-03-23 | [Chinese-Vicuna](https://github.com/Facico/Chinese-Vicuna)   | LLaMA         | 7B 13B     | [BELLE](https://github.com/LianjiaTech/BELLE)、[GuanacoDataset](https://huggingface.co/datasets/JosephusCheung/GuanacoDataset) | 1M                  | Zh          |
-| 2023-03-24 | [Alpaca-CoT](https://github.com/PhoebusSi/Alpaca-CoT)        | LLaMA         | 7B         | [dataset](https://github.com/PhoebusSi/Alpaca-CoT#statistics) | ----                | En Zh       |
-| 2023-03-25 | [dolly](https://github.com/databrickslabs/dolly)             | dolly         | 6B         | [alpaca_data](https://github.com/tatsu-lab/stanford_alpaca/blob/main/alpaca_data.json) | 52 k                | En          |
-| 2023-03-25 | [guanaco](https://huggingface.co/KBlueLeaf/guanaco-7B-leh)   | LLaMA         | 7B         | [GuanacoDataset](https://huggingface.co/datasets/JosephusCheung/GuanacoDataset) | 534 k               | En Zh Ja De |
-| 2023-03-28 | [Chinese-LLaMA-Alpaca](https://github.com/ymcui/Chinese-LLaMA-Alpaca) | LLaMA         | 7B         | [alpaca_data_zh](https://github.com/ymcui/Chinese-LLaMA-Alpaca/tree/main/data)、[pCLUE](https://github.com/CLUEbenchmark/pCLUE)、[translation2019zh](https://github.com/brightmart/nlp_chinese_corpus#5%E7%BF%BB%E8%AF%91%E8%AF%AD%E6%96%99translation2019zh)、[alpaca_data](https://github.com/tatsu-lab/stanford_alpaca/blob/main/alpaca_data.json)、Self-Instruct | 2M                  | Zh          |
-| 2023-03-29 | [ColossalChat](https://github.com/hpcaitech/ColossalAI)      | LLaMA         | 7B 13B     | [InstructionWild](https://github.com/XueFuzhao/InstructionWild) | 104 k               | En Zh       |
-| 2023-03-31 | [Luotuo](https://github.com/LC1332/Luotuo-Chinese-LLM)       | LLaMA ChatGLM | 7B 6B      | [trans_chinese_alpaca_data](https://github.com/LC1332/Chinese-alpaca-lora/blob/main/data/trans_chinese_alpaca_data.json) | 52k                 | Zh          |
-| 2023-03-31 | [cerebras-lora-alpaca](https://github.com/lxe/cerebras-lora-alpaca) | Cerebras-GPT  | 2.7B       | [AlpacaDataCleaned](https://github.com/gururise/AlpacaDataCleaned) | 52k                 | En          |
-
-# The template
-
-Append the new project at the end of file
-```shell
-
-[{Project-name}/{Dataset-name}]{https://github.com/link/to/project}
-
-- [paper/project link](link)
-- [dataset link](link)
-- Related work: (if applicable)
-
-Some introductions ...
-
-```
-
-# The Prompt Datasets List
+### General SFT
 
 ## [Alpaca -Stanford](https://github.com/tatsu-lab/stanford_alpaca)
 
@@ -216,7 +181,6 @@ Alpaca automatically generated 52k instruction data using GPT-3.5 and used it to
 - [Paper/Project Link](https://github.com/hpcaitech/ColossalAI/tree/main/applications/ColossalChat)
 - [Dataset Link](https://github.com/XueFuzhao/InstructionWild)
 - Data generation model: text-davinci-003
-  
 
 Instruction Tuning is a key component of ChatGPT. OpenAI used their user-based Instruction dataset, but unfortunately, this dataset is not open-sourced. Self-Instruct released a small instruction dataset including 175 instructions written by human labors. Standford Alpaca Team generated 52K instructions by text-davinci-003 model based on the the 175 seed instructions above.
 
@@ -232,7 +196,7 @@ Note: This is an ongoing project. We are still collecting and improving our data
 52K instruction data generated from modified self-instruct pipeline with human written 429 seed task.
 
 
-##  [Stanford Human Preferences Dataset (SHP)](https://huggingface.co/datasets/stanfordnlp/SHP)
+## [Stanford Human Preferences Dataset (SHP)](https://huggingface.co/datasets/stanfordnlp/SHP)
 
 - [DataLinks](https://huggingface.co/datasets/stanfordnlp/SHP)
 
@@ -319,7 +283,7 @@ How is SHP different from [Anthropic's HH-RLHF dataset](https://huggingface.co/d
 - Related: [(tatsu-lab/Alpaca)|52K|EN|MT|SI](https://github.com/tatsu-lab/stanford_alpaca)
 
 ## [YeungNLP/firefly-train-1.1M)](https://huggingface.co/datasets/YeungNLP/firefly-train-1.1M)
-- Summary: Chinese datasets of 23 tasks combined with human-written instruction templates. 
+- Summary: Chinese datasets of 23 tasks combined with human-written instruction templates.
 - Data generation model: N/A
 - paper: N/A
 - Cost: N/A
@@ -335,7 +299,7 @@ How is SHP different from [Anthropic's HH-RLHF dataset](https://huggingface.co/d
 - Data generation model: `GPT-4`
 - paper: [Instruction Tuning with GPT-4](https://arxiv.org/abs/2304.03277)
 - Cost: N/A
-- Related: 
+- Related:
     -[(tatsu-lab/Alpaca)|52K|EN|MT|SI](https://github.com/tatsu-lab/stanford_alpaca)
     -[(orhonovich/unnatural-instructions)|240K|EN|MT|MIX](https://github.com/orhonovich/unnatural-instructions)
 
@@ -346,7 +310,7 @@ How is SHP different from [Anthropic's HH-RLHF dataset](https://huggingface.co/d
 - Cost: N/A
 
 ## [OpenAssistant/oasst1](https://huggingface.co/datasets/OpenAssistant/oasst1)
-- Summary: OpenAssistant Conversations (OASST1), a human-generated, human-annotated assistant-style conversation corpus consisting of 161,443 messages distributed across 66,497 conversation trees, in 35 different languages, annotated with 461,292 quality ratings. 
+- Summary: OpenAssistant Conversations (OASST1), a human-generated, human-annotated assistant-style conversation corpus consisting of 161,443 messages distributed across 66,497 conversation trees, in 35 different languages, annotated with 461,292 quality ratings.
 - Data generation model: N/A
 - paper: [OpenAssistant Conversations - Democratizing Large Language Model Alignment](https://drive.google.com/file/d/10iR5hKwFqAKhL3umx8muOWSRm7hs5FqX/view)
 - Cost: N/A
@@ -384,7 +348,7 @@ How is SHP different from [Anthropic's HH-RLHF dataset](https://huggingface.co/d
 
 - 下载地址: [https://huggingface.co/datasets/BAAI/COIG](https://huggingface.co/datasets/BAAI/COIG)
 
-- 数据量: 
+- 数据量:
 
 - - Translated Instructions (67,798)
   - Exam Instructions (63,532)
@@ -398,11 +362,251 @@ https://github.com/FreedomIntelligence/InstructionZoo
 
 https://github.com/lightaime/camel
 
-# The RLHF Datasets List
+## [LIMA](https://arxiv.org/abs/2305.11206)
+- [Dataset Link](https://huggingface.co/datasets/GAIR/lima)
+- Summary: 1,000 carefully curated human-written instructions showing that "less is more for alignment". LIMA demonstrates that short fine-tuning on small, high-quality data can achieve competitive results with much larger synthetic datasets.
+- Data generation model: `human generated`
+- paper: [LIMA: Less Is More for Alignment](https://arxiv.org/abs/2305.11206)
+- Cost: N/A
+
+## [UltraChat / UltraChat 200k](https://github.com/thunlp/UltraChat)
+- [Dataset Link](https://huggingface.co/datasets/stingning/ultrachat)
+- [Filtered Dataset Link](https://huggingface.co/datasets/HuggingFaceH4/ultrachat_200k)
+- Summary: Large-scale multi-turn dialogue dataset generated by GPT-3.5-turbo. The HuggingFaceH4 release provides a sanitized, filtered 200k subset used in models like Zephyr.
+- Data generation model: `GPT-3.5-turbo`
+- paper: [Enhancing Chat Language Models by Scaling High-quality Instructional Conversations](https://arxiv.org/abs/2305.14233)
+- Cost: N/A
+
+## [OpenOrca / SlimOrca](https://github.com/Open-Orca/OpenOrca)
+- [Dataset Link](https://huggingface.co/datasets/Open-Orca/OpenOrca)
+- [Cleaned Subset Link](https://huggingface.co/datasets/Open-Orca/SlimOrca)
+- Summary: ~4.2M examples augmenting FLAN Collection prompts with GPT-4/GPT-3.5 completions and reasoning traces. SlimOrca is a cleaned, deduplicated subset focused on replicating Microsoft Orca-style reasoning.
+- Data generation model: `GPT-4`, `GPT-3.5`
+- paper: [OpenOrca: An Open Dataset of GPT Augmented FLAN Reasoning Traces](https://arxiv.org/abs/2308.07116)
+- Cost: N/A
+
+## [OpenHermes 2.5](https://huggingface.co/datasets/teknium/OpenHermes-2.5)
+- [Dataset Link](https://huggingface.co/datasets/teknium/OpenHermes-2.5)
+- Summary: A ~1M sample curated mixture of high-quality open-source instruction datasets including SlimOrca, Evol-Instruct, Platypus, ShareGPT, Airoboros, GPTeacher and others. Widely used for training generalist chat models.
+- Data generation model: `COL`
+- paper: N/A
+- Cost: N/A
+
+## [WizardLM / Evol-Instruct](https://github.com/nlpxucan/WizardLM)
+- [Dataset Link 70k](https://huggingface.co/datasets/WizardLMTeam/WizardLM_evol_instruct_70k)
+- [Dataset Link V2 196k](https://huggingface.co/datasets/WizardLMTeam/WizardLM_evol_instruct_V2_196k)
+- Summary: Evol-Instruct iteratively rewrites simple instructions into more complex variants using LLMs. WizardLM applies this method to create complexity-evolved instruction data for training capable instruction followers.
+- Data generation model: `GPT-4`, `ChatGPT`
+- paper: [WizardLM: Empowering Large Language Models to Follow Complex Instructions](https://arxiv.org/abs/2304.12244)
+- Cost: N/A
+
+## [Airoboros](https://huggingface.co/datasets/jondurbin/airoboros-3.2)
+- [Dataset Link](https://huggingface.co/datasets/jondurbin/airoboros-3.2)
+- Summary: Customizable self-instruct pipeline producing high-quality instruction data across general, code, roleplay and other domains. Version 3.2 contains ~58.7k samples.
+- Data generation model: `GPT-4`
+- paper: N/A
+- Cost: N/A
+
+## [No Robots](https://huggingface.co/datasets/HuggingFaceH4/no_robots)
+- [Dataset Link](https://huggingface.co/datasets/HuggingFaceH4/no_robots)
+- Summary: 10k high-quality, fully human-curated instruction dataset modeled after OpenAI's InstructGPT paper. Covers 10 categories including generation, QA, coding, summarization and more.
+- Data generation model: `human generated`
+- paper: N/A
+- Cost: N/A
+
+## [Magpie](https://github.com/magpie-align/magpie)
+- [Dataset Link](https://huggingface.co/datasets/Magpie-Align/Magpie-Pro-1M-v0.1)
+- [Chinese Dataset Link](https://huggingface.co/datasets/Magpie-Align/Magpie-Qwen2-Pro-200K-Chinese)
+- Summary: Alignment data synthesis from scratch by prompting aligned LLMs with nothing—no seed data required. Magpie-Pro contains ~1M samples generated from Llama-3-70B-Instruct; a 200k Chinese variant is available from Qwen2.
+- Data generation model: `Llama-3-Instruct`, `Qwen2-Instruct`
+- paper: [Magpie: Alignment Data Synthesis from Scratch by Prompting Aligned LLMs with Nothing](https://arxiv.org/abs/2406.08464)
+- Cost: N/A
+
+## [Deita](https://github.com/hkust-nlp/deita)
+- [Dataset Link](https://huggingface.co/datasets/hkust-nlp/deita-10k-v0)
+- Summary: A 10K-sample data-efficient instruction tuning dataset selected by complexity, quality, and diversity scorers. Deita shows that principled data selection can match or exceed models trained on 10x more data.
+- Data generation model: `COL`
+- paper: [What Makes Good Data for Alignment?](https://arxiv.org/abs/2312.15685)
+- Cost: N/A
+
+## [WildChat](https://wildchat.allen.ai/)
+- [Dataset Link](https://huggingface.co/datasets/allenai/WildChat-1M)
+- [Related Dataset](https://huggingface.co/datasets/lmsys/lmsys-chat-1m)
+- Summary: Large-scale real-world human-ChatGPT / multi-model conversation logs (1M–4.8M). WildChat captures diverse, often longer and more complex user prompts than synthetic datasets; LMSYS-Chat-1M covers 25+ models and ~154 languages.
+- Data generation model: `HG`
+- paper: [WildChat: 1M ChatGPT Interaction Logs in the Wild](https://arxiv.org/abs/2405.14770) / [LMSYS-Chat-1M](https://arxiv.org/abs/2309.11998)
+- Cost: N/A
+
+## [Capybara](https://huggingface.co/datasets/LDJnr/Capybara)
+- [Dataset Link](https://huggingface.co/datasets/LDJnr/Capybara)
+- Summary: ~15K multi-turn reasoning conversations generated using Amplify-Instruct, expanding high-quality seed instructions into deep, multi-turn dialogues across science, math, logic, and culture.
+- Data generation model: `GPT-4`
+- paper: N/A
+- Cost: N/A
+
+## [Tulu 3 SFT Mix](https://github.com/allenai/open-instruct)
+- [Dataset Link](https://huggingface.co/datasets/allenai/tulu-3-sft-mixture)
+- Summary: ~939K open post-training SFT mixture curated by Ai2 for Tulu 3. Combines high-quality public instruction datasets into a single training blend.
+- Data generation model: `COL`
+- paper: [Tulu 3: Pushing Frontiers in Open Language Model Post-Training](https://arxiv.org/abs/2411.09601)
+- Cost: N/A
+
+## [Smol-Smoltalk](https://huggingface.co/datasets/HuggingFaceTB/smoltalk)
+- [Dataset Link](https://huggingface.co/datasets/HuggingFaceTB/smoltalk)
+- [Dataset Link 2](https://huggingface.co/datasets/HuggingFaceTB/smoltalk2)
+- Summary: Instruction dataset for the SmolLM family. smoltalk2 (~3.4M samples) adds OpenThoughts, Tulu 3, and multilingual data for training small but capable chat models.
+- Data generation model: `COL`
+- paper: N/A
+- Cost: N/A
+
+## [PersonaHub](https://github.com/tencent-ailab/persona-hub)
+- [Dataset Link](https://huggingface.co/datasets/proj-persona/PersonaHub)
+- Summary: 200K personas (toward 1B) released by Tencent AI Lab for persona-driven synthetic data generation. Configurations include instruction, math, reasoning, knowledge, NPC, and tool definitions.
+- Data generation model: `SI`
+- paper: [Scaling Synthetic Data Creation with 1,000,000,000 Personas](https://arxiv.org/abs/2406.20094)
+- Cost: N/A
+
+### Code & Math
+
+## [MetaMathQA](https://github.com/meta-math/MetaMath)
+- [Dataset Link](https://huggingface.co/datasets/meta-math/MetaMathQA)
+- Summary: ~395K math question-answer pairs bootstrapped from GSM8K and MATH via forward/backward reasoning and rephrasing. Used to significantly improve mathematical reasoning in LLMs.
+- Data generation model: `GPT-3.5`
+- paper: [MetaMath: Bootstrap Your Own Mathematical Questions for Large Language Models](https://arxiv.org/abs/2309.12284)
+- Cost: N/A
+
+## [OpenMathInstruct-1](https://huggingface.co/datasets/nvidia/OpenMathInstruct-1)
+- [Dataset Link](https://huggingface.co/datasets/nvidia/OpenMathInstruct-1)
+- Summary: 1.8M math instruction tuning pairs with synthetic solutions for GSM8K and MATH, designed to improve open math reasoning.
+- Data generation model: `GPT-4`
+- paper: [OpenMathInstruct-1: A 1.8 Million Math Instruction Tuning Dataset](https://arxiv.org/abs/2402.10176)
+- Cost: N/A
+
+## [DART-Math](https://github.com/hkust-nlp/dart-math)
+- [Dataset Link](https://huggingface.co/datasets/hkust-nlp/DART-Math)
+- Summary: Difficulty-Aware Rejection Tuning dataset for math. Generates and filters reasoning trajectories by difficulty, yielding 600K+ high-quality math instruction examples.
+- Data generation model: `GPT-4`
+- paper: [DART-Math: Difficulty-Aware Rejection Tuning for Mathematical Problem-Solving](https://arxiv.org/abs/2407.13690)
+- Cost: N/A
+
+## [LIMO](https://github.com/GAIR-NLP/LIMO)
+- [Dataset Link](https://huggingface.co/datasets/GAIR/LIMO)
+- Summary: Only 817 curated high-quality reasoning examples that elicit strong complex reasoning (AIME 57%, MATH 95%) from a 32B base model, demonstrating "less is more for reasoning".
+- Data generation model: `COL`
+- paper: [LIMO: Less is More for Reasoning](https://arxiv.org/abs/2502.03387)
+- Cost: N/A
+
+## [Code-Feedback](https://huggingface.co/datasets/m-a-p/Code-Feedback)
+- [Dataset Link](https://huggingface.co/datasets/m-a-p/Code-Feedback)
+- [Filtered Version](https://huggingface.co/datasets/m-a-p/CodeFeedback-Filtered-Instruction)
+- Summary: 200K+ code instruction pairs with execution feedback from the M-A-P project. Used to train code models with test-driven verification signals.
+- Data generation model: `COL`
+- paper: [M-A-P: Introducing High-Quality Code-Feedback Dataset](https://arxiv.org/abs/2407.12883)
+- Cost: N/A
+
+## [OpenCodeInstruct](https://github.com/OpenCoder-llm/OpenCoder-llm)
+- [Dataset Link](https://huggingface.co/datasets/OpenCoder-llm/OpenCoder-llm)
+- Summary: 5 million code instruction tuning samples with execution-based verification, one of the largest open code instruction datasets.
+- Data generation model: `COL`
+- paper: [OpenCoder: The Open Cookbook for Top-Tier Code LLMs](https://arxiv.org/abs/2411.04905)
+- Cost: N/A
+
+### Multilingual & Chinese
+
+## [xP3](https://huggingface.co/datasets/bigscience/xP3)
+- [Dataset Link](https://huggingface.co/datasets/bigscience/xP3)
+- Summary: [Prompt-resource] xP3 (Crosslingual Public Pool of Prompts) is a collection of prompts & datasets across 46 of languages & 16 NLP tasks.
+- Data generation model: N/A
+- paper: [Crosslingual Generalization through Multitask Finetuning](https://arxiv.org/abs/2211.01786)
+- Cost: N/A
+
+## [firefly](https://github.com/yangjianxin1/Firefly)
+- [Dataset Link](https://huggingface.co/datasets/YeungNLP/firefly-train-1.1M)
+- Summary: Chinese datasets of 23 tasks combined with human-written instruction templates.
+- Data generation model: N/A
+- paper: N/A
+- Cost: N/A
+
+## [COIG](https://huggingface.co/datasets/BAAI/COIG)
+- [Dataset Link](https://huggingface.co/datasets/BAAI/COIG)
+- Summary: Chinese Open Instruction Generalist dataset containing translated instructions, exam instructions, value alignment instructions, counterfactual correction multi-round chat, and Leetcode instructions.
+- Data generation model: `COL`
+- paper: [Chinese Open Instruction Generalist: A Preliminary Release](https://arxiv.org/abs/2304.07987)
+- Cost: N/A
+
+## [Infinity Instruct](https://github.com/FlagOpen/Infinity-Instruct)
+- [Dataset Link (ModelScope)](https://modelscope.cn/datasets/AI-ModelScope/Infinity-Instruct)
+- [Dataset Link (HuggingFace)](https://huggingface.co/datasets/AI-ModelScope/Infinity-Instruct)
+- Summary: Large-scale general instruction dataset (7M+) released by BAAI / FlagOpen for both Chinese and English instruction tuning.
+- Data generation model: `COL`
+- paper: N/A
+- Cost: N/A
+
+## [COIG-CQIA](https://github.com/CSJianYang/COIG-CQIA)
+- [Dataset Link](https://huggingface.co/datasets/m-a-p/COIG-CQIA)
+- [ModelScope Link](https://modelscope.cn/datasets/m-a-p/COIG-CQIA)
+- Summary: High-quality Chinese instruction fine-tuning dataset following the "quality is all you need" philosophy. Built from Chinese internet Q&A and articles with deep cleansing, restructuring, and manual review.
+- Data generation model: `COL`
+- paper: [COIG-CQIA: Quality is All You Need for Chinese Instruction Fine-tuning](https://arxiv.org/abs/2403.18058)
+- Cost: N/A
+
+## [MSAgent / MSAgent-Bench](https://github.com/modelscope/modelscope-agent)
+- [Dataset Link](https://huggingface.co/datasets/iic/MSAgent-Bench)
+- [ModelScope Link](https://modelscope.cn/datasets/iic/MSAgent-Bench)
+- Summary: Chinese/English agent tool-use dataset for training LLMs to call APIs and use external tools in multi-turn conversations.
+- Data generation model: `MIX`
+- paper: N/A
+- Cost: N/A
+
+## [DeepCtrl-SFT](https://modelscope.cn/datasets/deepctrl/deepctrl-sft-data)
+- [ModelScope Link](https://modelscope.cn/datasets/deepctrl/deepctrl-sft-data)
+- Summary: 12M safe Chinese/English general-domain SFT entries (~3B tokens). Designed for small-scale Chinese LLM instruction fine-tuning with safety filtering.
+- Data generation model: `MIX`
+- paper: N/A
+- Cost: N/A
+
+## [Chinese-DeepSeek-R1-Distill-110k-SFT](https://huggingface.co/datasets/Congliu/Chinese-DeepSeek-R1-Distill-data-110k)
+- [Dataset Link](https://huggingface.co/datasets/Congliu/Chinese-DeepSeek-R1-Distill-data-110k)
+- [ModelScope Link](https://modelscope.cn/datasets/liucong/Chinese-DeepSeek-R1-Distill-data-110k)
+- Summary: 110K Chinese reasoning SFT samples distilled from the full DeepSeek-R1-671B model. Covers math (~36.5K), exam (~2.4K), STEM (~12K), and general Chinese reasoning (~58K).
+- Data generation model: `DeepSeek-R1-671B`
+- paper: N/A
+- Cost: N/A
+
+## [Seq-Monkey](https://www.modelscope.cn/datasets/ddzhu123/seq-monkey)
+- [ModelScope Link](https://www.modelscope.cn/datasets/ddzhu123/seq-monkey)
+- Summary: ~10B token Chinese pre-training corpus released by Mobvoi, including web, encyclopedia, Q&A, blogs, books, and code. Mainly for pre-training/continued pre-training; often combined with instruction data for full Chinese LLM training.
+- Data generation model: `COL`
+- paper: N/A
+- Cost: N/A
+
+# RLHF / Preference Datasets
+
+## RLHF Statistics
+
+|                           Project                            | Links                                                        |              Org              | Nums   |  Lang   | Summary                                                      |
+| :----------------------------------------------------------: | ------------------------------------------------------------ | :---------------------------: | ------ | :-----: | ------------------------------------------------------------ |
+| [webgpt_comparisons](https://huggingface.co/datasets/openai/webgpt_comparisons) |                                                              |            Openai             | 19,578 | English | In the [WebGPT paper](https://arxiv.org/abs/2112.09332), the authors trained a reward model from human feedback. They used the reward model to train a long form question answering model to align with human preferences. This is the dataset of all comparisons that were marked as suitable for reward modeling by the end of the WebGPT project. There are 19,578 comparisons in total. |
+|    [SHP](https://huggingface.co/datasets/stanfordnlp/SHP)    |                                                              |          stanfordnlp          | 349 K  | English | SHP is a dataset of 385K collective human preferences over responses to questions/instructions in 18 different subject areas, from cooking to legal advice. The preferences are meant to reflect the helpfulness of one response over another, and are intended to be used for training RLHF reward models and NLG evaluation models (e.g., [SteamSHP](https://huggingface.co/stanfordnlp/SteamSHP-flan-t5-xl)). |
+| [rlhf-reward-datasets](https://huggingface.co/datasets/yitingxie/rlhf-reward-datasets) |                                                              |           yitingxie           | 76.3 k | English |                                                              |
+| [Dahoas/full-hh-rlhf](https://huggingface.co/datasets/Dahoas/full-hh-rlhf) |                                                              |            Dahoas             | 112 k  | English | Anthropic's HH dataset reformatted into prompt, chosen, rejected samples. |
+| [Dahoas/synthetic-instruct-gptj-pairwise](https://huggingface.co/datasets/Dahoas/synthetic-instruct-gptj-pairwise) |                                                              |            Dahoas             |        | English |                                                              |
+| [Dahoas/rm-static](https://huggingface.co/datasets/Dahoas/rm-static) |                                                              |            Dahoas             | 76.3k  | English | Split of [hh-static](https://huggingface.co/datasets/Dahoas/static-hh) used for training reward models after supervised fine-tuning. |
+| [Anthropic/hh-rlhf](https://huggingface.co/datasets/Anthropic/hh-rlhf) |                                                              |           Anthropic           | 22k    | English | This RLHF dataset is an iterated 'online' dataset that includes data from 52B language models. It contains 22k helpfulness comparisons and no red-teaming data. |
+| [Instruction-Tuning-with-GPT-4/GPT-4-LLM](https://github.com/Instruction-Tuning-with-GPT-4/GPT-4-LLM) |                                                              | Instruction-Tuning-with-GPT-4 | 52k    | English | Ranked responses (Note: Data is evaluated by `GPT-4` model NOT human) of Alpaca prompts from three models (GPT-4, GPT-3.5 and OPT-IML) by asking GPT-4 to rate the quality. Author believes "GPT-4 is capable of identifying and fixing its own mistakes, and accurately judging the quality of responses" |
+| [thu-coai/Safety-Prompts](https://github.com/thu-coai/Safety-Prompts) | [thu-coai/Safety-Prompts](https://huggingface.co/datasets/thu-coai/Safety-Prompts) |           thu-coai            | 100k   | Chinese | 中文安全prompts，用于评测和提升大模型的安全性，将模型的输出与人类的价值观对齐。 |
+| [Chatgpt-Comparison-Detection project](https://github.com/Hello-SimpleAI/chatgpt-comparison-detection) | [Hello-SimpleAI/HC3](https://huggingface.co/datasets/Hello-SimpleAI/HC3) |                               | 24.3K  | English | Human ChatGPT Comparison Corpus, 60k human answers and 27K ChatGPT answers for around 24K questions. |
+| [UltraFeedback](https://huggingface.co/datasets/openbmb/UltraFeedback) | [openbmb/UltraFeedback](https://huggingface.co/datasets/openbmb/UltraFeedback) | OpenBMB (Tsinghua)            | 64k    | English | Multi-aspect feedback (instruction-following, truthfulness, honesty, helpfulness) for reward/DPO training. |
+| [HelpSteer](https://huggingface.co/datasets/nvidia/HelpSteer) | [nvidia/HelpSteer](https://huggingface.co/datasets/nvidia/HelpSteer) | NVIDIA                        | 37k    | English | Multi-attribute helpfulness dataset (helpfulness, correctness, coherence, complexity, verbosity). |
+| [HelpSteer2](https://huggingface.co/datasets/nvidia/HelpSteer2) | [nvidia/HelpSteer2](https://huggingface.co/datasets/nvidia/HelpSteer2) | NVIDIA                        | 10k    | English | High-quality preference dataset for reward models; SOTA on RewardBench at release. |
+| [HelpSteer2-Preference](https://huggingface.co/datasets/nvidia/HelpSteer2-Preference) | [nvidia/HelpSteer2-Preference](https://huggingface.co/datasets/nvidia/HelpSteer2-Preference) | NVIDIA                        | 10k    | English | Preference annotations with human-written justifications for BT vs regression reward modeling. |
+| [HelpSteer3-Preference](https://huggingface.co/datasets/nvidia/HelpSteer3-Preference) | [nvidia/HelpSteer3-Preference](https://huggingface.co/datasets/nvidia/HelpSteer3-Preference) | NVIDIA                        | 40k+   | English | Diverse open human-annotated preference data across STEM, coding, and multilingual tasks. |
+
+## RLHF Dataset Details
 
 ## [Anthropic/hh-rlhf](https://huggingface.co/datasets/Anthropic/hh-rlhf)
 
-- Summary: This RLHF dataset is an iterated 'online' dataset that includes data from 52B language models. It contains 22k helpfulness comparisons and no red-teaming data. 
+- Summary: This RLHF dataset is an iterated 'online' dataset that includes data from 52B language models. It contains 22k helpfulness comparisons and no red-teaming data.
 - Data generation model: `Anthropic RL-CAI 52B`
 - paper: [Training a Helpful and Harmless Assistant with Reinforcement Learning from Human Feedback](https://arxiv.org/abs/2204.05862)
 - Cost: N/A
@@ -423,11 +627,11 @@ https://github.com/lightaime/camel
 
 ## [Instruction-Tuning-with-GPT-4/GPT-4-LLM](https://github.com/Instruction-Tuning-with-GPT-4/GPT-4-LLM)
 
-- Summary: Ranked responses (Note: Data is evaluated by `GPT-4` model NOT human) of Alpaca prompts from three models (GPT-4, GPT-3.5 and OPT-IML) by asking GPT-4 to rate the quality. Author believes "GPT-4 is capable of identifying and fixing its own mistakes, and accurately judging the quality of responses" 
+- Summary: Ranked responses (Note: Data is evaluated by `GPT-4` model NOT human) of Alpaca prompts from three models (GPT-4, GPT-3.5 and OPT-IML) by asking GPT-4 to rate the quality. Author believes "GPT-4 is capable of identifying and fixing its own mistakes, and accurately judging the quality of responses"
 - Data generation model: `GPT-4`
 - paper: [Instruction Tuning with GPT-4](https://arxiv.org/abs/2304.03277)
 - Cost: N/A
-- Related: 
+- Related:
     -[(tatsu-lab/Alpaca)|52K|EN|MT|SI](https://github.com/tatsu-lab/stanford_alpaca)
 
 
@@ -535,28 +739,97 @@ Public User-Shared Dialogues with ChatGPT (ShareGPT) Around 60K dialogues shared
 Human ChatGPT Comparison Corpus (HC3) We use both the human and ChatGPT responses from the [HC3 english dataset](https://arxiv.org/abs/2301.07597), which contains around 60K human answers and 27K ChatGPT answers for around 24K questions, resulting in a total number of around 87K question-answer examples.
 
 
-## Open Instruction Generalist (OIG). 
+## Open Instruction Generalist (OIG).
 - [Paper/Project Link](https://arxiv.org/abs/2106.03300)
 - [Dataset Link](https://laion.ai/blog/oig-dataset/)
 
 We use a manually-selected subset of components from the Open [Instruction Generalist dataset](https://laion.ai/blog/oig-dataset/) curated by LAION. Specifically, we use the grade-school-math-instructions, the poetry-to-songs, and the plot-screenplay-books-dialogue datasets. This results in a total of around 30k examples.
 
 
-## OpenAI WebGPT. 
+## OpenAI WebGPT.
 - [Paper/Project Link](https://arxiv.org/abs/2106.03300)
 - [Dataset Link](https://huggingface.co/datasets/openai/webgpt_comparisons)
 
 In the [WebGPT paper](https://arxiv.org/abs/2112.09332), the authors trained a reward model from human feedback. They used the reward model to train a long form question answering model to align with human preferences. This is the dataset of all comparisons that were marked as suitable for reward modeling by the end of the WebGPT project. There are 19,578 comparisons in total.
 
-Each example in the dataset contains a pair of model answers for a question, and the associated metadata. Each answer has a preference score from humans that can be used to determine which of the two answers are better. 
+Each example in the dataset contains a pair of model answers for a question, and the associated metadata. Each answer has a preference score from humans that can be used to determine which of the two answers are better.
 
-## OpenAI Summarization. 
+## OpenAI Summarization.
 - [Paper/Project Link](https://arxiv.org/abs/2106.03300)
 - [Dataset Link](https://huggingface.co/datasets/openai/summarization)
 
 The OpenAI summarization dataset contains ~93K examples, each example consists of feedback from humans regarding the summarizations generated by a model. Human evaluators chose the superior summary from two options.
 
-# Datasets without license information 
+## [UltraFeedback](https://huggingface.co/datasets/openbmb/UltraFeedback)
+- [Paper/Project Link](https://arxiv.org/abs/2310.01377)
+- [Dataset Link](https://huggingface.co/datasets/openbmb/UltraFeedback)
+
+A large-scale, multi-aspect feedback dataset for training reward models and DPO. It contains ~64k prompts with multiple ranked responses annotated for instruction-following, truthfulness, honesty and helpfulness.
+
+## [HelpSteer / HelpSteer2 / HelpSteer2-Preference](https://huggingface.co/datasets/nvidia/HelpSteer2)
+- [Paper/Project Link](https://arxiv.org/abs/2311.09528)
+- [Dataset Link](https://huggingface.co/datasets/nvidia/HelpSteer)
+- [Dataset Link 2](https://huggingface.co/datasets/nvidia/HelpSteer2)
+- [Dataset Link 2-Preference](https://huggingface.co/datasets/nvidia/HelpSteer2-Preference)
+
+NVIDIA's family of multi-attribute helpfulness datasets. HelpSteer provides fine-grained ratings across helpfulness, correctness, coherence, complexity and verbosity. HelpSteer2 adds preference pairs for reward model training; HelpSteer2-Preference includes human-written justifications comparing Bradley-Terry and regression reward modeling. HelpSteer3-Preference expands to 40k+ diverse real-world applications including STEM, coding, and multilingual tasks.
+
+# DPO Datasets
+
+## DPO Statistics
+
+| Project                                                      | Links                                                        | Org                           | Nums     | Lang    | Summary                                                      |
+| :----------------------------------------------------------- | :----------------------------------------------------------: | :---------------------------: | :------- | :-----: | :----------------------------------------------------------- |
+| [Magpie-Pro-DPO](https://huggingface.co/datasets/Magpie-Align/Magpie-Pro-DPO-100K-v0.1) | [Magpie-Align/Magpie-Pro-DPO-100K-v0.1](https://huggingface.co/datasets/Magpie-Align/Magpie-Pro-DPO-100K-v0.1) | Magpie-Align                  | 100k     | English | Preference pairs synthesized from aligned LLMs for DPO training. |
+| [Orca-DPO-Pairs](https://huggingface.co/datasets/HuggingFaceH4/orca_dpo_pairs) | [HuggingFaceH4/orca_dpo_pairs](https://huggingface.co/datasets/HuggingFaceH4/orca_dpo_pairs) \|[Intel/orca_dpo_pairs](https://huggingface.co/datasets/Intel/orca_dpo_pairs) \|[argilla/distilabel-intel-orca-dpo-pairs](https://huggingface.co/datasets/argilla/distilabel-intel-orca-dpo-pairs) | HuggingFaceH4 / Intel / Argilla | 12k / 6k | English | DPO preference pairs from GPT-4 Orca reasoning traces; Argilla cleaned version ~6k. |
+| [UltraFeedback-Binarized](https://huggingface.co/datasets/HuggingFaceH4/ultrafeedback_binarized) | [HuggingFaceH4/ultrafeedback_binarized](https://huggingface.co/datasets/HuggingFaceH4/ultrafeedback_binarized) | HuggingFaceH4                 | 61k-230k | English | Binarized UltraFeedback into chosen/rejected pairs for DPO; decontaminated variants available. |
+| [DPO-Mix-7K](https://huggingface.co/datasets/argilla/dpo-mix-7k) | [argilla/dpo-mix-7k](https://huggingface.co/datasets/argilla/dpo-mix-7k) | Argilla                       | 7.5k     | English | Curated cocktail of Capybara, Intel Orca, and UltraFeedback high-quality DPO pairs. |
+| [Llama3-UltraFeedback-ArmoRM](https://huggingface.co/datasets/princeton-nlp/llama3-ultrafeedback-armorm) | [princeton-nlp/llama3-ultrafeedback-armorm](https://huggingface.co/datasets/princeton-nlp/llama3-ultrafeedback-armorm) | Princeton NLP                 | 60k      | English | 5 Llama-3-SFT responses per prompt ranked by ArmoRM for advanced preference research. |
+| [ChatML-DPO-Pairs](https://huggingface.co/datasets/mlabonne/chatml-dpo-pairs) | [mlabonne/chatml-dpo-pairs](https://huggingface.co/datasets/mlabonne/chatml-dpo-pairs) | Maxime Labonne                | 12k      | English | ChatML-formatted Intel Orca DPO pairs (ChatGPT chosen vs Llama-2 rejected). |
+| [Magpie-Air-DPO](https://huggingface.co/datasets/Magpie-Align/Magpie-Air-DPO-100K-v0.1) | [Magpie-Align/Magpie-Air-DPO-100K-v0.1](https://huggingface.co/datasets/Magpie-Align/Magpie-Air-DPO-100K-v0.1) | Magpie-Align                  | 100k     | English | Synthetic DPO preference pairs from Llama-3-8B-Instruct (Magpie-Air). |
+| [Tulu 3 Preference](https://github.com/allenai/open-instruct) | [allenai/tulu-3-pref-personas-instruction-following](https://huggingface.co/datasets/allenai/tulu-3-pref-personas-instruction-following) \|[allenai/tulu-3-pref-mixture](https://huggingface.co/datasets/allenai/tulu-3-pref-mixture) | Ai2                           | 20k-200k | English | Preference data used in Tulu 3 post-training pipeline. |
+
+## DPO Dataset Details
+
+## [Orca-DPO-Pairs](https://huggingface.co/datasets/HuggingFaceH4/orca_dpo_pairs)
+- [Dataset Link](https://huggingface.co/datasets/HuggingFaceH4/orca_dpo_pairs)
+- [Alternative Source](https://huggingface.co/datasets/Intel/orca_dpo_pairs)
+- [Cleaned Version](https://huggingface.co/datasets/argilla/distilabel-intel-orca-dpo-pairs)
+
+~12k DPO preference pairs derived from GPT-4 augmented Orca/FLAN reasoning traces. Intel released a widely used variant; Argilla later cleaned it to ~6k high-quality pairs, swapping/rejecting mislabeled examples.
+
+## [UltraFeedback-Binarized](https://huggingface.co/datasets/HuggingFaceH4/ultrafeedback_binarized)
+- [Dataset Link](https://huggingface.co/datasets/HuggingFaceH4/ultrafeedback_binarized)
+
+61k–230k preference pairs obtained by binarizing UltraFeedback scores into chosen/rejected responses. A standard DPO dataset used in Zephyr, Tulu 3, and many open alignment recipes.
+
+## [DPO-Mix-7K](https://huggingface.co/datasets/argilla/dpo-mix-7k)
+- [Dataset Link](https://huggingface.co/datasets/argilla/dpo-mix-7k)
+
+A small, curated cocktail (~7.5k pairs) mixing high-scoring chosen responses from Capybara, Intel Orca, and UltraFeedback. Designed for efficient, high-quality DPO training.
+
+## [Llama3-UltraFeedback-ArmoRM](https://huggingface.co/datasets/princeton-nlp/llama3-ultrafeedback-armorm)
+- [Dataset Link](https://huggingface.co/datasets/princeton-nlp/llama3-ultrafeedback-armorm)
+
+~60k prompts each with five Llama-3-SFT responses ranked by the ArmoRM reward model. Supports advanced preference optimization research beyond binary pairs.
+
+## [ChatML-DPO-Pairs](https://huggingface.co/datasets/mlabonne/chatml-dpo-pairs)
+- [Dataset Link](https://huggingface.co/datasets/mlabonne/chatml-dpo-pairs)
+
+~12k ChatML-formatted preference pairs based on Intel/orca_dpo_pairs, with ChatGPT responses as chosen and Llama-2-13b-chat responses as rejected.
+
+## [Magpie-Air-DPO](https://huggingface.co/datasets/Magpie-Align/Magpie-Air-DPO-100K-v0.1)
+- [Dataset Link](https://huggingface.co/datasets/Magpie-Align/Magpie-Air-DPO-100K-v0.1)
+
+~100k synthetic DPO preference pairs generated from Llama-3-8B-Instruct using the Magpie-Air pipeline.
+
+## [Tulu 3 Preference](https://github.com/allenai/open-instruct)
+- [Dataset Link](https://huggingface.co/datasets/allenai/tulu-3-pref-personas-instruction-following)
+- [Preference Mixture](https://huggingface.co/datasets/allenai/tulu-3-pref-mixture)
+
+Ai2's Tulu 3 preference data (~20k–200k) including persona-based instruction-following preferences and a full preference mixture for open post-training.
+
+# Datasets without license information
 
  ## [alespalla/chatbot_instruction_prompts](https://huggingface.co/datasets/alespalla/chatbot_instruction_prompts)
 
@@ -567,17 +840,40 @@ The OpenAI summarization dataset contains ~93K examples, each example consists o
 
 # Contributing
 
-Our purpose is to make this repo even better. If you are interested in contributing, please refer to HERE for instructions in contribution.
+Our purpose is to make this repo even better. If you are interested in contributing, please refer to [HERE](#contribution-template) for instructions in contribution.
+
+## Contribution Template
+
+Append the new project at the end of file:
+
+```markdown
+[{Project-name}/{Dataset-name}](https://github.com/link/to/project)
+
+- [paper/project link](link)
+- [dataset link](link)
+- Related work: (if applicable)
+
+Some introductions ...
+```
 
 # License
 
 `Awesome-Prompt-Dataset` is released under the Apache 2.0 license.
 
-
-
-## Reference
+# Reference
 - https://github.com/Zjh-819/LLMDataHub
 - https://github.com/raunak-agarwal/instruction-datasets
 - https://github.com/zhilizju/Awesome-instruction-tuning
 - https://github.com/RenzeLou/awesome-instruction-learning
 - https://github.com/neuml/txtinstruct
+- https://github.com/modelscope/ms-swift
+- https://github.com/ymcui/Chinese-LLaMA-Alpaca
+- https://github.com/Instruction-Tuning-with-GPT-4/GPT-4-LLM
+- https://github.com/magpie-align/magpie
+- https://github.com/FlagOpen/Infinity-Instruct
+- https://github.com/hkust-nlp/deita
+- https://github.com/hkust-nlp/dart-math
+- https://github.com/GAIR-NLP/LIMO
+- https://github.com/tencent-ailab/persona-hub
+- https://github.com/allenai/open-instruct
+- https://github.com/OpenCoder-llm/OpenCoder-llm
