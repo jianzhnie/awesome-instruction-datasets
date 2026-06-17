@@ -13,7 +13,7 @@
 ## 目录
 
 - [简介](#简介)
-- [更新说明 (2023–2025)](#更新说明-20232025)
+- [更新说明 (2023–2026)](#更新说明-20232026)
 - [快速分类索引](#快速分类索引)
 - [SFT 数据集](#sft-数据集)
   - [SFT 数据统计](#sft-数据统计)
@@ -40,16 +40,17 @@
 在这里，你可以找到一些开源的中文指令数据的 AWESOME 列表。
 
 
-## 更新说明 (2023–2025)
+## 更新说明 (2023–2026)
 
-指令微调数据生态发展迅速。本列表在保留经典数据集的基础上，新增了近两年具有代表性的高质量数据集，覆盖通用 SFT、RLHF/偏好、代码/数学推理以及中文资源。特别推荐在 [ModelScope 魔搭社区](#modelscope-中文指令微调数据集) 获取中文数据集。
+指令微调数据生态发展迅速。本列表在保留经典数据集的基础上，新增了近两年具有代表性的高质量数据集，覆盖通用 SFT、RLHF/偏好、DPO、代码/数学推理、Agent/工具调用以及中文资源。特别推荐在 [ModelScope 魔搭社区](#modelscope-中文指令微调数据集) 获取中文数据集。
 
 新增亮点：
-- **SFT 数据集**：LIMA、UltraChat、OpenOrca/SlimOrca、OpenHermes 2.5、WizardLM/Evol-Instruct、MetaMathQA、Airoboros、Platypus、No Robots、Magpie、Infinity Instruct、Deita、WildChat、Capybara、Tulu 3 SFT Mix、Smol-Smoltalk、PersonaHub、OpenMathInstruct-1、DART-Math、LIMO、Code-Feedback、FineWeb-Edu、OpenCodeInstruct。
-- **RLHF / 偏好数据集**：Anthropic HH-RLHF、Stanford SHP、UltraFeedback、HelpSteer/HelpSteer2/HelpSteer2-Preference、NVIDIA HelpSteer3-Preference。
-- **DPO 数据集**：Orca-DPO-Pairs、UltraFeedback-Binarized、DPO-Mix-7K、Llama3-UltraFeedback-ArmoRM、ChatML-DPO-Pairs、Magpie-Air-DPO、Magpie-Pro-DPO、Tulu 3 Preference。
-- **代码 / 数学**：MetaMathQA、OpenMathInstruct-1、DART-Math、LIMO、Code-Feedback、OpenCodeInstruct。
-- **中文 / ModelScope**：COIG-CQIA、MSAgent、DeepCtrl-SFT、Infinity Instruct、Alpaca-GPT4 中文、HC3-Chinese、Magpie-Qwen2-Pro-200K-Chinese、Chinese-DeepSeek-R1-Distill-110k-SFT、Seq-Monkey。
+- **SFT 数据集**：LIMA、UltraChat、OpenOrca/SlimOrca、OpenHermes 2.5、WizardLM/Evol-Instruct、MetaMathQA、Airoboros、Platypus、No Robots、Magpie、Infinity Instruct、Deita、WildChat、Capybara、Tulu 3 SFT Mix、Smol-Smoltalk、PersonaHub、OpenMathInstruct-1、DART-Math、LIMO、Code-Feedback、FineWeb-Edu、OpenCodeInstruct、**Nemotron-Cascade-2-SFT-Data、KIMI-K2.5-1000000x、CodeX-7M-Non-Thinking、Dolci-Instruct-SFT、AgentTrove、ToolMind、AM-Thinking-v1-Distilled、SYNTHETIC-2-SFT-verified、OpenThoughts-114k / OpenThoughts3-1.2M、OpenR1-Math-220k、NuminaMath-CoT、Bespoke-Stratos-17k**。
+- **RLHF / 偏好数据集**：Anthropic HH-RLHF、Stanford SHP、UltraFeedback、HelpSteer/HelpSteer2/HelpSteer2-Preference、NVIDIA HelpSteer3-Preference、**Nemotron-Cascade-2-RL-Data、TaskTrove、SYNTHETIC-2-RL、UltraInteract_preference、RLSTACK**。
+- **DPO 数据集**：Orca-DPO-Pairs、UltraFeedback-Binarized、DPO-Mix-7K、Llama3-UltraFeedback-ArmoRM、ChatML-DPO-Pairs、Magpie-Air-DPO、Magpie-Pro-DPO、Tulu 3 Preference、**RLSTACK、UltraInteract_preference、Ling-Coder-DPO、DAPO-Math-17k**。
+- **代码 / 数学**：MetaMathQA、OpenMathInstruct-1、DART-Math、LIMO、Code-Feedback、OpenCodeInstruct、**CodeX-7M-Non-Thinking、OpenR1-Math-220k、NuminaMath-CoT、Bespoke-Stratos-17k、DAPO-Math-17k**。
+- **Agent / 工具调用**：**AgentTrove、ToolMind、Nemotron-Cascade-2-SFT-Data（agentic 子集）**。
+- **中文 / ModelScope**：COIG-CQIA、MSAgent、DeepCtrl-SFT、Infinity Instruct、Alpaca-GPT4 中文、HC3-Chinese、Magpie-Qwen2-Pro-200K-Chinese、Chinese-DeepSeek-R1-Distill-110k-SFT、Seq-Monkey、**smoltalk-chinese、OpenThoughts3-1.2M**。
 
 现已按 **SFT 数据集**、**RLHF 数据集**、**DPO 数据集** 三大类组织。
 
@@ -58,12 +59,13 @@
 
 | 分类 | 入口 | 亮点 |
 | :----- | :----------- | :----------- |
-| **通用 SFT** | [SFT 数据统计](#sft-数据统计) • [通用 SFT 详情](#通用-sft) | Alpaca、LIMA、UltraChat、OpenOrca、OpenHermes 2.5、WizardLM、Magpie、No Robots、Deita、WildChat、Capybara、Tulu 3、Smol-Smoltalk、PersonaHub |
-| **代码 / 数学** | [SFT 数据统计](#sft-数据统计) • [代码 / 数学详情](#代码--数学) | Code Alpaca、MetaMathQA、OpenMathInstruct-1、DART-Math、LIMO、Code-Feedback、OpenCodeInstruct |
+| **通用 SFT** | [SFT 数据统计](#sft-数据统计) • [通用 SFT 详情](#通用-sft) | Alpaca、LIMA、UltraChat、OpenOrca、OpenHermes 2.5、WizardLM、Magpie、No Robots、Deita、WildChat、Capybara、Tulu 3、Smol-Smoltalk、PersonaHub、Nemotron-Cascade-2、Dolci-Instruct-SFT、KIMI-K2.5-1000000x |
+| **代码 / 数学** | [SFT 数据统计](#sft-数据统计) • [代码 / 数学详情](#代码--数学) | Code Alpaca、MetaMathQA、OpenMathInstruct-1、DART-Math、LIMO、Code-Feedback、OpenCodeInstruct、CodeX-7M-Non-Thinking、OpenR1-Math-220k、NuminaMath-CoT、Bespoke-Stratos-17k |
 | **多语言 / 中文** | [SFT 数据统计](#sft-数据统计) • [多语言 / 中文详情](#多语言--中文) | Chinese-LLaMA-Alpaca、BELLE、COIG、COIG-CQIA、MSAgent、DeepCtrl-SFT、Infinity Instruct、Chinese-DeepSeek-R1-Distill、Seq-Monkey |
-| **RLHF / 偏好** | [RLHF 数据统计](#rlhf-数据统计) • [RLHF 详情](#rlhf-数据集详情) | HH-RLHF、SHP、UltraFeedback、HelpSteer 系列 |
-| **DPO** | [DPO 数据统计](#dpo-数据统计) • [DPO 详情](#dpo-数据集详情) | Orca-DPO-Pairs、UltraFeedback-Binarized、DPO-Mix-7K、Llama3-UltraFeedback-ArmoRM、Magpie DPO |
-| **ModelScope 中文** | [ModelScope 中文指令微调数据集](#modelscope-中文指令微调数据集) | COIG-CQIA、MSAgent、DeepCtrl-SFT、Infinity Instruct、Chinese-DeepSeek-R1-Distill、Seq-Monkey |
+| **Agent / 工具调用** | [SFT 数据统计](#sft-数据统计) • [Agent / 工具调用详情](#agent--工具调用) | AgentTrove、ToolMind、MSAgent |
+| **RLHF / 偏好** | [RLHF 数据统计](#rlhf-数据统计) • [RLHF 详情](#rlhf-数据集详情) | HH-RLHF、SHP、UltraFeedback、HelpSteer 系列、Nemotron-Cascade-2-RL、TaskTrove、SYNTHETIC-2-RL |
+| **DPO** | [DPO 数据统计](#dpo-数据统计) • [DPO 详情](#dpo-数据集详情) | Orca-DPO-Pairs、UltraFeedback-Binarized、DPO-Mix-7K、Llama3-UltraFeedback-ArmoRM、Magpie DPO、RLSTACK、UltraInteract_preference、Ling-Coder-DPO |
+| **ModelScope 中文** | [ModelScope 中文指令微调数据集](#modelscope-中文指令微调数据集) | COIG-CQIA、MSAgent、DeepCtrl-SFT、Infinity Instruct、Chinese-DeepSeek-R1-Distill、Seq-Monkey、smoltalk-chinese、OpenThoughts3-1.2M |
 
 
 ## SFT 数据集
@@ -163,6 +165,19 @@
 | [FineWeb-Edu](https://huggingface.co/datasets/HuggingFaceFW/fineweb-edu)       | 1.3T+ tokens | ML       | MT        | COL        | 高质量教育网页语料（预训练/持续预训练）                                       | FineWeb 教育内容过滤                        | [下载](https://huggingface.co/datasets/HuggingFaceFW/fineweb-edu)                            |
 | [Chinese-DeepSeek-R1-Distill-110k-SFT](https://huggingface.co/datasets/Congliu/Chinese-DeepSeek-R1-Distill-data-110k) | 110k | CN | MT | SI | 中文 DeepSeek-R1 蒸馏推理 SFT 数据                                           | 数学/考试/STEM/通用中文推理                 | [下载](https://huggingface.co/datasets/Congliu/Chinese-DeepSeek-R1-Distill-data-110k)        |
 | [Seq-Monkey](https://www.modelscope.cn/datasets/ddzhu123/seq-monkey)           | 100亿 tokens | CN       | MT        | COL        | 序列猴子中文预训练语料                                                       | 网页/百科/问答/博客/书籍/代码               | [下载](https://www.modelscope.cn/datasets/ddzhu123/seq-monkey)                               |
+| [Nemotron-Cascade-2-SFT-Data](https://huggingface.co/datasets/nvidia/Nemotron-Cascade-2-SFT-Data) | 1587万 | EN/ML | MT | COL | 多领域大规模 SFT（对话、数学、科学、代码、Agent、SWE、安全） | 多教师 on-policy 蒸馏（DeepSeek-V3.2 / GPT-OSS-120B / Qwen3 / Nemotron-Cascade-1） | [下载](https://huggingface.co/datasets/nvidia/Nemotron-Cascade-2-SFT-Data) |
+| [KIMI-K2.5-1000000x](https://huggingface.co/datasets/ianncity/KIMI-K2.5-1000000x) | 69.3万（~5B tokens）| EN/ML | MT | SI | Kimi K2.5 高推理模式蒸馏推理轨迹 | Kimi K2.5 合成 | [下载](https://huggingface.co/datasets/ianncity/KIMI-K2.5-1000000x) |
+| [CodeX-7M-Non-Thinking](https://huggingface.co/datasets/Modotte/CodeX-7M-Non-Thinking) | 736万 | EN | TS | SI | 大规模精选代码指令（无推理链直接输出） | Modotte 整理 + 合成 | [下载](https://huggingface.co/datasets/Modotte/CodeX-7M-Non-Thinking) |
+| [Dolci-Instruct-SFT](https://huggingface.co/datasets/allenai/Dolci-Instruct-SFT) | 215万 | ML | MT | COL | OLMo 3 SFT 混合数据（数学、代码、多语言、安全、逻辑谜题） | 开源数据精选 + Ai2 合成 | [下载](https://huggingface.co/datasets/allenai/Dolci-Instruct-SFT) |
+| [AgentTrove](https://huggingface.co/datasets/open-thoughts/AgentTrove) | 170万 | EN | MT | COL | Agentic 交互轨迹（代码修复、Shell、数学、竞技编程、计算机使用） | 219 个源数据集 / terminus-2 / Harbor | [下载](https://huggingface.co/datasets/open-thoughts/AgentTrove) |
+| [ToolMind](https://huggingface.co/datasets/Nanbeige/ToolMind) | 36.9万 | EN | TS | MIX | 推理增强的函数调用 / 工具使用轨迹 | 多智能体模拟 + 开源数据增强 | [下载](https://huggingface.co/datasets/Nanbeige/ToolMind) |
+| [AM-Thinking-v1-Distilled](https://huggingface.co/datasets/a-m-team/AM-Thinking-v1-Distilled) | 189万 | CN/EN | MT | SI | 验证后的推理蒸馏（数学、代码、对话、科学、指令遵循） | AM-Thinking-v1 / Qwen3 / DeepSeek-R1 + 验证器 | [下载](https://huggingface.co/datasets/a-m-team/AM-Thinking-v1-Distilled) |
+| [SYNTHETIC-2-SFT-verified](https://huggingface.co/datasets/PrimeIntellect/SYNTHETIC-2-SFT-verified) | 10.5万 | EN | MT | SI | 验证后的推理轨迹（数学、代码、格式化、谜题） | DeepSeek-R1-0528 + 分布式验证 | [下载](https://huggingface.co/datasets/PrimeIntellect/SYNTHETIC-2-SFT-verified) |
+| [OpenThoughts-114k](https://huggingface.co/datasets/open-thoughts/OpenThoughts-114k) | 11.4万 | EN | MT | SI | 合成推理数据（数学、科学、代码、谜题） | DeepSeek-R1 验证 | [下载](https://huggingface.co/datasets/open-thoughts/OpenThoughts-114k) |
+| [OpenThoughts3-1.2M](https://huggingface.co/datasets/open-thoughts/OpenThoughts3-1.2M) | 120万 | EN | TS | SI | 规模化推理数据集（数学 / 代码 / 科学） | QwQ-32B 16 次标注 | [下载](https://huggingface.co/datasets/open-thoughts/OpenThoughts3-1.2M) |
+| [OpenR1-Math-220k](https://huggingface.co/datasets/open-r1/OpenR1-Math-220k) | 22万 | EN | TS | SI | 基于 NuminaMath 1.5 的数学推理轨迹 | DeepSeek R1 + Math-Verify / Llama 评判 | [下载](https://huggingface.co/datasets/open-r1/OpenR1-Math-220k) |
+| [NuminaMath-CoT](https://huggingface.co/datasets/AI-MO/NuminaMath-CoT) | 86万 | EN/CN | TS | COL | 带 CoT 解答的数学问题（K-12 到奥赛） | OCR + 翻译 + 格式对齐 | [下载](https://huggingface.co/datasets/AI-MO/NuminaMath-CoT) |
+| [Bespoke-Stratos-17k](https://huggingface.co/datasets/bespokelabs/Bespoke-Stratos-17k) | 1.7万 | EN | TS | SI | 高质量推理蒸馏（数学 / 代码 / 科学） | DeepSeek-R1 拒绝采样 | [下载](https://huggingface.co/datasets/bespokelabs/Bespoke-Stratos-17k) |
 
 
 ### SFT 数据集详情
@@ -461,6 +476,53 @@ https://github.com/lightaime/camel
 - paper: [Scaling Synthetic Data Creation with 1,000,000,000 Personas](https://arxiv.org/abs/2406.20094)
 - Cost: N/A
 
+## [Nemotron-Cascade-2-SFT-Data](https://huggingface.co/datasets/nvidia/Nemotron-Cascade-2-SFT-Data)
+- [数据集链接](https://huggingface.co/datasets/nvidia/Nemotron-Cascade-2-SFT-Data)
+- [论文](https://arxiv.org/abs/2603.19220)
+- 简介：约 1587 万条多领域 SFT 数据，用于训练 Nemotron-Cascade-2-30B-A3B。覆盖对话（~932 万）、数学（~294 万）、科学（~181 万）、指令遵循（~82 万）、对话式 Agent（~54.8 万）、终端 Agent（~32.4 万）、SWE（~10.2 万）和安全。回复通过 DeepSeek-V3.2、GPT-OSS-120B、Qwen3-235B-A22B 与 Nemotron-Cascade-1 进行 on-policy 蒸馏得到。
+- 生成模型：`DeepSeek-V3.2`、`GPT-OSS-120B`、`Qwen3-235B-A22B`、`Nemotron-Cascade-1`
+- 许可证：NVIDIA Open Model License
+
+## [KIMI-K2.5-1000000x](https://huggingface.co/datasets/ianncity/KIMI-K2.5-1000000x)
+- [数据集链接](https://huggingface.co/datasets/ianncity/KIMI-K2.5-1000000x)
+- 简介：约 69.3 万条（~5B tokens）从 Moonshot AI Kimi K2.5 高推理模式蒸馏的推理轨迹。组成约 50% 代码、20% 科学、15% 数学，以及计算机、逻辑、创意写作、多语言 STEM 等子集。
+- 生成模型：`Kimi K2.5`
+- 许可证：Apache 2.0
+
+## [Dolci-Instruct-SFT](https://huggingface.co/datasets/allenai/Dolci-Instruct-SFT)
+- [数据集链接](https://huggingface.co/datasets/allenai/Dolci-Instruct-SFT)
+- [论文](https://arxiv.org/abs/2512.13961)
+- 简介：215 万条指令样本，用于训练 OLMo 3 7B Instruct SFT。混合了 OpenThoughts 3、FLAN v2、Aya、Tulu 3 personas、WildChat（GPT-4.1 升级版）、SciRIFF 等开源数据，以及 Ai2 新增的精确指令遵循、Python 算法、逻辑谜题、可验证推理和工具使用数据。
+- 生成模型：`COL`
+- 许可证：ODC-BY
+
+## [AM-Thinking-v1-Distilled](https://huggingface.co/datasets/a-m-team/AM-Thinking-v1-Distilled)
+- [数据集链接](https://huggingface.co/datasets/a-m-team/AM-Thinking-v1-Distilled)
+- [论文](https://arxiv.org/abs/2505.14464)
+- 简介：189 万条经自动验证的推理蒸馏样本，来源包括 AM-Thinking-v1、Qwen3-235B-A22B 和 DeepSeek-R1。覆盖数学（~29.5%）、代码（~17.1%）、通用对话（~41.8%）及科学/指令遵循/对话。使用 Math-Verify、沙箱执行和模型评判进行验证。
+- 生成模型：`AM-Thinking-v1`、`Qwen3-235B-A22B`、`DeepSeek-R1`
+- 许可证：仅供研究
+
+## [SYNTHETIC-2-SFT-verified](https://huggingface.co/datasets/PrimeIntellect/SYNTHETIC-2-SFT-verified)
+- [数据集链接](https://huggingface.co/datasets/PrimeIntellect/SYNTHETIC-2-SFT-verified)
+- [博客](https://www.primeintellect.ai/blog/synthetic-2-release)
+- 简介：SYNTHETIC-2 集合中 10.5 万条验证正确的 SFT 推理轨迹，由 DeepSeek-R1-0528 生成并过滤（reward=1 或 >0.7）。任务包括代码输出预测、Pydantic/JSON 格式化、句子重组、ASCII 树等可验证推理问题。
+- 生成模型：`DeepSeek-R1-0528`
+
+## [OpenThoughts-114k](https://huggingface.co/datasets/open-thoughts/OpenThoughts-114k)
+- [数据集链接](https://huggingface.co/datasets/open-thoughts/OpenThoughts-114k)
+- [论文](https://arxiv.org/abs/2506.04178)
+- 简介：11.4 万条高质量合成推理样本，覆盖数学、科学、代码和谜题。用于训练 OpenThinker-7B / 32B。答案由 DeepSeek-R1 生成并验证。
+- 生成模型：`DeepSeek-R1`
+- 许可证：Apache 2.0
+
+## [OpenThoughts3-1.2M](https://huggingface.co/datasets/open-thoughts/OpenThoughts3-1.2M)
+- [数据集链接](https://huggingface.co/datasets/open-thoughts/OpenThoughts3-1.2M)
+- [论文](https://arxiv.org/abs/2506.04178)
+- 简介：OpenThoughts 第三代，120 万条样本（85 万数学、25 万代码、10 万科学）。每道题经 QwQ-32B 16 次标注并严格过滤。用于训练 OpenThinker3-7B。
+- 生成模型：`QwQ-32B`
+- 许可证：Apache 2.0
+
 #### 代码 / 数学
 
 ## [MetaMathQA](https://github.com/meta-math/MetaMath)
@@ -505,6 +567,32 @@ https://github.com/lightaime/camel
 - Data generation model: `COL`
 - paper: [OpenCoder: The Open Cookbook for Top-Tier Code LLMs](https://arxiv.org/abs/2411.04905)
 - Cost: N/A
+
+## [CodeX-7M-Non-Thinking](https://huggingface.co/datasets/Modotte/CodeX-7M-Non-Thinking)
+- [数据集链接](https://huggingface.co/datasets/Modotte/CodeX-7M-Non-Thinking)
+- 简介：736 万条精选代码指令对，强调直接给出代码解（不含逐步推理链）。覆盖 Python、Java、C++、JavaScript、算法、Web 开发、ML/AI、数据库、竞技编程等。
+- 生成模型：`COL` / Modotte 整理
+- 许可证：Apache 2.0
+
+## [OpenR1-Math-220k](https://huggingface.co/datasets/open-r1/OpenR1-Math-220k)
+- [数据集链接](https://huggingface.co/datasets/open-r1/OpenR1-Math-220k)
+- [GitHub](https://github.com/huggingface/open-r1)
+- 简介：22 万道来自 NuminaMath 1.5 的数学题，每题由 DeepSeek R1 生成 2–4 条推理轨迹。约 88% 经 Math-Verify 验证，12% 由 Llama-3.3-70B-Instruct 评判。含 `default`（~9.4 万）和 `extended`（~13.1 万）两个 split。
+- 生成模型：`DeepSeek-R1`
+- 许可证：Apache 2.0
+
+## [NuminaMath-CoT](https://huggingface.co/datasets/AI-MO/NuminaMath-CoT)
+- [数据集链接](https://huggingface.co/datasets/AI-MO/NuminaMath-CoT)
+- 简介：约 86 万道带 Chain-of-Thought 解答的数学题，从中国 K-12 练习到国际奥赛。来源包括 cn_k12、olympiads、AoPS、GSM8K、MATH 及合成数据。
+- 生成模型：`COL`
+- 许可证：Apache 2.0
+
+## [Bespoke-Stratos-17k](https://huggingface.co/datasets/bespokelabs/Bespoke-Stratos-17k)
+- [数据集链接](https://huggingface.co/datasets/bespokelabs/Bespoke-Stratos-17k)
+- [博客](https://www.bespokelabs.ai/blog/bespoke-stratos-the-unreasonable-effectiveness-of-reasoning-distillation)
+- 简介：1.7 万条高质量推理蒸馏样本（5K 代码来自 APPs/TACO、10K 数学来自 AIME/MATH/Olympiads、1K 科学/谜题来自 STILL-2）。以 DeepSeek-R1 为教师，gpt-4o-mini 过滤，正确率提升至约 73%。
+- 生成模型：`DeepSeek-R1`
+- 许可证：Apache 2.0
 
 #### 多语言 / 中文
 
@@ -575,6 +663,21 @@ https://github.com/lightaime/camel
 - paper: N/A
 - Cost: N/A
 
+#### Agent / 工具调用
+
+## [AgentTrove](https://huggingface.co/datasets/open-thoughts/AgentTrove)
+- [数据集链接](https://huggingface.co/datasets/open-thoughts/AgentTrove)
+- [GitHub](https://github.com/open-thoughts/OpenThoughts-Agent)
+- 简介：170 万条从 219 个源数据集汇聚的 Agentic 交互轨迹。覆盖代码修复、Shell 脚本、数学求解、竞技编程和通用计算机使用任务。ShareGPT 格式，附带 `original_source`、`original_teacher`、`reward` 等元数据。配套的 RL/评测数据集为 [TaskTrove](https://huggingface.co/datasets/open-thoughts/TaskTrove)。
+- 生成模型：`COL`（terminus-2 / Harbor）
+- 许可证：Apache 2.0
+
+## [ToolMind](https://huggingface.co/datasets/Nanbeige/ToolMind)
+- [数据集链接](https://huggingface.co/datasets/Nanbeige/ToolMind)
+- [论文](https://arxiv.org/abs/2511.15718)
+- 简介：约 36.9 万条推理增强的函数调用/工具使用轨迹。包含 16 万条基于 2 万+ 函数的多智能体合成轨迹，以及 20 万条增强后的开源 function-calling 数据。含轨迹级与轮次级两级过滤，并保留显式的 `<think>` 推理内容。
+- 生成模型：`MIX`
+- 许可证：Apache 2.0
 
 ## RLHF / 偏好数据集
 
@@ -597,6 +700,11 @@ https://github.com/lightaime/camel
 | HelpSteer2 | 10k | EN | 奖励模型训练偏好数据 | [下载](https://huggingface.co/datasets/nvidia/HelpSteer2) |
 | HelpSteer2-Preference | 10k | EN | 带人工解释的偏好对 | [下载](https://huggingface.co/datasets/nvidia/HelpSteer2-Preference) |
 | HelpSteer3-Preference | 40k+ | EN | 跨 STEM、代码、多语言的开放式人类偏好数据 | [下载](https://huggingface.co/datasets/nvidia/HelpSteer3-Preference) |
+| Nemotron-Cascade-2-RL-Data | 多子集 | EN | Nemotron-Cascade-2 的 RL 数据（数学、代码、推理、Agentic、指令遵循） | [下载](https://huggingface.co/collections/nvidia/nemotron-cascade-2) |
+| TaskTrove | 75万+ | EN | Harbor 格式的 Agentic 任务规范，用于 RL 与评测 | [下载](https://huggingface.co/datasets/open-thoughts/TaskTrove) |
+| SYNTHETIC-2-RL | 15.6万 | EN | SYNTHETIC-2 的 RL 子集，带 Qwen3 / DeepSeek-R1-0528 难度标注 | [下载](https://huggingface.co/datasets/PrimeIntellect/SYNTHETIC-2-RL) |
+| UltraInteract_preference | ~21.9万 | EN | 多轮推理与工具使用的偏好树（正确/错误轨迹与动作） | [下载](https://huggingface.co/datasets/openbmb/UltraInteract_preference) |
+| RLSTACK | 86.8万 | EN | Stack Exchange 上的 DPO 风格偏好对（高赞 vs 低赞答案） | [下载](https://huggingface.co/datasets/H-D-T/RLSTACK) |
 
 ### RLHF 数据集详情
 
@@ -770,6 +878,38 @@ A large-scale, multi-aspect feedback dataset for training reward models and DPO.
 
 NVIDIA's family of multi-attribute helpfulness datasets. HelpSteer provides fine-grained ratings across helpfulness, correctness, coherence, complexity and verbosity. HelpSteer2 adds preference pairs for reward model training; HelpSteer2-Preference includes human-written justifications comparing Bradley-Terry and regression reward modeling. HelpSteer3-Preference expands to 40k+ diverse real-world applications including STEM, coding, and multilingual tasks.
 
+## [Nemotron-Cascade-2-RL-Data](https://huggingface.co/collections/nvidia/nemotron-cascade-2)
+- [集合链接](https://huggingface.co/collections/nvidia/nemotron-cascade-2)
+- [论文](https://arxiv.org/abs/2603.19220)
+- 简介：NVIDIA 为训练 Nemotron-Cascade-2-30B-A3B 发布的强化学习数据集。包含数学、代码、推理、指令遵循、长上下文、Agentic/SWE 及 RLHF 风格偏好对等多个领域的 RL 数据。
+- 生成模型：`Nemotron-Cascade-2 pipeline`
+- 许可证：NVIDIA Open Model License
+
+## [TaskTrove](https://huggingface.co/datasets/open-thoughts/TaskTrove)
+- [数据集链接](https://huggingface.co/datasets/open-thoughts/TaskTrove)
+- [GitHub](https://github.com/open-thoughts/OpenThoughts-Agent)
+- 简介：75 万+ 条 Harbor 格式的 Agentic 任务规范，用于 Agentic 编码/计算机使用模型的 RL 训练与评测。与 AgentTrove 配套，可通过 Harbor 部署以更新模型行为。
+- 生成模型：`COL`
+- 许可证：Apache 2.0
+
+## [SYNTHETIC-2-RL](https://huggingface.co/datasets/PrimeIntellect/SYNTHETIC-2-RL)
+- [数据集链接](https://huggingface.co/datasets/PrimeIntellect/SYNTHETIC-2-RL)
+- [博客](https://www.primeintellect.ai/blog/synthetic-2-release)
+- 简介：SYNTHETIC-2 集合中 15.6 万条面向 RL 的问题，带有 Qwen3-32B、Qwen3-4B、DeepSeek-R1-0528-Qwen3-8B、DeepSeek-R1-0528 的难度/奖励标注。每行包含 verification_info，可用于基于规则的奖励训练。
+- 生成模型：`DeepSeek-R1-0528`、`Qwen3`
+
+## [UltraInteract_preference](https://huggingface.co/datasets/openbmb/UltraInteract_preference)
+- [数据集链接](https://huggingface.co/datasets/openbmb/UltraInteract_preference)
+- [论文](https://arxiv.org/abs/2404.02078)
+- 简介：约 21.9 万条偏好对（最多 28.6 万正确/错误节点），以偏好树形式组织多轮推理与工具使用轨迹。可用于奖励模型或 DPO 训练。
+- 生成模型：`GPT-4`
+
+## [RLSTACK](https://huggingface.co/datasets/H-D-T/RLSTACK)
+- [数据集链接](https://huggingface.co/datasets/H-D-T/RLSTACK)
+- 简介：86.8 万条 DPO 风格偏好对，源自 53 个 Stack Exchange 社区。每行包含问题及 `chosen`（高赞）/`rejected`（低赞）答案对。
+- 生成模型：N/A
+- 许可证：CC BY 4.0
+
 
 ## DPO 偏好优化数据集
 
@@ -785,6 +925,10 @@ NVIDIA's family of multi-attribute helpfulness datasets. HelpSteer provides fine
 | ChatML-DPO-Pairs | 12k | EN | ChatML 格式 Orca DPO 对（ChatGPT chosen / Llama-2 rejected） | [下载](https://huggingface.co/datasets/mlabonne/chatml-dpo-pairs) |
 | Magpie-Air-DPO | 100k | EN | Llama-3-8B-Instruct 合成的 DPO 偏好对 | [下载](https://huggingface.co/datasets/Magpie-Align/Magpie-Air-DPO-100K-v0.1) |
 | Tulu 3 Preference | 20k-200k | EN | Ai2 Tulu 3 后训练偏好数据 | [下载](https://huggingface.co/datasets/allenai/tulu-3-pref-mixture) |
+| RLSTACK | 86.8万 | EN | Stack Exchange 上的 DPO 风格偏好对（高赞 vs 低赞答案） | [下载](https://huggingface.co/datasets/H-D-T/RLSTACK) |
+| UltraInteract_preference | ~21.9万 | EN | 多轮推理与工具使用的偏好树（正确/错误轨迹与动作） | [下载](https://huggingface.co/datasets/openbmb/UltraInteract_preference) |
+| Ling-Coder-DPO | 25.3万 | EN | 面向代码的 DPO 偏好对，基于 code_contests 与测试通过/奖励模型信号 | [下载](https://huggingface.co/datasets/inclusionAI/Ling-Coder-DPO) |
+| DAPO-Math-17k | 179万 | EN | 竞技级数学题及奖励元数据，用于 RL/DPO 训练 | [下载](https://huggingface.co/datasets/BytedTsinghua-SIA/DAPO-Math-17k) |
 
 ### DPO 数据集详情
 
@@ -826,6 +970,29 @@ A small, curated cocktail (~7.5k pairs) mixing high-scoring chosen responses fro
 
 Ai2's Tulu 3 preference data (~20k–200k) including persona-based instruction-following preferences and a full preference mixture for open post-training.
 
+## [RLSTACK](https://huggingface.co/datasets/H-D-T/RLSTACK)
+- [数据集链接](https://huggingface.co/datasets/H-D-T/RLSTACK)
+
+86.8 万条 DPO 风格偏好对，来自 53 个 Stack Exchange 社区。每行提供一个问题及 `chosen`（高赞）/`rejected`（低赞）答案对。
+
+## [UltraInteract_preference](https://huggingface.co/datasets/openbmb/UltraInteract_preference)
+- [数据集链接](https://huggingface.co/datasets/openbmb/UltraInteract_preference)
+- [论文](https://arxiv.org/abs/2404.02078)
+
+约 21.9 万条偏好对（最多 28.6 万正确/错误节点），以偏好树形式组织多轮推理与工具使用轨迹。每个偏好树的根为指令，动作作为节点，可用于奖励模型或 DPO 训练。
+
+## [Ling-Coder-DPO](https://huggingface.co/datasets/inclusionAI/Ling-Coder-DPO)
+- [数据集链接](https://huggingface.co/datasets/inclusionAI/Ling-Coder-DPO)
+- [论文](https://arxiv.org/abs/2503.17793)
+
+25.3 万条代码专用 DPO 偏好对，源自 code_contests。根据代码测试用例通过率、困惑度分布和奖励模型分数选择正负样本。用于训练 Ling-Coder-Lite。
+
+## [DAPO-Math-17k](https://huggingface.co/datasets/BytedTsinghua-SIA/DAPO-Math-17k)
+- [数据集链接](https://huggingface.co/datasets/BytedTsinghua-SIA/DAPO-Math-17k)
+- [集合](https://huggingface.co/collections/BytedTsinghua-SIA/dapo)
+
+179 万条竞技级数学题，附带奖励模型元数据（ground_truth、评测 style）。面向 RL 与偏好优化（如 GRPO/DPO），属于 DAPO 集合。
+
 
 ## ModelScope 中文指令微调数据集
 
@@ -843,6 +1010,8 @@ Ai2's Tulu 3 preference data (~20k–200k) including persona-based instruction-f
 | **Magpie-Qwen2-Pro-200K-Chinese** | [HuggingFace/ModelScope](https://huggingface.co/datasets/Magpie-Align/Magpie-Qwen2-Pro-200K-Chinese) | 200k | 基于 Qwen2 的中文对齐合成数据 |
 | **Chinese-DeepSeek-R1-Distill-110k-SFT** | [modelscope/liucong/Chinese-DeepSeek-R1-Distill-data-110k](https://modelscope.cn/datasets/liucong/Chinese-DeepSeek-R1-Distill-data-110k) | 110k | 中文 DeepSeek-R1-671B 蒸馏推理 SFT 数据 |
 | **Seq-Monkey** | [modelscope/ddzhu123/seq-monkey](https://modelscope.cn/datasets/ddzhu123/seq-monkey) | 100亿 tokens | 出门问问开源的中文通用预训练语料 |
+| **smoltalk-chinese** | [modelscope/openscsg/smoltalk-chinese](https://modelscope.cn/datasets/openscsg/smoltalk-chinese) | 70万+ | 中文通用指令微调数据 |
+| **OpenThoughts3-1.2M** | [modelscope/open-thoughts/OpenThoughts3-1.2M](https://modelscope.cn/datasets/open-thoughts/OpenThoughts3-1.2M) | 120万 | OpenThoughts 第三代推理数据集（数学/代码/科学） |
 
 > 提示：可通过 [ms-swift](https://github.com/modelscope/ms-swift) 框架一键使用上述数据集进行微调。
 
@@ -898,3 +1067,9 @@ Some introductions ...
 - https://github.com/tencent-ailab/persona-hub
 - https://github.com/allenai/open-instruct
 - https://github.com/OpenCoder-llm/OpenCoder-llm
+- https://github.com/open-thoughts/open-thoughts
+- https://github.com/open-thoughts/OpenThoughts-Agent
+- https://github.com/huggingface/open-r1
+- https://github.com/PrimeIntellect-ai/genesys
+- https://github.com/bespokelabsai/curator
+- https://github.com/NVIDIA-NeMo/Nemotron

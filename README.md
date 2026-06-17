@@ -13,7 +13,7 @@
 # Contents
 
 - [Introduction](#introduction)
-- [What's New (2023–2025)](#whats-new-20232025)
+- [What's New (2023–2026)](#whats-new-20232026)
 - [Quick Index by Category](#quick-index-by-category)
 - [SFT Datasets](#sft-datasets)
   - [SFT Statistics](#sft-statistics)
@@ -38,16 +38,17 @@ Instruction Tuning / Reinforcement Learning from Human Feedback (RLHF) Dataset i
 
 With 'awesome-prompt-dataset', you can accelerate your research and development in NLP and unlock new opportunities for innovation. Let's explore the possibilities together!"
 
-# What's New (2023–2025)
+# What's New (2023–2026)
 
-The instruction-tuning landscape has evolved rapidly. Below are representative high-quality datasets that have emerged since this list was first created, covering general SFT, RLHF/preference, code/math reasoning, and Chinese resources. For Chinese datasets, also see README_zh.md for ModelScope links.
+The instruction-tuning landscape has evolved rapidly. Below are representative high-quality datasets that have emerged since this list was first created, covering general SFT, RLHF/preference, DPO, code/math reasoning, agent/tool use, and Chinese resources. For Chinese datasets, also see README_zh.md for ModelScope links.
 
 Notable additions:
-- **SFT**: LIMA, UltraChat, OpenOrca/SlimOrca, OpenHermes 2.5, WizardLM/Evol-Instruct, MetaMathQA, Airoboros, Platypus, No Robots, Magpie, Infinity Instruct, Deita, WildChat, Capybara, Tulu 3 SFT Mix, Smol-Smoltalk, PersonaHub, OpenMathInstruct-1, DART-Math, LIMO, Code-Feedback, FineWeb-Edu, OpenCodeInstruct.
-- **RLHF / Preference**: Anthropic HH-RLHF, Stanford SHP, UltraFeedback, HelpSteer/HelpSteer2/HelpSteer2-Preference, NVIDIA HelpSteer3-Preference.
-- **DPO**: Orca-DPO-Pairs, UltraFeedback-Binarized, DPO-Mix-7K, Llama3-UltraFeedback-ArmoRM, ChatML-DPO-Pairs, Magpie-Air-DPO, Magpie-Pro-DPO, Tulu 3 Preference.
-- **Code / Math**: MetaMathQA, OpenMathInstruct-1, DART-Math, LIMO, Code-Feedback, OpenCodeInstruct.
-- **Chinese / ModelScope**: COIG-CQIA, MSAgent, DeepCtrl-SFT, Infinity Instruct, Alpaca-GPT4 Chinese, HC3-Chinese, Magpie-Qwen2-Pro-200K-Chinese, Chinese-DeepSeek-R1-Distill-110k-SFT, Seq-Monkey.
+- **SFT**: LIMA, UltraChat, OpenOrca/SlimOrca, OpenHermes 2.5, WizardLM/Evol-Instruct, MetaMathQA, Airoboros, Platypus, No Robots, Magpie, Infinity Instruct, Deita, WildChat, Capybara, Tulu 3 SFT Mix, Smol-Smoltalk, PersonaHub, OpenMathInstruct-1, DART-Math, LIMO, Code-Feedback, FineWeb-Edu, OpenCodeInstruct, **Nemotron-Cascade-2-SFT-Data, KIMI-K2.5-1000000x, CodeX-7M-Non-Thinking, Dolci-Instruct-SFT, AgentTrove, ToolMind, AM-Thinking-v1-Distilled, SYNTHETIC-2-SFT-verified, OpenThoughts-114k / OpenThoughts3-1.2M, OpenR1-Math-220k, NuminaMath-CoT, Bespoke-Stratos-17k**.
+- **RLHF / Preference**: Anthropic HH-RLHF, Stanford SHP, UltraFeedback, HelpSteer/HelpSteer2/HelpSteer2-Preference, NVIDIA HelpSteer3-Preference, **Nemotron-Cascade-2-RL-Data, TaskTrove, SYNTHETIC-2-RL, UltraInteract_preference, RLSTACK**.
+- **DPO**: Orca-DPO-Pairs, UltraFeedback-Binarized, DPO-Mix-7K, Llama3-UltraFeedback-ArmoRM, ChatML-DPO-Pairs, Magpie-Air-DPO, Magpie-Pro-DPO, Tulu 3 Preference, **RLSTACK, UltraInteract_preference, Ling-Coder-DPO, DAPO-Math-17k**.
+- **Code / Math**: MetaMathQA, OpenMathInstruct-1, DART-Math, LIMO, Code-Feedback, OpenCodeInstruct, **CodeX-7M-Non-Thinking, OpenR1-Math-220k, NuminaMath-CoT, Bespoke-Stratos-17k, DAPO-Math-17k**.
+- **Agent / Tool Use**: **AgentTrove, ToolMind, Nemotron-Cascade-2-SFT-Data (agentic subset)**.
+- **Chinese / ModelScope**: COIG-CQIA, MSAgent, DeepCtrl-SFT, Infinity Instruct, Alpaca-GPT4 Chinese, HC3-Chinese, Magpie-Qwen2-Pro-200K-Chinese, Chinese-DeepSeek-R1-Distill-110k-SFT, Seq-Monkey, **smoltalk-chinese, OpenThoughts3-1.2M**.
 
 The list is now organized into **SFT datasets**, **RLHF datasets**, and **DPO datasets** sections.
 
@@ -55,12 +56,13 @@ The list is now organized into **SFT datasets**, **RLHF datasets**, and **DPO da
 
 | Category | Where to find | Highlights |
 | :------- | :------------ | :----------- |
-| **General SFT** | [SFT Statistics](#sft-statistics) • [General SFT Details](#general-sft) | Alpaca, LIMA, UltraChat, OpenOrca, OpenHermes 2.5, WizardLM, Magpie, No Robots, Deita, WildChat, Capybara, Tulu 3, Smol-Smoltalk, PersonaHub |
-| **Code & Math** | [SFT Statistics](#sft-statistics) • [Code & Math Details](#code--math) | Code Alpaca, MetaMathQA, OpenMathInstruct-1, DART-Math, LIMO, Code-Feedback, OpenCodeInstruct |
+| **General SFT** | [SFT Statistics](#sft-statistics) • [General SFT Details](#general-sft) | Alpaca, LIMA, UltraChat, OpenOrca, OpenHermes 2.5, WizardLM, Magpie, No Robots, Deita, WildChat, Capybara, Tulu 3, Smol-Smoltalk, PersonaHub, Nemotron-Cascade-2, Dolci-Instruct-SFT, KIMI-K2.5-1000000x |
+| **Code & Math** | [SFT Statistics](#sft-statistics) • [Code & Math Details](#code--math) | Code Alpaca, MetaMathQA, OpenMathInstruct-1, DART-Math, LIMO, Code-Feedback, OpenCodeInstruct, CodeX-7M-Non-Thinking, OpenR1-Math-220k, NuminaMath-CoT, Bespoke-Stratos-17k |
 | **Multilingual & Chinese** | [SFT Statistics](#sft-statistics) • [Multilingual & Chinese Details](#multilingual--chinese) | Chinese-LLaMA-Alpaca, BELLE, COIG, COIG-CQIA, MSAgent, DeepCtrl-SFT, Infinity Instruct, Chinese-DeepSeek-R1-Distill, Seq-Monkey |
-| **RLHF / Preference** | [RLHF Statistics](#rlhf-statistics) • [RLHF Details](#rlhf-dataset-details) | HH-RLHF, SHP, UltraFeedback, HelpSteer family |
-| **DPO** | [DPO Statistics](#dpo-statistics) • [DPO Details](#dpo-dataset-details) | Orca-DPO-Pairs, UltraFeedback-Binarized, DPO-Mix-7K, Llama3-UltraFeedback-ArmoRM, Magpie DPO |
-| **Chinese ModelScope** | README_zh.md | COIG-CQIA, MSAgent, DeepCtrl-SFT, Infinity Instruct, Chinese-DeepSeek-R1-Distill, Seq-Monkey |
+| **Agent & Tool Use** | [SFT Statistics](#sft-statistics) • [Agent & Tool Use Details](#agent--tool-use) | AgentTrove, ToolMind, MSAgent |
+| **RLHF / Preference** | [RLHF Statistics](#rlhf-statistics) • [RLHF Details](#rlhf-dataset-details) | HH-RLHF, SHP, UltraFeedback, HelpSteer family, Nemotron-Cascade-2-RL, TaskTrove, SYNTHETIC-2-RL |
+| **DPO** | [DPO Statistics](#dpo-statistics) • [DPO Details](#dpo-dataset-details) | Orca-DPO-Pairs, UltraFeedback-Binarized, DPO-Mix-7K, Llama3-UltraFeedback-ArmoRM, Magpie DPO, RLSTACK, UltraInteract_preference, Ling-Coder-DPO |
+| **Chinese ModelScope** | README_zh.md | COIG-CQIA, MSAgent, DeepCtrl-SFT, Infinity Instruct, Chinese-DeepSeek-R1-Distill, Seq-Monkey, smoltalk-chinese, OpenThoughts3-1.2M |
 
 # SFT Datasets
 
@@ -159,6 +161,19 @@ Referring to [this](https://github.com/yaodongC/awesome-instruction-dataset) ([@
 | [FineWeb-Edu](https://huggingface.co/datasets/HuggingFaceFW/fineweb-edu) | [HuggingFaceFW/fineweb-edu](https://huggingface.co/datasets/HuggingFaceFW/fineweb-edu) | HuggingFaceFW              | 1.3T+ tokens | ML | MT    | COL  | high-quality educational web corpus for pretrain/SFT         | FineWeb filtered for educational content                   | [download](https://huggingface.co/datasets/HuggingFaceFW/fineweb-edu) |
 | [Chinese-DeepSeek-R1-Distill-110k-SFT](https://huggingface.co/datasets/Congliu/Chinese-DeepSeek-R1-Distill-data-110k) | [Congliu/Chinese-DeepSeek-R1-Distill-data-110k](https://huggingface.co/datasets/Congliu/Chinese-DeepSeek-R1-Distill-data-110k) \|[liucong/Chinese-DeepSeek-R1-Distill-data-110k](https://modelscope.cn/datasets/liucong/Chinese-DeepSeek-R1-Distill-data-110k) | Cong Liu                   | 110k      | CN    | MT    | SI   | Chinese reasoning SFT distilled from DeepSeek-R1-671B       | math/exam/STEM/general Chinese reasoning                   | [download](https://huggingface.co/datasets/Congliu/Chinese-DeepSeek-R1-Distill-data-110k) |
 | [Seq-Monkey](https://www.modelscope.cn/datasets/ddzhu123/seq-monkey) | [ddzhu123/seq-monkey](https://www.modelscope.cn/datasets/ddzhu123/seq-monkey) | Mobvoi / 出门问问          | 10B tokens | CN   | MT    | COL  | Chinese pre-training corpus (general/web/QA/code)           | Chinese web, encyclopedia, Q&A, blogs, books, code       | [download](https://www.modelscope.cn/datasets/ddzhu123/seq-monkey) |
+| [Nemotron-Cascade-2-SFT-Data](https://huggingface.co/datasets/nvidia/Nemotron-Cascade-2-SFT-Data) | [nvidia/Nemotron-Cascade-2-SFT-Data](https://huggingface.co/datasets/nvidia/Nemotron-Cascade-2-SFT-Data) | NVIDIA | 15.87M | EN/ML | MT | COL | large-scale multi-domain SFT (chat, math, science, code, agent, SWE, safety) | on-policy distillation from DeepSeek-V3.2, GPT-OSS-120B, Qwen3, Nemotron-Cascade-1 | [download](https://huggingface.co/datasets/nvidia/Nemotron-Cascade-2-SFT-Data) |
+| [KIMI-K2.5-1000000x](https://huggingface.co/datasets/ianncity/KIMI-K2.5-1000000x) | [ianncity/KIMI-K2.5-1000000x](https://huggingface.co/datasets/ianncity/KIMI-K2.5-1000000x) | ianncity | 693K (~5B tokens) | EN/ML | MT | SI | reasoning traces distilled from Kimi K2.5 high-reasoning mode | Kimi K2.5 synthetic | [download](https://huggingface.co/datasets/ianncity/KIMI-K2.5-1000000x) |
+| [CodeX-7M-Non-Thinking](https://huggingface.co/datasets/Modotte/CodeX-7M-Non-Thinking) | [Modotte/CodeX-7M-Non-Thinking](https://huggingface.co/datasets/Modotte/CodeX-7M-Non-Thinking) | Modotte | 7.36M | EN | TS | SI | large curated code instruction pairs without reasoning chains | Modotte curation + synthetic generation | [download](https://huggingface.co/datasets/Modotte/CodeX-7M-Non-Thinking) |
+| [Dolci-Instruct-SFT](https://huggingface.co/datasets/allenai/Dolci-Instruct-SFT) | [allenai/Dolci-Instruct-SFT](https://huggingface.co/datasets/allenai/Dolci-Instruct-SFT) | Ai2 | 2.15M | ML | MT | COL | OLMo 3 SFT mixture (math, code, multilingual, safety, logic puzzles) | curated open data + Ai2 synthetic prompts | [download](https://huggingface.co/datasets/allenai/Dolci-Instruct-SFT) |
+| [AgentTrove](https://huggingface.co/datasets/open-thoughts/AgentTrove) | [open-thoughts/AgentTrove](https://huggingface.co/datasets/open-thoughts/AgentTrove) | OpenThoughts | 1.7M | EN | MT | COL | agentic interaction traces (code repair, shell, math, CP, computer-use) | 219 source datasets via terminus-2 / Harbor | [download](https://huggingface.co/datasets/open-thoughts/AgentTrove) |
+| [ToolMind](https://huggingface.co/datasets/Nanbeige/ToolMind) | [Nanbeige/ToolMind](https://huggingface.co/datasets/Nanbeige/ToolMind) | Nanbeige Lab | 369K | EN | TS | MIX | reasoning-enhanced function-calling / tool-use trajectories | multi-agent simulation + curated open data | [download](https://huggingface.co/datasets/Nanbeige/ToolMind) |
+| [AM-Thinking-v1-Distilled](https://huggingface.co/datasets/a-m-team/AM-Thinking-v1-Distilled) | [a-m-team/AM-Thinking-v1-Distilled](https://huggingface.co/datasets/a-m-team/AM-Thinking-v1-Distilled) | a-m-team (Beike) | 1.89M | CN/EN | MT | SI | verified reasoning distillation (math, code, chat, science, IF) | AM-Thinking-v1 / Qwen3 / DeepSeek-R1 + verifiers | [download](https://huggingface.co/datasets/a-m-team/AM-Thinking-v1-Distilled) |
+| [SYNTHETIC-2-SFT-verified](https://huggingface.co/datasets/PrimeIntellect/SYNTHETIC-2-SFT-verified) | [PrimeIntellect/SYNTHETIC-2-SFT-verified](https://huggingface.co/datasets/PrimeIntellect/SYNTHETIC-2-SFT-verified) | PrimeIntellect | 105K | EN | MT | SI | verified reasoning traces (math, code, formatting, puzzles) | DeepSeek-R1-0528 + distributed verification | [download](https://huggingface.co/datasets/PrimeIntellect/SYNTHETIC-2-SFT-verified) |
+| [OpenThoughts-114k](https://huggingface.co/datasets/open-thoughts/OpenThoughts-114k) | [open-thoughts/OpenThoughts-114k](https://huggingface.co/datasets/open-thoughts/OpenThoughts-114k) | OpenThoughts | 114K | EN | MT | SI | synthetic reasoning (math, science, code, puzzles) | DeepSeek-R1 verified | [download](https://huggingface.co/datasets/open-thoughts/OpenThoughts-114k) |
+| [OpenThoughts3-1.2M](https://huggingface.co/datasets/open-thoughts/OpenThoughts3-1.2M) | [open-thoughts/OpenThoughts3-1.2M](https://huggingface.co/datasets/open-thoughts/OpenThoughts3-1.2M) | OpenThoughts | 1.2M | EN | TS | SI | scaled reasoning dataset (math / code / science) | QwQ-32B 16× annotations | [download](https://huggingface.co/datasets/open-thoughts/OpenThoughts3-1.2M) |
+| [OpenR1-Math-220k](https://huggingface.co/datasets/open-r1/OpenR1-Math-220k) | [open-r1/OpenR1-Math-220k](https://huggingface.co/datasets/open-r1/OpenR1-Math-220k) | Hugging Face | 220K | EN | TS | SI | math reasoning traces over NuminaMath 1.5 | DeepSeek R1 + Math-Verify / Llama judge | [download](https://huggingface.co/datasets/open-r1/OpenR1-Math-220k) |
+| [NuminaMath-CoT](https://huggingface.co/datasets/AI-MO/NuminaMath-CoT) | [AI-MO/NuminaMath-CoT](https://huggingface.co/datasets/AI-MO/NuminaMath-CoT) | AI-MO | 860K | EN/CN | TS | COL | math problems with CoT solutions (K-12 to olympiad) | OCR + translation + realignment | [download](https://huggingface.co/datasets/AI-MO/NuminaMath-CoT) |
+| [Bespoke-Stratos-17k](https://huggingface.co/datasets/bespokelabs/Bespoke-Stratos-17k) | [bespokelabs/Bespoke-Stratos-17k](https://huggingface.co/datasets/bespokelabs/Bespoke-Stratos-17k) | Bespoke Labs | 17K | EN | TS | SI | high-quality reasoning distillation (math / code / science) | DeepSeek-R1 rejection sampling | [download](https://huggingface.co/datasets/bespokelabs/Bespoke-Stratos-17k) |
 
 
 ## SFT Dataset Details
@@ -466,6 +481,53 @@ https://github.com/lightaime/camel
 - paper: [Scaling Synthetic Data Creation with 1,000,000,000 Personas](https://arxiv.org/abs/2406.20094)
 - Cost: N/A
 
+## [Nemotron-Cascade-2-SFT-Data](https://huggingface.co/datasets/nvidia/Nemotron-Cascade-2-SFT-Data)
+- [Dataset Link](https://huggingface.co/datasets/nvidia/Nemotron-Cascade-2-SFT-Data)
+- [Paper](https://arxiv.org/abs/2603.19220)
+- Summary: ~15.87M-sample multi-domain SFT dataset used to train Nemotron-Cascade-2-30B-A3B. Covers chat (~9.3M), math (~2.9M), science (~1.8M), instruction following (~820K), conversational agent (~548K), terminal agent (~324K), SWE (~102K), and safety. Responses were generated via on-policy distillation from DeepSeek-V3.2, GPT-OSS-120B, Qwen3-235B-A22B, and Nemotron-Cascade-1.
+- Data generation model: `DeepSeek-V3.2`, `GPT-OSS-120B`, `Qwen3-235B-A22B`, `Nemotron-Cascade-1`
+- License: NVIDIA Open Model License
+
+## [KIMI-K2.5-1000000x](https://huggingface.co/datasets/ianncity/KIMI-K2.5-1000000x)
+- [Dataset Link](https://huggingface.co/datasets/ianncity/KIMI-K2.5-1000000x)
+- Summary: ~693K reasoning traces (~5B tokens) distilled from Moonshot AI's Kimi K2.5 in high-reasoning mode. Composition is roughly 50% code, 20% science, 15% math, plus CS, logic, creative writing, and multilingual STEM subsets.
+- Data generation model: `Kimi K2.5`
+- License: Apache 2.0
+
+## [Dolci-Instruct-SFT](https://huggingface.co/datasets/allenai/Dolci-Instruct-SFT)
+- [Dataset Link](https://huggingface.co/datasets/allenai/Dolci-Instruct-SFT)
+- [Paper](https://arxiv.org/abs/2512.13961)
+- Summary: 2.15M instruction samples used to train OLMo 3 7B Instruct SFT. Mixes existing sources (OpenThoughts 3, FLAN v2, Aya, Tulu 3 personas, WildChat upgraded with GPT-4.1, SciRIFF, etc.) with new Ai2 prompts for precise instruction following, Python algorithms, logic puzzles, verifiable reasoning, and tool use.
+- Data generation model: `COL`
+- License: ODC-BY
+
+## [AM-Thinking-v1-Distilled](https://huggingface.co/datasets/a-m-team/AM-Thinking-v1-Distilled)
+- [Dataset Link](https://huggingface.co/datasets/a-m-team/AM-Thinking-v1-Distilled)
+- [Paper](https://arxiv.org/abs/2505.14464)
+- Summary: 1.89M verified reasoning examples distilled from AM-Thinking-v1 (and also Qwen3-235B-A22B / DeepSeek-R1). Covers math (~29.5%), code (~17.1%), general chat (~41.8%), and science/IF/dialogue. Each response is verified with Math-Verify, sandbox execution, and model judges.
+- Data generation model: `AM-Thinking-v1`, `Qwen3-235B-A22B`, `DeepSeek-R1`
+- License: research-only
+
+## [SYNTHETIC-2-SFT-verified](https://huggingface.co/datasets/PrimeIntellect/SYNTHETIC-2-SFT-verified)
+- [Dataset Link](https://huggingface.co/datasets/PrimeIntellect/SYNTHETIC-2-SFT-verified)
+- [Blog](https://www.primeintellect.ai/blog/synthetic-2-release)
+- Summary: 105K verified reasoning traces from the SYNTHETIC-2 collection. Responses are generated by DeepSeek-R1-0528 and filtered to keep only correct solutions (reward = 1 or >0.7). Tasks include code output prediction, Pydantic/JSON formatting, sentence unscrambling, ASCII trees, and other verifiable reasoning problems.
+- Data generation model: `DeepSeek-R1-0528`
+
+## [OpenThoughts-114k](https://huggingface.co/datasets/open-thoughts/OpenThoughts-114k)
+- [Dataset Link](https://huggingface.co/datasets/open-thoughts/OpenThoughts-114k)
+- [Paper](https://arxiv.org/abs/2506.04178)
+- Summary: 114K high-quality synthetic reasoning examples across math, science, code, and puzzles. Used to train OpenThinker-7B / 32B. Solutions are generated by DeepSeek-R1 and verified.
+- Data generation model: `DeepSeek-R1`
+- License: Apache 2.0
+
+## [OpenThoughts3-1.2M](https://huggingface.co/datasets/open-thoughts/OpenThoughts3-1.2M)
+- [Dataset Link](https://huggingface.co/datasets/open-thoughts/OpenThoughts3-1.2M)
+- [Paper](https://arxiv.org/abs/2506.04178)
+- Summary: Third iteration of the OpenThoughts series with 1.2M examples (850K math, 250K code, 100K science). Each question is annotated 16× with QwQ-32B and rigorously filtered. Used to train OpenThinker3-7B.
+- Data generation model: `QwQ-32B`
+- License: Apache 2.0
+
 ### Code & Math
 
 ## [MetaMathQA](https://github.com/meta-math/MetaMath)
@@ -510,6 +572,32 @@ https://github.com/lightaime/camel
 - Data generation model: `COL`
 - paper: [OpenCoder: The Open Cookbook for Top-Tier Code LLMs](https://arxiv.org/abs/2411.04905)
 - Cost: N/A
+
+## [CodeX-7M-Non-Thinking](https://huggingface.co/datasets/Modotte/CodeX-7M-Non-Thinking)
+- [Dataset Link](https://huggingface.co/datasets/Modotte/CodeX-7M-Non-Thinking)
+- Summary: 7.36M curated code instruction pairs emphasizing direct code solutions (no step-by-step reasoning chains). Covers Python, Java, C++, JavaScript, algorithms, web dev, ML/AI, databases, and competitive programming.
+- Data generation model: `COL` / Modotte curation
+- License: Apache 2.0
+
+## [OpenR1-Math-220k](https://huggingface.co/datasets/open-r1/OpenR1-Math-220k)
+- [Dataset Link](https://huggingface.co/datasets/open-r1/OpenR1-Math-220k)
+- [GitHub](https://github.com/huggingface/open-r1)
+- Summary: 220K math problems from NuminaMath 1.5 with 2–4 reasoning traces per problem generated by DeepSeek R1. Traces are verified with Math-Verify (~88%) and Llama-3.3-70B-Instruct as judge (~12%). Includes `default` (~94K) and `extended` (~131K) splits.
+- Data generation model: `DeepSeek-R1`
+- License: Apache 2.0
+
+## [NuminaMath-CoT](https://huggingface.co/datasets/AI-MO/NuminaMath-CoT)
+- [Dataset Link](https://huggingface.co/datasets/AI-MO/NuminaMath-CoT)
+- Summary: ~860K math problems with Chain-of-Thought solutions, spanning Chinese K-12 exercises to US/international olympiad problems. Sources include cn_k12, olympiads, AoPS, GSM8K, MATH, and synthetic data.
+- Data generation model: `COL`
+- License: Apache 2.0
+
+## [Bespoke-Stratos-17k](https://huggingface.co/datasets/bespokelabs/Bespoke-Stratos-17k)
+- [Dataset Link](https://huggingface.co/datasets/bespokelabs/Bespoke-Stratos-17k)
+- [Blog](https://www.bespokelabs.ai/blog/bespoke-stratos-the-unreasonable-effectiveness-of-reasoning-distillation)
+- Summary: 17K high-quality reasoning-distillation examples (5K code from APPs/TACO, 10K math from AIME/MATH/Olympiads, 1K science/puzzles from STILL-2). Uses DeepSeek-R1 as teacher and gpt-4o-mini for filtering, improving correct-solution retention to ~73%.
+- Data generation model: `DeepSeek-R1`
+- License: Apache 2.0
 
 ### Multilingual & Chinese
 
@@ -580,6 +668,22 @@ https://github.com/lightaime/camel
 - paper: N/A
 - Cost: N/A
 
+### Agent & Tool Use
+
+## [AgentTrove](https://huggingface.co/datasets/open-thoughts/AgentTrove)
+- [Dataset Link](https://huggingface.co/datasets/open-thoughts/AgentTrove)
+- [GitHub](https://github.com/open-thoughts/OpenThoughts-Agent)
+- Summary: 1.7M agentic interaction traces drawn from 219 source datasets. Covers code repair, shell scripting, mathematical problem solving, competitive programming, and general computer-use tasks. Formatted as ShareGPT-style conversations with `original_source`, `original_teacher`, and `reward` metadata. Companion RL/evaluation dataset: [TaskTrove](https://huggingface.co/datasets/open-thoughts/TaskTrove).
+- Data generation model: `COL` (terminus-2 / Harbor)
+- License: Apache 2.0
+
+## [ToolMind](https://huggingface.co/datasets/Nanbeige/ToolMind)
+- [Dataset Link](https://huggingface.co/datasets/Nanbeige/ToolMind)
+- [Paper](https://arxiv.org/abs/2511.15718)
+- Summary: ~369K reasoning-enhanced tool-use trajectories. Combines 160K synthetic multi-agent trajectories over 20K+ functions with 200K augmented open-source function-calling data. Includes two-stage quality filtering and explicit `<think>` reasoning traces.
+- Data generation model: `MIX`
+- License: Apache 2.0
+
 # RLHF / Preference Datasets
 
 ## RLHF Statistics
@@ -601,6 +705,11 @@ https://github.com/lightaime/camel
 | [HelpSteer2](https://huggingface.co/datasets/nvidia/HelpSteer2) | [nvidia/HelpSteer2](https://huggingface.co/datasets/nvidia/HelpSteer2) | NVIDIA                        | 10k    | English | High-quality preference dataset for reward models; SOTA on RewardBench at release. |
 | [HelpSteer2-Preference](https://huggingface.co/datasets/nvidia/HelpSteer2-Preference) | [nvidia/HelpSteer2-Preference](https://huggingface.co/datasets/nvidia/HelpSteer2-Preference) | NVIDIA                        | 10k    | English | Preference annotations with human-written justifications for BT vs regression reward modeling. |
 | [HelpSteer3-Preference](https://huggingface.co/datasets/nvidia/HelpSteer3-Preference) | [nvidia/HelpSteer3-Preference](https://huggingface.co/datasets/nvidia/HelpSteer3-Preference) | NVIDIA                        | 40k+   | English | Diverse open human-annotated preference data across STEM, coding, and multilingual tasks. |
+| [Nemotron-Cascade-2-RL-Data](https://huggingface.co/collections/nvidia/nemotron-cascade-2) | [nvidia/Nemotron-Cascade-2-RL-Data](https://huggingface.co/collections/nvidia/nemotron-cascade-2) | NVIDIA | multi-subset | English | RL datasets for Nemotron-Cascade-2 (math, code, reasoning, agentic, instruction following). |
+| [TaskTrove](https://huggingface.co/datasets/open-thoughts/TaskTrove) | [open-thoughts/TaskTrove](https://huggingface.co/datasets/open-thoughts/TaskTrove) | OpenThoughts | 750K+ | English | Agentic task specifications in Harbor format for RL and evaluation; companion to AgentTrove. |
+| [SYNTHETIC-2-RL](https://huggingface.co/datasets/PrimeIntellect/SYNTHETIC-2-RL) | [PrimeIntellect/SYNTHETIC-2-RL](https://huggingface.co/datasets/PrimeIntellect/SYNTHETIC-2-RL) | PrimeIntellect | 156k | English | RL subset of SYNTHETIC-2 with difficulty annotations from Qwen3 and DeepSeek-R1-0528. |
+| [UltraInteract_preference](https://huggingface.co/datasets/openbmb/UltraInteract_preference) | [openbmb/UltraInteract_preference](https://huggingface.co/datasets/openbmb/UltraInteract_preference) | OpenBMB (Tsinghua) | ~219k | English | Preference trees for multi-turn reasoning and tool use (correct/incorrect trajectories and actions). |
+| [RLSTACK](https://huggingface.co/datasets/H-D-T/RLSTACK) | [H-D-T/RLSTACK](https://huggingface.co/datasets/H-D-T/RLSTACK) | Hive-Digital-Technologies | 868k | English | DPO-style preference pairs from Stack Exchange dumps (highest- vs lowest-rated answers). |
 
 ## RLHF Dataset Details
 
@@ -774,6 +883,38 @@ A large-scale, multi-aspect feedback dataset for training reward models and DPO.
 
 NVIDIA's family of multi-attribute helpfulness datasets. HelpSteer provides fine-grained ratings across helpfulness, correctness, coherence, complexity and verbosity. HelpSteer2 adds preference pairs for reward model training; HelpSteer2-Preference includes human-written justifications comparing Bradley-Terry and regression reward modeling. HelpSteer3-Preference expands to 40k+ diverse real-world applications including STEM, coding, and multilingual tasks.
 
+## [Nemotron-Cascade-2-RL-Data](https://huggingface.co/collections/nvidia/nemotron-cascade-2)
+- [Collection Link](https://huggingface.co/collections/nvidia/nemotron-cascade-2)
+- [Paper](https://arxiv.org/abs/2603.19220)
+- Summary: Reinforcement-learning datasets used to train Nemotron-Cascade-2-30B-A3B. Includes domain-wise RL data for math, code, reasoning, instruction following, long-context, agentic/SWE, and RLHF-style preference pairs. Released alongside the SFT data and model checkpoints.
+- Data generation model: `Nemotron-Cascade-2 pipeline`
+- License: NVIDIA Open Model License
+
+## [TaskTrove](https://huggingface.co/datasets/open-thoughts/TaskTrove)
+- [Dataset Link](https://huggingface.co/datasets/open-thoughts/TaskTrove)
+- [GitHub](https://github.com/open-thoughts/OpenThoughts-Agent)
+- Summary: 750K+ agentic task specifications in the Harbor format, designed for RL and evaluation of agentic coding/computer-use models. Companion to AgentTrove; tasks can be deployed via Harbor to update model behavior.
+- Data generation model: `COL`
+- License: Apache 2.0
+
+## [SYNTHETIC-2-RL](https://huggingface.co/datasets/PrimeIntellect/SYNTHETIC-2-RL)
+- [Dataset Link](https://huggingface.co/datasets/PrimeIntellect/SYNTHETIC-2-RL)
+- [Blog](https://www.primeintellect.ai/blog/synthetic-2-release)
+- Summary: 156K RL-focused problems from the SYNTHETIC-2 collection with difficulty/reward annotations from Qwen3-32B, Qwen3-4B, DeepSeek-R1-0528-Qwen3-8B, and DeepSeek-R1-0528. Each row includes verification info suitable for rule-based reward training.
+- Data generation model: `DeepSeek-R1-0528`, `Qwen3`
+
+## [UltraInteract_preference](https://huggingface.co/datasets/openbmb/UltraInteract_preference)
+- [Dataset Link](https://huggingface.co/datasets/openbmb/UltraInteract_preference)
+- [Paper](https://arxiv.org/abs/2404.02078)
+- Summary: ~219K preference pairs (and up to 286K correct/incorrect nodes) organized as preference trees for multi-turn reasoning and tool-use trajectories. Supports both reward-model and DPO-style training.
+- Data generation model: `GPT-4`
+
+## [RLSTACK](https://huggingface.co/datasets/H-D-T/RLSTACK)
+- [Dataset Link](https://huggingface.co/datasets/H-D-T/RLSTACK)
+- Summary: 868K DPO-style preference pairs built from Stack Exchange dumps across 53 communities. Each example contains a prompt and paired `chosen` (highest-rated) / `rejected` (lowest-rated) answers.
+- Data generation model: N/A
+- License: CC BY 4.0
+
 # DPO Datasets
 
 ## DPO Statistics
@@ -788,6 +929,10 @@ NVIDIA's family of multi-attribute helpfulness datasets. HelpSteer provides fine
 | [ChatML-DPO-Pairs](https://huggingface.co/datasets/mlabonne/chatml-dpo-pairs) | [mlabonne/chatml-dpo-pairs](https://huggingface.co/datasets/mlabonne/chatml-dpo-pairs) | Maxime Labonne                | 12k      | English | ChatML-formatted Intel Orca DPO pairs (ChatGPT chosen vs Llama-2 rejected). |
 | [Magpie-Air-DPO](https://huggingface.co/datasets/Magpie-Align/Magpie-Air-DPO-100K-v0.1) | [Magpie-Align/Magpie-Air-DPO-100K-v0.1](https://huggingface.co/datasets/Magpie-Align/Magpie-Air-DPO-100K-v0.1) | Magpie-Align                  | 100k     | English | Synthetic DPO preference pairs from Llama-3-8B-Instruct (Magpie-Air). |
 | [Tulu 3 Preference](https://github.com/allenai/open-instruct) | [allenai/tulu-3-pref-personas-instruction-following](https://huggingface.co/datasets/allenai/tulu-3-pref-personas-instruction-following) \|[allenai/tulu-3-pref-mixture](https://huggingface.co/datasets/allenai/tulu-3-pref-mixture) | Ai2                           | 20k-200k | English | Preference data used in Tulu 3 post-training pipeline. |
+| [RLSTACK](https://huggingface.co/datasets/H-D-T/RLSTACK) | [H-D-T/RLSTACK](https://huggingface.co/datasets/H-D-T/RLSTACK) | Hive-Digital-Technologies | 868k | English | Stack Exchange DPO-style preference pairs (chosen/rejected answers). |
+| [UltraInteract_preference](https://huggingface.co/datasets/openbmb/UltraInteract_preference) | [openbmb/UltraInteract_preference](https://huggingface.co/datasets/openbmb/UltraInteract_preference) | OpenBMB (Tsinghua) | ~219k | English | Preference trees for multi-turn reasoning and tool-use trajectories. |
+| [Ling-Coder-DPO](https://huggingface.co/datasets/inclusionAI/Ling-Coder-DPO) | [inclusionAI/Ling-Coder-DPO](https://huggingface.co/datasets/inclusionAI/Ling-Coder-DPO) | inclusionAI / Codefuse | 253k | English | Code-specific DPO pairs curated from code_contests using test-pass, PPL, and reward-model signals. |
+| [DAPO-Math-17k](https://huggingface.co/datasets/BytedTsinghua-SIA/DAPO-Math-17k) | [BytedTsinghua-SIA/DAPO-Math-17k](https://huggingface.co/datasets/BytedTsinghua-SIA/DAPO-Math-17k) | ByteDance / Tsinghua SIA | 1.79M | English | Competition-level math problems with reward metadata for RL/DPO training. |
 
 ## DPO Dataset Details
 
@@ -828,6 +973,29 @@ A small, curated cocktail (~7.5k pairs) mixing high-scoring chosen responses fro
 - [Preference Mixture](https://huggingface.co/datasets/allenai/tulu-3-pref-mixture)
 
 Ai2's Tulu 3 preference data (~20k–200k) including persona-based instruction-following preferences and a full preference mixture for open post-training.
+
+## [RLSTACK](https://huggingface.co/datasets/H-D-T/RLSTACK)
+- [Dataset Link](https://huggingface.co/datasets/H-D-T/RLSTACK)
+
+868K DPO-style preference pairs mined from Stack Exchange dumps. Each row provides a question and a `chosen`/`rejected` answer pair derived from community up/down votes, spanning 53 categories such as programming, math, and physics.
+
+## [UltraInteract_preference](https://huggingface.co/datasets/openbmb/UltraInteract_preference)
+- [Dataset Link](https://huggingface.co/datasets/openbmb/UltraInteract_preference)
+- [Paper](https://arxiv.org/abs/2404.02078)
+
+~219K preference pairs organized as preference trees over multi-turn reasoning and tool-use trajectories. Each tree has an instruction root, action nodes, and root-to-leaf trajectories; paired correct/incorrect nodes or paths can be used for reward modeling or DPO.
+
+## [Ling-Coder-DPO](https://huggingface.co/datasets/inclusionAI/Ling-Coder-DPO)
+- [Dataset Link](https://huggingface.co/datasets/inclusionAI/Ling-Coder-DPO)
+- [Paper](https://arxiv.org/abs/2503.17793)
+
+253K code-specific preference pairs derived from code_contests. Positive/negative samples are selected using code test-case pass rates, perplexity distribution, and reward model scores. Used to train Ling-Coder-Lite.
+
+## [DAPO-Math-17k](https://huggingface.co/datasets/BytedTsinghua-SIA/DAPO-Math-17k)
+- [Dataset Link](https://huggingface.co/datasets/BytedTsinghua-SIA/DAPO-Math-17k)
+- [Collection](https://huggingface.co/collections/BytedTsinghua-SIA/dapo)
+
+1.79M competition-level math problems with reward-model metadata (`ground_truth`, evaluation style). Intended for RL and preference optimization such as GRPO/DPO; part of the DAPO collection.
 
 # Datasets without license information
 
@@ -877,3 +1045,9 @@ Some introductions ...
 - https://github.com/tencent-ailab/persona-hub
 - https://github.com/allenai/open-instruct
 - https://github.com/OpenCoder-llm/OpenCoder-llm
+- https://github.com/open-thoughts/open-thoughts
+- https://github.com/open-thoughts/OpenThoughts-Agent
+- https://github.com/huggingface/open-r1
+- https://github.com/PrimeIntellect-ai/genesys
+- https://github.com/bespokelabsai/curator
+- https://github.com/NVIDIA-NeMo/Nemotron
