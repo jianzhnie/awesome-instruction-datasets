@@ -1115,3 +1115,10 @@ Some introductions ...
 - https://github.com/PrimeIntellect-ai/genesys
 - https://github.com/bespokelabsai/curator
 - https://github.com/NVIDIA-NeMo/Nemotron
+
+[NEUIR/LongMab-PO](https://github.com/NEUIR/LongMab-PO)
+
+- [paper/project link](https://aclanthology.org/2026.acl-long.161/)
+- [dataset link](https://drive.google.com/drive/folders/1uK3-yFqgnpmjvc_M6Q89WrZYPcZ_JJlG)
+
+Synthetic preference pairs for long-context DPO, with separate releases for Llama 3 and Qwen 2. LongMab-PO treats context chunks as multi-armed-bandit arms and uses reward feedback to sample diverse responses and construct preference pairs.
